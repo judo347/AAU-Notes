@@ -63,7 +63,7 @@ Svar = $O(n*lg*n)$
 
 **Exercise 2.2 - Consider the following algorithm: **
 
-![2](C:\GitDesktop\AAU-Notes\Algorithms and Datastructures\img\2.PNG)
+![2](.\img\2.PNG)
 
 **Assume that A is with size 8x8, how does A look like after FillTable(A)? What is the (asymtotic) running time of FillTable?**
 
