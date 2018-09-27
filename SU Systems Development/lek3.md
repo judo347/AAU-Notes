@@ -47,7 +47,10 @@ Structures must be simple
 #### Generally
 
 - Selecting the right structure is difficult
-- SLIDE 31!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  - Try them out one by one for each pair of classes
+  - Use the criteria to select the most correct structure
+- It is very easy to include too many structures
+  - Try to simulate functions and see if you can get to the relevant objects
 
 #### Structure
 
@@ -72,9 +75,7 @@ Generalization = ---------->
 
 Customer and Appointment is an aggregation: they cannot stand without the other. Free is confusing.  Apprentice can turn into assistant: not allowed.
 
-SLIDE 20!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-SLIDE 24 A streaming service + solution
+Se mere på slide 20
 
 ## Explore Patterns
 

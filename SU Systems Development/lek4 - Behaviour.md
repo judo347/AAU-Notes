@@ -23,8 +23,13 @@
 
 - Make event traces for each class.
 - For each class ask:
-  - Which event(s) cause the creation of a problem-domain object? 
-  - SLIDE 14!!!!!!!!!!!!!!!!!!!!!!!!!!
+  - Which event(s) cause the creation of a problem-domain object? These events are good as selections that can cause the birth of an object.
+  - Which event(s) cause the disappearence of a problem-domain object? These events are grouped as selections that can cause the death of an object
+- Typical event traces:
+  - Which events occur together in a sequence?
+  - Are there any alternative events?
+  - Can a given event occur more than once?
+  - Is the overall form structured or unstructured?
 
 #### Control Structures
 
@@ -57,8 +62,6 @@ Because 1 customer can have multiple accounts.
 #### Example: Streaming service
 
 ![](.\img\19.png)
-
-SLIDE 27!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #### Explore Patterns: Stepwise Relation
 

@@ -15,3 +15,7 @@ EXAM:
 - Summit in english or danish
 
 - Take moodle quiz prior to exam
+
+
+
+Take the example from your report.
