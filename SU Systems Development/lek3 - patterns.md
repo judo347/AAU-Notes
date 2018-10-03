@@ -103,4 +103,3 @@ Se mere på slide 20
 - Properties of objects from one class (items) are described in an object from another class (descriptor). As in a library: book - is that the physical book or the one that is registered in the IT system.
 
 ![](.\img\10.png)
-
