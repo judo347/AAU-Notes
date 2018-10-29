@@ -298,4 +298,43 @@ To find these we simple go all the way to the right or left. Keep going to eithe
 
 ![](.\img\58.png)
 
-SLIDEEEEE!!!! 53-
+#### Successor
+
+- Given x, find the node with the smallest key greater than x.**key**
+- We can distinguish two cases, depending on the right subtree of x
+- Case 1: Right subtree of x is nonempty.
+  - The successor is the smallest node in the right subtree.
+  - This can be done by returning Minimum(x.**right**).
+- Case 2: Right subtree of x is empty. 
+  - The successor is the lowest ancestor of x whose left child is also an ancestor of x
+
+![](.\img\59.png)
+
+![](.\img\60.png)
+
+#### Insertion
+
+- The basic idea is similar to searching
+  - Suppose we want to insert a new value v into the BST T.
+  - Create a new node z (z.key=v, z.left=NIL, z.right=NIL, z.p=NIL)
+  - find place in T where z belongs (as if searching for z.key),
+  - And add z there
+- The running on a tree of height h is O (h)
+
+![](.\img\61.png)
+
+#### Deletion
+
+- Delete(T, z): Delete node z from BST T.
+
+![](.\img\62.png)
+
+- Otherwise, z has both left and right children. Find z’s successor y, which must lie in z’s right sub-tree and has no left child. (Recall the first case of Successor operation.)
+
+- Case 3: if y is z’s right child, replace z by y.
+- Case 4: if not, replace y by its own right child, and then replace z by y. 
+
+![](.\img\63.png)
+
+- Pseudo code
+  - Check the Transplant and Tree-Delete in CLRS, pp 296 – 298. 
