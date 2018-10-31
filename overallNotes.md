@@ -1,0 +1,1 @@
+- Make sure all files got a topic of the lecture and subject.

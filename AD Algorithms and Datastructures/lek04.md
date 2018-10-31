@@ -118,7 +118,28 @@ also \ f(n)=1, \ f(n)=\Theta(1) \\
 \rightarrow Case \ 2: \ T(n)=\Theta(lg*n)
 $$
 
+![](.\img\64.png)
+
+![](.\img\65.png)
+
+![](.\img\66.png)
+
+#### Solving recurrences
+
+- If a recurrence is in the form that can be solved by the master method, try to use the master method, because it is the simplest method.
+  - But, when using the master method, if you are not sure about deciding which case should be applied, especially for checking the regularity condition in case 3, use the repeated substitution method or recursion tree instead. 
+- If a recurrence is not in the form that can be solved by the master method, use the repeated substitution method or recursion trees. 
+  - E.g., computing the factorial.
+- You can always use the repeated substitution method or recursion trees to solve any recurrence.
 
 
 
-SLIDE 25 + 26 + 27 + 28 + 35 - 39
+
+
+
+
+
+
+
+
+SLIDE 30 + 35 - 39 Måske flere
