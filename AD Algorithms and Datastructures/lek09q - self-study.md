@@ -28,7 +28,7 @@ line 11: return st.top() = 2
 
 I draw them to see it:
 
-![](.\img\44.png)
+![](.\img\67.png)
 
 2.2 Consider the QuickSort(A,p,r) algorithm sown on page 171, CLRS. Let p = 1 and r = 9. Assume that the array A[p..r] is $5,1,3,6,8,7,9,12,11$
 
@@ -86,7 +86,7 @@ $h(8,0)= (8 + 0 * (8 \: mod \: 10)) \: mod \: 11 = 8 \:  mod \: 11 = 8$ **SET VA
 
 $h(14,0)= (14 + 0 * (14 \: mod \: 10)) \: mod \: 11 = 14 \: mod \: 11=3$ **SET VALUE**
 
-![](.\img\46.png)
+![](.\img\68.png)
 
 3.2 (from re-exam 2012)
 
@@ -110,7 +110,9 @@ And that means that the left child is smaller than parent and right child is lar
 
 The answer is switches.
 
-![](.\img\47.jpg)
+![](.\img\69.png)
 
 
+
+#### Exercise 4 (similar to an assignment in exam 2002)
 
