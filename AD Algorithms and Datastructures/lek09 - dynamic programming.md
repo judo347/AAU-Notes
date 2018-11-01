@@ -1,4 +1,4 @@
-# Dynamic programming 
+# Dynamic programming (algorithm type)
 
 #### Recall algorithm design techniques
 
@@ -50,7 +50,7 @@ FibonacciR(n)
 02 else return FibonacciR(n-1) + FibonacciR(n-2)
 ````
 
-Straightforward recursive procedure is slow!
+Straightforward recursive procedure is slow! We have two sub problems and their size is one smaller and two smaller.
 
 Let's draw the recursion tree:
 
@@ -102,13 +102,14 @@ How does DP work?
 
 ![](.\img\76.png)
 
-
+#### Rod Cutting Recursion
 
 - Recursive top-down solution
 
-![](.\img\76.png)
+![](.\img\77.png)
 
 - Rod-Cut(P, n) calls Rod-Cut(P, *n-i*) n times where *i* starts from *1 to n*.
 - Equivalently, Rod-Cut(P, n) calls Rod-Cut(P, *j*) for *j from n-1 to 0*.
 
 SLIDE 29-!!!!!!!!!!!!!!!
+
