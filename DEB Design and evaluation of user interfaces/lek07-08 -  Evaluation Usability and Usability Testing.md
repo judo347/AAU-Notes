@@ -1,4 +1,4 @@
-##### Usability
+##### *Usability*
 
 Describes a quality in the design: "*The effectiveness, efficiency and satisfaction with which specified users can achieve specified goals in particular environments.*"
 
@@ -230,3 +230,123 @@ Can include:
 - User suggestion solutions and design ideas.
 
 Allow enough time for discussion.
+
+#### What is a usability problem?
+
+For user-based evaluations:
+
+A problem experienced by a specific user while interacting with a specific system.
+
+The user...
+
+- is deployed or prevented in completing a task
+- feels frustrated
+- makes mistakes
+- misses important information
+- stops talking
+- is confused or surprised
+- changes strategy or approach
+- asks for help
+- makes negative comments
+
+For expert-based evaluations:
+
+A *potential* problem identified by a specific expert to be in conflict with a specific heuristic or guideline.
+
+Task 1: "You need to collaborate with another person to create an invitation. Log in to the application and share your credentials with a contact of yours."
+
+Problem(s):
+
+- Does not understand the difference between the concepts of "collaboration" vs. "invitation" is this context?
+- Does not notice the [Collaborate] option?
+- Misreading the task?
+
+Task 2: "Create an invitation and invite your guests."
+
+Problem(s):
+
+- Unclear meaning of [Preview current invitation]
+- Does not notice the [Send invitations] options
+- Unclear what "QR code" means
+
+#### Good and bad behaviour of the test moderator
+
+Important characteristics:
+
+- Solid knowledge about usability
+- Fast learner
+- Can establish good relations to subjects
+- Good memory
+- Good at listening
+- Good at communicationg
+- Can handle uncertainty
+- Flexible and capable of improvasing
+- Can stay alert for a long time
+- Can maintain and overview
+
+Typical problems:
+
+- Controlling rather than supporting
+- Too focused on data collection
+- Stick too close to test plan
+- Appears better knowing
+- Does not establish good relations
+- Jumps to conclusions
+
+#### The log file
+
+The log file is an important document in the analysis:
+
+- Simplified transcriptions of the evaluation
+- Captures the user interaction in textual form
+- Provides overview and "filtered detail"
+- Relation between time, events, and usability problems
+- Specialized tools exists - but a table in Word will do
+- Can be created "live" during tests, and fished from video recordings
+
+#### The problem list
+
+The problem list is the primary outcome from an evaluation:
+
+- A ranked, and numbered, list of usability problems
+- Indicates how many users experienced the problem (and who)
+- Indicates where in the system the problem was experienced
+- Describes each identified usability problem in detail and with brief examples
+- The problem/description may go across several tasks
+- May be divided into two lists: 1) overview and 2) detail
+
+![](.\img\14.png)
+
+#### categorizing problems
+
+Typically three categories:
+
+- Critical, Serious, Cosmetic
+- In case of different experience of severity, you typically chose the most severe
+
+Critical problem
+
+- Usable to continue
+- Feels the system behaves strongly irritating
+- Critical difference between believed and actual state of the system
+
+Catastrophic
+
+- More than one user experienced the same critical problem independently
+
+![](.\img\15.png)
+
+#### Summary example
+
+Overall performance
+
+- Test subjects spent 36-53 minutes
+- No one were able to solve all tasks
+- High level of stress and frustration
+
+Total of 83 usability problems:
+
+- 25 critical
+- 45 serious
+- 13 cosmetic
+- 31 "unique" problems
