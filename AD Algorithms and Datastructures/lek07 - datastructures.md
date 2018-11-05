@@ -132,10 +132,135 @@ Note that; "next" pointers are for elements. E.g., x.next. "head" pointer is for
   - The first elements **prev** pointer points to the last element.
   - This gives again a circular structure.
 
+![](.\img\88.png)
 
+#### Operations on doubly linked lists
 
-SLIDES!!!!!!!!!!!!! , 29-33
+- Search
+  - Given a key *k*, finds the first element with a key *k* in list *L*.
+- Insertion
+  - Insert an element *x* in list *L*.
+- Deletion
+  - Delete an element x from list L.
+- Note that for insertion and deletion, it is insert/delete an
+  element x, not an element with key x.
 
-SLIDE 31: line 2-4 skal være i den rækkefølge og line 1 skal være før line 4.
+#### Implementation: Search
 
-SLIDE!!!!!!!!!!!! 36, 38 - 54
+- Searching: linear search the list.
+
+![](.\img\89.png)
+
+Runtime = $\Theta(n)$, we have to search the entire list.
+
+#### Implementations: Insert
+
+- Insertion: insert element x onto the front of the linked list L.
+
+![](.\img\90.png)
+
+line 2-4 skal være i den rækkefølge og line 1 skal være før line 4.
+
+![](.\img\91.png)
+
+Running time = $\Theta(1)$ Contant time.
+
+#### Implementations: delete
+
+![](.\img\92.png)
+
+Running time = $\Theta(1)$ Contant time.
+
+#### Mini quiz on Moodle
+
+From exam 2016
+
+![](.\img\93.png)
+
+#### Mini quiz
+
+- Can we use a linked list to implement a stack? 
+  - Push: add an element onto the front of the linked list.
+  - Pop: delete the element pointed by the “head” pointer.
+- Are the push and pop operations still constant time?
+  - Yes, because add and delete operations of a linked list are also constant time. 
+
+|             | Push        | Pop         |
+| ----------- | ----------- | ----------- |
+| Array       | $\Theta(1)$ | $\Theta(1)$ |
+| Linked List | $\Theta(1)$ | $\Theta(1)$ |
+
+- This is why Stack is an ADT, which can be implemented by different means, e.g., using arrays or linked lists.
+
+#### Priority Queues 
+
+- A priority queue (PQ) is a container for maintaining a set A of elements, each with an associated value called key.
+- A PQ supports the following operations
+  - Insert(A, x) insert element x in set A (A=A∪{x})
+  - Maximum(A) returns the element of A with the largest key (i.e., highest priority)
+  - extract-Max(A) returns and removes the element of A with the largest key from A 
+
+#### A Max Heap implementation of Priority Queues
+
+- **Maximum**(A)
+
+```
+Heap-Maximum(A)
+01 return A[1]
+```
+
+- Takes constant time.
+
+- **Extract-Max**(A)
+
+![](.\img\94.png)
+
+- Analysis
+  - Max-Heapify takes Θ(lgn), the remaining lines take constant time.
+  - Thus, in total, Θ(lgn).
+
+- **Insert**(A,key)
+- Enlarge the heap and propagate the new element from last place “up” the heap.
+
+![](.\img\95.png)
+
+- Run time of Heap-Insert = $\Theta(lgn)$
+
+#### Priority Queue
+
+- Applications: 
+  - Job scheduling shared computing resources
+    - Call Extract-Max to select the highest-priority job from those pending jobs.
+    - Call Insert to insert a new job to the queue.
+  - As a building block for other algorithms
+    - Dijkstra’s algorithm for computing shortest routes in a graph.
+- We used a heap to implement priority queues. Other implementations are possible.
+  - Can we implement a priority queue using a (singly) linked list?
+  - What are the complexities of the 3 operations?
+
+#### Different implementations
+
+|                            | Maximum     | Extract-Max   | Insert        |
+| -------------------------- | ----------- | ------------- | ------------- |
+| Heap                       | $\Theta(1)$ | $\Theta(lgn)$ | $\Theta(lgn)$ |
+| Singly Linked List         | $\Theta(n)$ | $\Theta(n)$   | $\Theta(1)$   |
+| Ordered Singly Linked List | $\Theta(1)$ | $\Theta(1)$   | $\Theta(n)$   |
+
+Consider a specific workload: you first build a priority queue with n elements by keep inserting the n elements and then Extract-Max half of the elements. Which implementation will be the most efficient?
+
+|                            | Maximum           | Extract-Max         | Insert         |
+| -------------------------- | ----------------- | ------------------- | -------------- |
+| Heap                       | $\Theta(lgn) * n$ | $\Theta(lgn) * n/2$ | $\Theta(nlgn)$ |
+| Singly Linked List         | $\Theta(1) * n$   | $\Theta(n) * n/2$   | $\Theta(n^2) $ |
+| Ordered Singly Linked List | $\Theta(n) * n$   | $\Theta(1) * n/2$   | $\Theta(n^2)$  |
+
+#### ADT vs. Data Structure
+
+- Abstract vs. concrete
+- Specification vs. implementation
+  - Stack
+    - Specification of operations: push, pop.
+    - Implementation: array, linked list.
+  - Priority queue
+    - Specification of operations: insert, maximum, extract-Max
+    - Implementation: heap, linked list.
