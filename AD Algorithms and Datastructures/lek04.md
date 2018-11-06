@@ -132,14 +132,63 @@ $$
   - E.g., computing the factorial.
 - You can always use the repeated substitution method or recursion trees to solve any recurrence.
 
+#### Mini quiz
+
+- Solving the recurrence $T(n)=9T(n/3)+n$
+- **Master Method**:
+  - $T(n)=9T(n/3)+n$
+  - $a=9, \: b=3, \: log_ba=log_39=3, $  so $n^2$
+  - $f(n)=n=O(n^{2-ε})$ where e.g., $ε=0.5$
+  - So case 1 applies. $T(n)=\Theta(n^2)$
+- **Repeated Substitution Method**:
+
+![](.\img\106.png)
+
+#### Recursion Tree
+
+![](.\img\107.png)
+
+#### Analysing D&C Algorithms
+
+- Write down the recurrence
+  - How many subproblem? What is the size of each subproblem?
+- Solve the recurrence
+  - If the recurrence is in the form of T(n)=a*T(n/b)+f(n), try the master
+    method. 
+    - If you can use master method, use the master method. 
+    - Otherwise, go for the repeated substitution method or using a recursion tree.
+      - Not polynomially faster or slower in case 1 or case 3. 
+      - Regularity condition cannot be satisfied in case 3.
+  - Repeated substitution method and recursion trees can be applied to any recurrence, no matter what form the recurrence is.
+    - Generic solutions.
+    - I personally like the repeated substitution method, because it is much easier to make mistakes when drawing a recursion tree.
+
+#### Correctness of Alogirtms
+
+- The algorithm is **correct** if for any legal input it terminates and produces the desired output.
+
+#### Loop invariants
+
+- **Invariants** – assertions (i.e, statements about the states of the execution) that are valid any time they are reached (many times during the execution of an algorithm, e.g., in loops)
+
+- We must show three things about loop invariants:
+  - **Initialization** – it is true prior to the first iteration
+  - **Maintenance** – if it is true before an iteration, *then* it remains true before the next iteration
+  - **Termination** – when loop terminates the invariant gives a useful property to show the correctness of the algorithm
+
+#### Example for insertion sort
+
+- Invariant: at the start of each for loop, A[1…j-1] consists of elements originally in A[1…j-1] but in sorted order
+
+![](.\img\108.png)
+
+- Initialization: j = 2, the invariant trivially holds because A[1] is a sorted array
+- Invariant: at the start of each for loop, A[1…j-1] consists of elements originally in A[1…j-1] but in sorted order
+- Maintenance: the inner while loop moves elements A[j-1], A[j-2], …, A[j-k] by one position to the right without changing their order until it finds the proper position for A[j]. Then, A[j] is inserted into k-th position such that A[k-1] ≤ A[k] ≤ A[k+1]. Thus, A[1…j] consists of the elements originally in A[1…j] but in sorted order. 
+- Invariant: at the start of each for loop, A[1…j-1] consists of elements originally in A[1…j-1] but in sorted order
+- Termination: the loop terminates, when j=n+1. Then the invariant states: “A[1…n] consists of elements originally in A[1…n] but in sorted order”
+
+![](.\img\109.png)
 
 
 
-
-
-
-
-
-
-
-SLIDE 30 + 35 - 39 Måske flere
