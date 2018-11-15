@@ -73,4 +73,89 @@ Strategy:
   - The **minimum** running time over all k inputs of size n
   - Can be cheating
 
-SLIDE 23!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#### Compare Algorthms' Efficiencies
+
+Look at how fast T(n) grows as n grows to a very large number (to the limit). This is called **Asymtotic Complexity**.
+
+#### Asymptotic Analysis
+
+- This is the BIG IDEA of algorithmic analysis.
+- Goal: to simplify analysis of running time by getting rid of “details”, which may be affected by specific implementation and hardware. 
+  - “rounding” for numbers: 1,000,001 ≈ 1,000,000
+  - “rounding” for functions: $3n^2$ ≈ $n^2$
+
+- Basic idea of asymptotic analysis - capturing the essence
+  - Ignore machine-dependent constants.
+  - Look at the growth of the running time with the size of the input in the limit, instead of the actual running time.
+  - Asymptotically more efficient algorithms are best for all but very small inputs.
+
+#### Theta notation $\Theta$
+
+- “Engineering way” of manipulating Θ notation.
+  - Ignore its leading constant
+    - $T(n)=1000*n^5 = \Theta*(n^5)$
+  - Drop its lower order terms
+    - $T(n)=n^5 + n^3 + lgn= \Theta (n^5)$
+
+
+
+- How to identify lower order terms?
+  - Constant < poly-logarithm < polynomial < exponential
+  - c                            $lg^kn$                      $n^a$                   $b^n$
+
+![](.\img\116.png)
+
+#### Theta notation $\Theta$
+
+- Mathematical definition
+  - Θ(g(n)) is a set of functions {f(n)}.
+  - Θ(g(n)) ={f(n): there exists positive constants $c_1$, $c_2$, and $n_0$, s.t. $0 ≤ c_1 g(n) ≤ f(n) ≤ c_2 g(n)$ for all $n ≥ n_0$}.
+- f(n)= Θ(g(n)) means f(n) ∈ Θ(g(n))
+- Asymptotically tight bound
+- f(n) is equal to g(n) within a constant factor. 
+
+#### Big-O Notation O
+
+- Mathematical definition
+  - Ο(g(n)) is a set of functions.
+  - Ο(g(n)) ={f(n): there exists positive constants c, and $n_0$, s.t. $0 ≤ f(n) ≤ c g(n)$ for all $n ≥ n_0$}.
+- f(n)= Ο(g(n)) means f(n) ∈ Ο(g(n))
+- Asymptotically upper bound.
+- f(n) grows asymptotically slower than g(n).
+- Used for worst-case analysis.
+
+#### Big-Omega Notation Ω
+
+- Mathematical definition
+  - Ω(g(n)) is a set of functions.
+  - Ω(g(n)) ={f(n): there exists positive constants c, and n0, s.t. $0 ≤ c g(n) ≤ f(n)$ for all $n ≥ n_0$}.
+- f(n)= Ω(g(n)) means f(n) ∈ Ω(g(n))
+- Asymptotically lower bound.
+- f(n) grows asymptotically faster than g(n).
+
+- Used for best-case analysis. 
+
+![](.\img\117.png)
+
+#### Common Time Complexities
+
+![](.\img\118.png)
+
+#### Two concepts (Complexity)
+
+- Concrete complexity vs. abstract complexity
+  - Concrete complexity refers to the results from the complexity analysis using the RAM model, including many details.
+  - Abstract complexity refers to the results from the asymptotic analysis, i.e., using the theta, Big-O, and Big-Omega notation. 
+- Example, insertion sort
+  - Concrete complexity
+
+![](.\img\119.png)
+
+- Abstract complexity (above ex.)
+  - Worst case, average case: $Θ(n^2)$
+  - Best case: Θ(n)
+
+- Another example, exercise from Lecture 1, CLRS, 1.2-2. 
+  - Insertion sort needs $8n^2$ steps vs. merge sort needs 64nlgn steps.
+  - Concrete complexity: 8$n^2​$ vs. 64nlgn
+  - Abstract complexity: Θ($n^2$) vs. Θ(nlgn)
