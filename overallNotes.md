@@ -23,4 +23,5 @@ Duration: 2 hours. Internet connection allowed for digital submission only. Perm
 ## Todo before exam
 
 - Make sure all files got a topic of the lecture and subject.
+- Write topic under the tittle in all lectures.
 

@@ -1,2 +1,2 @@
-# Lecture 11: Strongly Connected Components and Minimum Spanning Trees
+# Lek11: Strongly Connected Components and Minimum Spanning Trees
 
