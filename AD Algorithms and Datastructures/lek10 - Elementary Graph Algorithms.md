@@ -1,5 +1,7 @@
 # Lek10 - Elementary Graph Algorithms
 
+**Graphs, DAG**
+
 #### Graphs
 
 - Applications with graphs
@@ -159,4 +161,111 @@ Depth-first forest: u -> v -> y -> x   og   w -> z
 
 ![](.\img\131.png)
 
-TODO SLIDE 35!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#### BFS vs. DFS
+
+BFS:
+
+- Search from one source.
+- Only visit the vertices that are reachable from the source. 
+- BFS tree.
+- Often serves to find shortest paths and shortest path distances.
+- O(|V| + |E|)
+
+DFS:
+
+- May search from multiple sources.
+- Visit every vertex.
+- DFS forest.
+- Often as a subroutine in another algorithm, e.g.,
+  - Classifying edges (we will see it shortly).
+  - Topological sort (we will see it shortly).
+  - Strongly connected components (next lecture).
+- Θ(|V| + |E|)
+
+#### Edge Classification based on DFS
+
+![](.\img\133.png)
+
+- When exploring an edge (x, y), y’s color tells something:
+  - If y is white – visit x, then y, edge (x, y) is a tree edge.
+  - If y is gray – visit y, later x, then y again, edge (x, y) is a back edge.
+  - If y is black, edge (x, y) is a forward or cross edge.
+
+![](.\img\134.png)
+
+#### DAG: Directed Acyclic Graph
+
+- A DAG is a directed graph with no cycles. 
+
+![](.\img\135.png)
+
+- Applications:
+  - Indicate precedence relationship: an edge e=(a, b) from a to b means that event a must happen before event b.
+
+#### DAG: Example
+
+- Indication of precedence:
+  - Some events must happen before some other events
+- Example: professor gets dressed in the morning.
+  - The professor must put certain garments before others (e.g., socks before shoes). 
+
+![](.\img\136.png)
+
+#### How to check DAG
+
+- A directed graph is acyclic if and only if the graph has no back edges. 
+
+![](.\img\137.png)
+
+#### Topological sort
+
+- Input: 
+  - DAG G = (V, E)
+- Aim: 
+  - Introduce a linear ordering of all its vertices, such that for any edge (u,v) in the DAG, event u appears before event v in the ordering.
+- Output:
+  - Topologically sorted DAG, i.e., a linked list of vertices, showing an order.
+
+![](.\img\138.png)
+
+#### Topological sort example
+
+![](.\img\139.png)
+
+#### Run Time of Topological Sort
+
+Algorithm:
+
+![](.\img\140.png)
+
+- Run-time:
+  - DFS takes Θ(|V|+|E|)
+  - It takes constant time Θ(1) to insert a vertex onto the front of a linked list.
+    - In total, |V| vertices. Thus, Θ(|V|).
+  - In total, Θ(|V|+|E|).
+
+#### Topological sort correctness
+
+- Topological sort of a DAG G
+  - Produce a linear order of vertices in G, such that if an edge (u, v) exists in G, event u appears before event v in the ordering.
+
+![](.\img\141.png)
+
+- Prove: Topoligical-Sort(G) produces a topological sort of G.
+  - i.e., Topoligical-Sort(G) can produces an order that u appears before v.
+  - Just need to prove, for any edge (u,v) in a DAG G, if we use a DFS to explore (u,v), we must obtain u.f > v.f.
+  - Since Topoligical-Sort(G) uses an reversed order to arrange vertices by their finishing time, as long as we have u.f > v.f, we can have the order that u appears before v.
+
+
+
+- We just need to show that , if we use a DFS to explore edge (u,v) in a DAG G, we must obtain u.f > v.f.
+
+
+
+- When explore (u, v) by a DFS, we distinguish three cases:
+  - Case 1: v is white;
+    - v becomes a descendant of u, thus v will be finished before u, i.e., u.f v.f. 
+  - Case 2: v is gray;
+    - (u, v) is a back edge. However, DAG should not have a back edge. So this won’t happen.
+  - Case 3: v is black;
+    - v has already finished. Thus, u.f > v.f.

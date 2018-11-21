@@ -2,7 +2,7 @@ CLRS p56 -> cheatsheet
 
 Master method (the three cases, make table) from lek4
 
-
+The difference of big-O, Theta and Ohm.
 
 $\Theta \ O \ \Omega$
 
