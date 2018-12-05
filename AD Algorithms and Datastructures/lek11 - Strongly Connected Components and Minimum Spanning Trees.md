@@ -102,6 +102,8 @@ Then the MST of the graph is an optimal solution.
 
 ### Prim's algorithm
 
+SLIDE 21!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 ### Kruskal's algorithm
 
 ### Generic algorithm
