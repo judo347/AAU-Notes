@@ -102,9 +102,95 @@ Then the MST of the graph is an optimal solution.
 
 ### Prim's algorithm
 
-SLIDE 21!!!!!!!!!!!!!!!!!!!!!!!!!!
+#### Growing MST
+
+Input: Connected, undirected, weighted graph G = (V, E), A weighted function w: E -> $\R$.
+
+Output: An MST A, i.e., a set of edges
+
+Intuition - greedy search:
+
+- Initialize A = $\emptyset$, and A is a subset of some MST, i.e., a tree.
+- Add one edge (u, v) to A at a time, such that A $\cup$ {(u, v)} is a subset of some MST.
+- Key part:  how to determine an edge (u, v) to add.
+  - Edge $(u,v) \in E $ but $(u,v) \notin A$
+  - What else? 
+
+![](.\img\149.png)
+
+#### Prim's Algorithm
+
+A special case of the generic MST method.
+
+Input: Connected, undirected, weighted graph G = (V, E), A weight function w: E -> $\R$, A random vertex *r* to start with.
+
+![](.\img\150.png)
+
+Intuition:
+
+- A vertex based algorithm.
+- The algorithm maintains a **tree**.
+- Add one vertex to a tree at a time, until all are added -- MSP.
+- Safe edge: the least weight edge that connects a vertex v not in the tree to a vertex in tree, i.e., greedy feature, -- add v.
+
+Output: MST, where each vertex v has two attributes:
+
+- Parent attribute, **v.parent**: v’s parent in the MST.
+- Key attribute, **v.key**: the least weight of any edge connecting v to a vertex in the MST.
+
+v.key, if vertex v is not in the tree (during the search)
+
+- The least weight of any edge connecting v to a vertex in tree
+
+![](.\img\151.png)
+
+Min-priority queue
+
+- Implements the intuition of greedy search. Contains all vertices that are not in the tree. Arrange its vertices by an ascending order of the attribute v.key. Every time, extract vertex v that has the minimum key value. f is the vertex to add, satisfying the intuition of safe edge (c, f).
+
+![](.\img\152.png)
+
+![](.\img\153.png)
+
+![](.\img\154.png)
+
+![](.\img\155.png)
+
+![](.\img\156.png)
+
+![](.\img\157.png)
+
+#### Complexity Analysis
+
+![](.\img\158.png)
 
 ### Kruskal's algorithm
+
+#### Disjoint-Set ADT
+
+Maintains a partition of vertices. A collection S of disjoint vertex sets, e.g., $S=\{X,Y \} , X$ and $Y$ are vertex sets, and $X \cap Y = \emptyset$.
+
+Operations of collections S:
+
+![](.\img\159.png)
+
+#### Example of Disjoint-Set
+
+![](.\img\160.png)
+
+#### Kruskal's Algorithm
+
+A special case of the generic MST method.
+
+Input: Connected, undirected, weighted graph G = (V, E), A weight function w: E -> $\R$.
+
+Output: MST.
+
+Intuition: An edge based algorithm. The algorithm maintains a **forest**, where each vertex is treated as a distinct tree in the beginning. Add one edge to from G to MST at a time. Safe edge: the least weight edge among all edges in G that connects two distinct trees in the **forest**, i.e., greedy feature.
+
+![](.\img\161.png)
+
+SLIDE 36!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ### Generic algorithm
 
