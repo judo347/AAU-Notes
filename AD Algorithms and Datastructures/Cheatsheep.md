@@ -16,3 +16,4 @@ $\Theta(n^2*lg(n))$
 
 Sums regneregler! CLRS p1147pdf
 
+Relation Symbols ($\cup \in \subset$)

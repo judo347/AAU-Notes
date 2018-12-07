@@ -190,7 +190,101 @@ Intuition: An edge based algorithm. The algorithm maintains a **forest**, where 
 
 ![](.\img\161.png)
 
-SLIDE 36!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+The algorithm keeps adding a safe edge (u, v) to the MST, if (u, v) satisfies: C1: has the least weight among all edges in G, C2: connects two different trees in the forest – (u, v) is not in MST.
+
+If u and v belong to the same tree of the forest, u and v are a part of MST – adding (u, v) creates a cycle for MST.
+
+![](.\img\162.png)
+
+![](.\img\163.png)
+
+![](.\img\164.png)
+
+![](.\img\165.png)
+
+![](.\img\166.png)
+
+![](.\img\167.png)
 
 ### Generic algorithm
+
+A cut of an undirected graph G=(V, E) is a partition of vertices, denoted as **(S, V-S)**, where $S \subset V$.
+
+An edge (u, v)∈ E **crosses** the cut if u is in S and v is in VS, or v is in S and u is in V-S.
+
+**Light edge** is an edge crosses the cut and has the minimum weight of any edge crossing the cut.
+
+![](./img/168.png)
+
+Given a cut **(S, V-S)** as a partition of G=(V, E).
+
+Considering a set A of edges, we say the cut **respects** A if no edge in A crosses the cut. 
+
+![](.\img\169.png)
+
+![](.\img\170.png)
+
+3.1: If an edge belongs A, i.e., a part of MST, it does not cross S to V-S – this makes sure edges in A are not safe edges.
+
+3.2: the light edge (u, v) is safe for A, satisfying:
+
+- (u, v) crosses S to V-S: (u, v) does not belong to A.
+- (u, v) has the minimum weight of any edge crossing the cut: greedy.
+
+Essence of the generic algorithm: Find a **possible** cut. Take a light edge.
+
+![](.\img\171.png)
+
+#### Prim’s algorithm vs. Generic alg.
+
+Prim’s alg. maintains a tree A (also the output MST).
+
+The safe edge added to A is always a least-weight edge connecting the tree to a vertex not in tree.
+
+![](.\img\172.png)
+
+Currently, A={(a, b), (b, c), (c, i)}, where A forms a tree. Since A doesn’t cover all vertices, continue to explore.
+
+Current cut (S, V-S) 
+
+- S={a, b, c, i}, vertices that are not in the priority queue. They are all in A.
+- V-S={f, g, h, d, e}, vertices that are in the priority queue.
+- Cut (S, V-S) respects A.
+
+Light edge (c, f) is added into A.
+
+#### Kruskal’s alg vs. Generic Alg
+
+Kruskal’s alg. maintains a forest S and outputs a MST.
+
+![](.\img\173.png)
+
+The safe edge added to MST is always a least-weight edge connecting two distinct trees in S.
+
+![](.\img\174.png)
+
+We can construct a possible cut (S, V-S) 
+
+- S={a, c, i, f, h, g}.
+- V-S={b, d, e}.
+- Cut (S, V-S) respects MST.
+
+Given the cut, (a, b) is a light edge and can be added into MST.
+
+- (a, b) has the minimum weight: 4.
+- Check S.findSet(a) and S.findSet(b): {a}≠{b}, add (a, b) to MST.
+- MST={(h,g), (i,c), (g,f), (a,b)}
+- S={{a,b}, {c, i}, {d}, {e}, {f, h, g}}
+
+Mini quiz: what about (c, f), whose weight is also 4?
+
+Given the cut, (c, f) is not a light edge and cannot be added into MST.
+
+- (c, f) does not cross the cut.
+
+Consider a different cut (S, V-S)
+
+- S={h, g, f} and V-S={a, b, c, d, e, i}
+- Cut (S, V-S) respects MST.
+- (c, f) is a light edge. 
 
