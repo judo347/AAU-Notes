@@ -11,8 +11,6 @@ From architecture to components:
 
 Bank example: Remove private event: Credit approval: only happen once and only to customer.
 
-SLIDES 9 - 13!!!!!!!!!!!!!!!!!
-
 INSÆT NEDENSTÅENDE EKSEMPEL!! BOTH CLASS DIAGRAMS + EVENT TABLE (enhanced solution)
 
 Event table for representing the class diagram RULES: (Exam opg example 4.2 Jan 2018)
