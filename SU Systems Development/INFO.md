@@ -19,7 +19,6 @@ Take the example from your report.
 # TODO
 
 - Look for missing notes.
-- Include components examples from project.
 
 
 

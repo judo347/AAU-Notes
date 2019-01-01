@@ -63,5 +63,9 @@ The table shows a multitude of events that happen in the problem-domain, along w
 
 ![](.\img\80.png)
 
+### Components
+
+![](.\img\81.png)
+
 
 
