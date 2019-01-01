@@ -1,4 +1,4 @@
-# Function Component
+# 13: Function Component: Patters: Model-Class placement, Function-Class placement, Strategy, Active function.
 
 From architecture to components:
 ![](.\img\57.png)

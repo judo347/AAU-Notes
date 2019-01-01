@@ -1,4 +1,4 @@
-# Usage
+# III: 6: Usage: Actors, Functions, Work Tasks, Use Case, Patterns (Procedual, Material). 
 
 Event tables: * = 0 or more, + = 0 or 1 time.
 

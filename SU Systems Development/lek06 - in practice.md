@@ -1,4 +1,4 @@
-# OOA&D in practice
+# OOA&D in practice: Waterfall and Iterative approach.
 
 #### Unclear requirements
 

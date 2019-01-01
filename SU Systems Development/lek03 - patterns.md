@@ -1,4 +1,4 @@
-## Problem Domain Analysis
+## II: 4: Structure: Class diagrams and patterns, and how to use them. Patterns: Role, Relation, Hierarchy, Item-Descriptor.
 
 #### Class Diagram
 

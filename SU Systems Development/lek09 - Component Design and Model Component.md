@@ -1,6 +1,4 @@
-# Component Design and Model Component
-
-## Components design
+## V: Components design: Putting it all together.
 
 #### Results
 

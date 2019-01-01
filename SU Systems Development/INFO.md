@@ -13,3 +13,20 @@ EXAM:
 
 
 Take the example from your report.
+
+
+
+# TODO
+
+- Keyword notes.
+- Look for missing notes.
+- Include components examples from project.
+- Complete lek10.
+
+
+
+## Print
+
+These documents.
+
+Google docs "OOA&D" containing project OOAD

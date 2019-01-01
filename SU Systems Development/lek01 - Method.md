@@ -1,4 +1,4 @@
-## Chapter 1: Method
+## 1: Method: Base understanding and analysis.
 
 ![](.\img\32.png)
 
@@ -70,17 +70,15 @@ System = Collection of components that implement modeling requirements, function
 
 ![](.\img\34.png)
 
-## Chapter 2
+## 2: System Choice: Rich Picture, FACTOR.
 
-Rich Picture: a drawing to illustrate of the problem. to differ problem domain and app. domain.
-
-Rich picture = both system and real world.
+Rich Picture: a drawing to illustrate of the problem. to differ problem domain and app. domain. Rich picture = both system and real world.
 
 #### Factor
 
 - **Functionality**: The system functions that support the app-domain tasks.
 - **App-domain**: Those parts of an organization that administrate, monitor or control a problem domain.
-- **Conditions**: Se Bog!!!!!!!!!!!!!!!
+- **Conditions**: The conditions under which the system will be developed and used.
 - **Technology**: Both the technology used to develop the system and technology on which the system will run.
 - **Objects**: The main objects in the problem domain.
 - **Responsibility**: The systems overall responsibility in relation to its context.

@@ -1,19 +1,16 @@
-# System choice
-
-### Problem domain analysis
+## II: Problem domain analysis: Event.
 
 #### Results:
 
 - Class diagram (chapter 20)
 - Behaviour pattern for each class.
-
-Event table!
+- Event table!
 
 Classify objects and events in problem domain.
 
 From reality to objects. (Abstract classification) Look at objects to define classes.
 
-#### Key concept: Event
+### Key concept: Event
 
 - An intantanious incident involving one or more objects. Example: IKEA payment: Event = Payed. Shopping is not an event.
 - Common to several objects: buyer and goods bought.
