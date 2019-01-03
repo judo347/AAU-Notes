@@ -67,5 +67,13 @@ The table shows a multitude of events that happen in the problem-domain, along w
 
 ![](.\img\81.png)
 
+## Usage
 
+### Work Tasks:
+
+- Register tournament/configure tournament stages: The host decides to register and set-up a tournament, in accordance to the wanted tournament-structure.
+- Register bot: The host decides to register a bot for the tournament. The host must enter the bots name, its path to its config, its elo, and optionally a description. Values can be entered in any order, and when done, the task i complete. The task can also be aborted instead of entering a value.
+- Edit a played match: The streamer decides to go back a edit the results of a played match. The streamer will select a match to edit, and enter the desired results. The streamer ends the task at any time, either saving the values or abouting without save. 
+- Start match: The streamer decides to start the next match. First they selects the match they want to start, then starts it. This runs the RLBot framework with the bots in the selected match and creates an overlay with the bots’ name.
+- Conclude match: The host should be able to end a specific match and fetch the results if wished. First they select a match they want to conclude, then the system will ask if the fetched result should be assigned to this match, if no is chosen the host should be prompted to enter a result manually.
 

@@ -19,6 +19,8 @@ Take the example from your report.
 # TODO
 
 - Look for missing notes.
+- Pattern cheatsheet with a bit of discription.
+- Dictionary: Behavioral patterns, 
 
 
 
