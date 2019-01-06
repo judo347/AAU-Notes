@@ -1,5 +1,7 @@
 ### 3: Divide and Conquer (Analyzing Recursive ..)
 
+*Recursive algorithms and recurrences, Merge sort.*
+
 Divide big problems into small problems of the same nature. Then solve the sub-problems recursively until it is so small that you can solve the problem trivially.
 
 #### factorial n!

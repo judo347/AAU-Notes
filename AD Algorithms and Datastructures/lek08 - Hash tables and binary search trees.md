@@ -1,5 +1,7 @@
 # Hash Tables and Binary Search Trees
 
+*Dictionaries, Hash table, Collision resolution, Chaining, Division method, Dynamic set, Binary search tree, Tree walks.*
+
 #### Dictionaries
 
 - An element has a key part and a satellite data part.

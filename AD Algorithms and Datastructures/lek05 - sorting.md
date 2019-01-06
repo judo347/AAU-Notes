@@ -13,14 +13,6 @@ Bubble sort, selection sort and quick sort.
 
 ![](.\img\24.png)
 
-
-
-
-
-
-
-SLIDE 11!!!!!!!!!!!!!
-
 ### Intertion sort
 
 - **In-place** sorting.

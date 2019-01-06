@@ -1,4 +1,6 @@
-# 0Lek11: Strongly Connected Components and Minimum Spanning Trees
+# Lek11: Strongly Connected Components and Minimum Spanning Trees
+
+*Transpose graph, Minimum spanning trees, Prim's and Kruskal's algorithms, Generic algorithm.*
 
 ## Strongly Connected Components
 

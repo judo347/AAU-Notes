@@ -4,6 +4,8 @@
 
 # Dynamic programming (algorithm type)
 
+*Recursion, Rod cutting, Recurrence tree.*
+
 #### Recall algorithm design techniques
 
 - Algorithm design techniques so far:

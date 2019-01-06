@@ -1,5 +1,6 @@
 # Divide-and-conquer: Solving Recurrences & Correctness of Algorithms
 
+*Recursion tree, The master method (EXAM), Master Theorem, Correctness of algorithms.* 
 $$
 T(1)=3 \\
 T(n)=T(n-1)+3n, when \ n>1 \\
@@ -163,7 +164,7 @@ $$
     - Generic solutions.
     - I personally like the repeated substitution method, because it is much easier to make mistakes when drawing a recursion tree.
 
-#### Correctness of Alogirtms
+#### Correctness of Algorithms
 
 - The algorithm is **correct** if for any legal input it terminates and produces the desired output.
 
