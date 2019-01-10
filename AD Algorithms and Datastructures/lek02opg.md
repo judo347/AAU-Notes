@@ -68,28 +68,3 @@ Svar = $O(n*lg*n)$
 **Assume that A is with size 8x8, how does A look like after FillTable(A)? What is the (asymtotic) running time of FillTable?**
 
 Runtime = $O(n^2)$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

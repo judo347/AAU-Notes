@@ -122,4 +122,3 @@ The leafs in the tree is already/always heaps. So call heap on the first element
   - Equivalently, we compute $ \sum\limits_{h=0}^{lgn}h*z_h$, which is then the total run time.
 - Let's identify $z_h = 2^{lgn-h}$ and compute $\sum\limits_{h=0}^{lgn}h*z_h$
   - Proof can also be found in CLRS page 157-159;
-

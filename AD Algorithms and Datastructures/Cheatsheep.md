@@ -1,19 +1,15 @@
-CLRS p56 -> cheatsheet
-
-Master method (the three cases, make table) from lek4
-
-The difference of big-O, Theta and Ohm.
-
-$\Theta \ O \ \Omega$
-
-$husk \ at \ n*lg^2 \ n = n*lg^2(n)$
+![](.\img\180.png)
 
 ![](.\img\21.png)
 
-$\Theta(n^2*lg(n))$
+#### Logarithm rules:
 
+$$
+lg*n=log_2n \: (binary \: \: logarithm) \\
+ln*n=log_en \: (natural logarithm) \\
+lg^kn=(lg*n)^k \: (exponentiation) \\
+lg*lg*n=lg(lg*n) \: (composition) \\
+n*lg^2 \ n = n*lg^2(n)
+$$
 
-
-Sums regneregler! CLRS p1147pdf
-
-Relation Symbols ($\cup \in \subset$)
+![](.\img\181.png)

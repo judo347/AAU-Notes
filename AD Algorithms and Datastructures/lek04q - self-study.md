@@ -20,8 +20,6 @@ One solution is to re-write all to something n^x
 
    $n*lg^3(n) = n*(lg(n))^3$
 
-   Soo: ??????????
-
 4. $2n^{10}+{1.5^n}/100+4n^9*lg(n)$
 
    $\rightarrow n^{10}+xxxx+n^9*lg(n)$
@@ -53,10 +51,4 @@ for i = 0 to n-1
 		if dist < d then result.append(pair(A[i], A[j]))
 		
 return result
-		
-	
-
-
 ```
-
-![](.\img\23.png)

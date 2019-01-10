@@ -18,8 +18,6 @@ $$
 
 Above example has to be fixed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-
 ### Recursion tree
 
 - A recursion tree is a convenient way to visualize what
