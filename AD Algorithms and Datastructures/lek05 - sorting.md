@@ -1,4 +1,4 @@
-# Sorting
+# Sorting: Bubble sort, Selection sort, Quick sort, 
 
 Bubble sort, selection sort and quick sort.
 

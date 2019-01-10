@@ -1,4 +1,4 @@
-### 3: Divide and Conquer (Analyzing Recursive ..)
+### 3: Divide and Conquer (Analyzing Recursive ..):  Binary Search, Recurrences, Repeated Substitution Method, Merge sort, 
 
 *Recursive algorithms and recurrences, Merge sort.*
 

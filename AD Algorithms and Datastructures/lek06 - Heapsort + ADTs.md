@@ -1,6 +1,4 @@
-# Heapsort and ADTs
-
-Heapi
+# Heapsort and ADTs: Heapify.
 
 #### Heap
 

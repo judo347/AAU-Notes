@@ -1,4 +1,4 @@
-# Divide-and-conquer: Solving Recurrences & Correctness of Algorithms
+# Divide-and-conquer: Solving Recurrences & Correctness of Algorithms: Recursion tree, The master method, Master Theorem.
 
 *Recursion tree, The master method (EXAM), Master Theorem, Correctness of algorithms.* 
 $$

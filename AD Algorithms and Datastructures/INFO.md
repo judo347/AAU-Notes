@@ -1,4 +1,4 @@
-EXAM TODO:
+Cheatsheet for complexity with a lot of examples
 
-- Lek12
-- Lek10 opg
+
+

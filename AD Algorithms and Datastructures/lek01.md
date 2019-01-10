@@ -1,2 +1,0 @@
-# LEK1: Introduction
-

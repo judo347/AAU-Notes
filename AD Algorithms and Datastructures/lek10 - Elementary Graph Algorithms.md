@@ -1,6 +1,6 @@
 # Lek10 - Elementary Graph Algorithms
 
-**Graphs, DAG**
+*Graphs, DAG, BFS, DFS, Topological sort.* 
 
 #### Graphs
 

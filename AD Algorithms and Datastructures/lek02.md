@@ -1,10 +1,4 @@
-
-
-Todo: side 57 CLRS comparison of polylogarithmic and polynomial functions.
-
-
-
-# LEK2: Analysing Algorithms: 
+# LEK2: Analysing Algorithms: Insertion sort, RAM, Notations, Complexity.
 
 #### Insertion Sort
 

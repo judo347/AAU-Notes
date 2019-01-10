@@ -127,7 +127,7 @@ Insert: First you calculate the modulo value. If that spot in hash is taken, tak
 
 #### Open Addressing
 
-- Step *i* from 0, 1, 2, …, m-1
+- Step *i* from 0, 1, 2, …, m-1 (Only when encountering a CRASH!)
 - Linear probing: $h(k,i)=(h'(k)+i) \: mod \: m$ 
 - Quadratic probing ($c_1$ and $c_2$ are constant): $h(k,i)=(h'(k)+c_1i+c_2i^2) \: mod \: m$
 - Double hashing: $h(k,i)=(h_1(k)+ih_2(k)) \: mod \: m$
