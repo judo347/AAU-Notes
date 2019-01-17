@@ -37,7 +37,7 @@ Secondary cues (2D plane, monocular):
 
 #### Pattern Recognition
 
-Gestalt laws of perception:
+**Gestalt laws** of perception:
 
 - Proximity (Elements positioned together belong together)
 - Continuity (Connectedness between elements)
