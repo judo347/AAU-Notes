@@ -24,7 +24,7 @@ C# i think.
 
 #### 2. Make a drawing or description of the phases (internals) of a compiler (without reading the books or searching the Internet) – save this for comparison with your knowledge after the course.
 
-Remove junk -> rewrite things to be more efficient or remove fluff -> convert to assembly -> convert to binary.
+Check if syntax is correct -> Remove junk -> rewrite things to be more efficient or remove fluff -> convert to assembly -> convert to binary.
 
 #### 4. Create a list of language features group members would like in a new language. Are any of these features in conflict with each other? How would you prioritize the features?
 
