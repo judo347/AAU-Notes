@@ -30,5 +30,5 @@ Check if syntax is correct -> Remove junk -> rewrite things to be more efficient
 
 #### 5. Discuss what is needed to define a new programming language. Write down your conclusions for comparison with your knowledge after the course.
 
-A lot of documentation on how to use the langue.
+A lot of documentation on how to use the language.
 
