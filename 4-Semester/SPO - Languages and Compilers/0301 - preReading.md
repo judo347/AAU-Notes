@@ -12,7 +12,16 @@ A third potential problem is **operator overloading**, in which a single operato
 
 
 
+## Fischer Chap 1
 
+![](.\img\17.png)
+
+1. The scanner reads a source ac programas a text file and produces a stream of tokens. For example, strings such as 5 and 3.2 are recognized as inum and fnum tokens. Reserved keywords such as f and p are distinguished from variable names such as a and b. For languages of greater complexity, the techniques presented in Chapter 3 automate much of this task. (Page 40)
+2. The parser processes tokens produced by the scanner, determines the syntactic validity of the token stream, and creates an abstract syntax tree (AST) suitable for the compiler’s subsequent activities. Given the simplicity of ac,we write its parser ad hoc using the recursive-descent style presented in Chapter 5. While such parsers work well in many cases, Chapter 6 presents a more popular technique for generating parsers automatically.
+3. The AST created by the parsing task is next traversed to create a symbol table. This table associates type and other contextual information with variables used in an ac program. Most programming languages allow the use of an unbounded number of variable names. Techniques for processing symbols are discussed more generally in Chapter 8. This task can be greatly simplified for ac, which allows the use of at most 23 variable names.
+4. The AST is next traversed to perform semantic analysis. For ac, such analysis is fairly minimal. For most programming languages, multiple passes over the AST may be required to enforce programming language rules that are difficult to check in the parsing task. Semantic analysis often decorates or transforms portions of an AST as the actual meaning of such portions becomes more clear. For example, an AST node for the + operator may be replaced with the actual meaning of +, which may
+   mean floating point or integer addition.
+5. Finally, the AST is traversed to generate a translation of the original program. Necessities such as register allocation and opportunities for program optimization may be implemented as phases that precede code generation. For ac, translation is sufficiently simple to be accommodated in a single code-generation pass.
 
 ## Fischer Chap 2
 
@@ -42,4 +51,14 @@ As a special case, the symbol λ denotes the empty or null string string, which 
 From java docs: A *context-free grammar* consists of a number of *productions*. Each production has an abstract symbol called a *nonterminal* as its *left-hand side*, and a sequence of one or more nonterminal and *terminal* symbols as its *right-hand side*. For each grammar, the terminal symbols are drawn from a specified *alphabet*.
 
 From java docs: Starting from a sentence consisting of a single distinguished nonterminal, called the *goal symbol*, a given context-free grammar specifies a language, namely, the set of possible sequences of terminal symbols that can result from repeatedly replacing any nonterminal in the sequence with a right-hand side of a production for which the nonterminal is the left-hand side.
+
+2.2.2
+
+The terminal symbols used in the above figure, for instance the *assign* or *id* must be specified. In the input stream *assign* will appear as =, and we call this the actual input character.
+
+![](.\img\16.png)
+
+**An ac program and its parse tree.**
+
+This tree is build by the scanner and the code responsible is shown on page 40.
 
