@@ -62,3 +62,13 @@ The terminal symbols used in the above figure, for instance the *assign* or *id*
 
 This tree is build by the scanner and the code responsible is shown on page 40.
 
+2.6 Abstract syntax tree
+
+common practice to create an artefact of syntax analysis known as the abstract syntax tree (AST). This structure contains the essential information from a parse tree, but inessential punctuation and delimiters (braces, semicolons, parentheses, etc.) are not included. (p 46)
+
+![](.\img\18.png)
+
+Visitor pattern! Calling a node and doing something, the visitor then moves on to the next and does something.. and so on.
+
+
+
