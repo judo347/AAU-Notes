@@ -83,5 +83,28 @@ u = kat, v = $\varepsilon$, uv = kat.
 
 **Men** $L_1 \times L_2$ giver ikke mening.
 
-## Afsnit 3
+## Afsnit 3 - Endelige automater - grundlæggense ideer.
 
+Model af neuroner (Dem i hjernen). I dag bliver endelige automater andvent til leksikalsk analyser (lexer). Og også i specifikation of simple systemer.
+
+Endelig automater er simple algorithmer til sproggenkendelse. Vi ønsker at svare på spørgsmålet: "Givet w, har vi w $\in$ L?". w = streng, L = sprog. 
+
+En endelig automat er en orienteret graf. Knuderne er tilstade, kanter er transvitioner eller overgange. 
+
+**Eksempel**
+
+En af tilstandene er det vi kalder start-tilstanden, den hvor den første pil peger ind til en knude. Kanterne er mærket med tegn, kan have en eller flere. Når første tegn i input strengen læses er vi i start tilstanden. Herefter læser man et tegn efter det andet og bevæger sig rundt i den endelige automat. Hvis vil til sidst ender i en accept-tilstand er input accepteret, hvis ikke er input ikke accepteret.
+
+![](.\img\1.png)
+
+**Eksempel** (Her laves en automat der kun godkender strenge med et bestmet format)
+
+Måden man tegner på: Vi skal have en start knude. Og så tegner man hvad der gør en gladere indtil man er i accept-tilstand.
+
+![](.\img\2.png)
+
+## Afsnit 4 - Formel difinition of endelig automat
+
+![](.\img\3.png)
+
+3:39
