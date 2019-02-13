@@ -107,4 +107,53 @@ Måden man tegner på: Vi skal have en start knude. Og så tegner man hvad der g
 
 ![](.\img\3.png)
 
-3:39
+![](.\img\4.png)
+
+![](.\img\5.png)
+
+![](.\img\6.png)
+
+A acceptere w hvis der findes en følge af tilstande $v_0 , ... , r_k$ så
+
+- $r_0 = q_o$ (Start tilstand)
+
+- For alle $0 \leq i \leq k : \delta(r_i,a_i)=r_{i+1}$ (Vi når næste tilstand i følgen vha. $\delta$)
+
+- $r_k \in F​$ (Accepttilstand)
+
+ ![](.\img\7.png) 
+
+## Afsnit 5 - Lukning under foreningsmængde (1)
+
+![](.\img\8.png)
+
+![](.\img\9.png)
+
+![](.\img\10.png)
+
+![](.\img\11.png)
+
+"De naturlige tal er lukket under operationen +, 2 + 2 er stadig et naturligt tal. Naturlige tal er ikke lukket unden division, 2/3 = ikke et naturligt tal."
+
+![](.\img\12.png)
+
+## Afsnit 6 - Lukning under foreningsmængde (2)
+
+ ![](.\img\13.png)
+
+![](.\img\14.png)
+
+![](.\img\15.png)![](.\img\16.png)
+
+Man tager man den ene knude efter den anden. Lad os starte i a,x: hvis vores input er 1, ender vi i b og i x, så 1 går til b,x. Bare en af de to automater skal acceptere.
+
+![](.\img\17.png)
+
+![](.\img\18.png)
+
+![](.\img\19.png)
+
+## Afsnit 7: GYSER
+
+{aa, ag} <- mængder
+
