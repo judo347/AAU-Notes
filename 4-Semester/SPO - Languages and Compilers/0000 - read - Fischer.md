@@ -58,3 +58,16 @@ Visitor pattern! Calling a node and doing something, the visitor then moves on t
 
 
 
+## Fischer Chap 4
+
+### 4.1 Context-Free Grammers (CFG)
+
+A context-free grammar (CFG) is a compact, finite representation of a language, defined by the following four components:
+
+![](.\img\23.png)
+
+
+
+For example, the rule that variables must be declared before they are used cannot be expressed because a CFG provides no mechanism for transmitting to the body of a program the exact set of variables that has been declared. In practice, syntactic details that cannot be represented in a CFG are considered part of the static semantics and are checked by semantic routines (along with scope and type rules).
+
+Nået til 4.2
