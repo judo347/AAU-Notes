@@ -70,4 +70,14 @@ A context-free grammar (CFG) is a compact, finite representation of a language, 
 
 For example, the rule that variables must be declared before they are used cannot be expressed because a CFG provides no mechanism for transmitting to the body of a program the exact set of variables that has been declared. In practice, syntactic details that cannot be represented in a CFG are considered part of the static semantics and are checked by semantic routines (along with scope and type rules).
 
-Nået til 4.2
+Nået til 4.2 1448
+
+Java declaration of function describes with NBackus-Naur form (BNF):
+
+``Declaration -> [ final ] [ static ] [ const ] Type identifier { , identifier }``
+
+### 4.4 Parsers and Recognizers
+
+When specifying a parsing technique, we must state whether a leftmost or rightmost parse will be produced. The best-known and most widely used top-down and bottom-up parsing strategies are called LL and LR, respectively. These names seem rather arcane, but they reflect how the input is processed and which kind of parse is produced. In both cases, the first character (L) states that the token sequence is processed from left to right. The second letter (L or R) indicates whether a leftmost or rightmost parse is produced. The parsing technique can be further characterized by the number of lookahead symbols (i.e., symbols beyond the current token) that the parser may consult to make parsing choices. LL(1) and LR(1) parsers are the most common, requiring only one symbol of lookahead.
+
+Nået til 4.5.3
