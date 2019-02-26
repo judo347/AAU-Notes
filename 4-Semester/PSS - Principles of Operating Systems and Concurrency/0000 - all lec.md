@@ -24,3 +24,5 @@ Threads are faster when implemented in user-mode. The OS does not know anything 
 
 Dynamic loaded library (DLL) is often used by different processes and is therefore run in a specerate thread. 
 
+## Lecture 3 - Scheduling
+
