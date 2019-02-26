@@ -6,7 +6,7 @@
 
 1. What states can processes be in; explain what each state means.
 
-   - UNUSED: This state is for when the process has never been used.
+   - UNUSED: This state is for when the process has never been used. = Empty slot in the process table. This mean that all data in this slot is not valid/useful.
    - EMBRYO: This process has been used and is given a pid. 
    - SLEEPING: When the cpu does not need to run this process. At some point wake() will be called and the sleeping process will be set to RUNNABLE.
    - RUNNABLE: A process that is ready to be run by the CPU.
