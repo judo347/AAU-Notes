@@ -56,7 +56,19 @@ common practice to create an artefact of syntax analysis known as the abstract s
 
 Visitor pattern! Calling a node and doing something, the visitor then moves on to the next and does something.. and so on.
 
+## Fischer Chap 3
 
+### 3.2 Regular Expressions
+
+A set of strings defined by regular expressions is called a **regular set**.For purposes of scanning, a token class is a regular set whose structure is defined by a regular expression. A particular instance of a token class is sometimes called a **lexeme**; however, we simply call a string in a token class an instance of that token. For example, we call the string abc an identifier if it matches the regular expression that defines the set of valid identifier tokens.
+
+Our definition of regular expressions starts with a finite character set, or vocabulary (denoted Σ). This vocabulary is normally the character set used by a computer. Today, the ASCII character set, which contains 128 characters, is very widely used.
+
+An empty, or null, string is allowed (denoted λ). This symbol represents an empty buffer in which no characters have yet been matched. It also represents an optional part of a token. Thus, an integer literal may begin with a plus or minus, or, if it is unsigned, it may begin with λ.
+
+....
+
+Nået til mid p.66
 
 ## Fischer Chap 4
 
