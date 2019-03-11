@@ -1,4 +1,4 @@
-# # Lecture 3
+## Lecture 3
 
 ### XV6 Exercises
 
@@ -19,3 +19,29 @@
 
 3. 
 
+## Lecture 5
+
+### Exercises from OSTEP
+
+**1) Compute the response time and turnaround time when running three jobs**
+**of length 200 with the SJF and FIFO schedulers**.
+
+$T_{turnaroundtime} = T_{completion} - T_{arrival}$
+
+$T_{response} = T_{firstrun} - T_{arrival}$
+
+FIFO: 
+
+- turnaroundtime should be: 200 + 200 + 200 = 600. Average is 200.
+- response: 0, 200 and 400. Average is 333,33.
+
+SJF (Shortest job first):
+
+- Has the same values as the above FIFO because all jobs has the same length.
+
+**2) Now do the same but with jobs of different lengths: 100, 200, and 300.**
+
+FIFO:
+
+- Turnaroundtime: 100 + 200 + 300 = 600. Average is 200.
+- Response: 
