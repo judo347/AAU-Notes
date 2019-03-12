@@ -1,6 +1,6 @@
 ## Lecture 3
 
-![](C:/GitDesktop/AAU-Notes/4-Semester/SPO%20-%20Languages%20and%20Compilers/img/24.png)
+![](./img/24.png)
 
 **Rewrite the BNF of Example 3.4 to give + precedence over * and force + to be right associative.**
 
@@ -8,12 +8,12 @@ we switch + with *.
 
 
 
-![](C:/GitDesktop/AAU-Notes/4-Semester/SPO%20-%20Languages%20and%20Compilers/img/25.png)
+![](./img/25.png)
 
 **Using the grammar in Example 3.2, show a parse tree and a leftmost derivation for each of the following statements:**
 	**a. A = A * (B + (C * A))**
 
-![](C:/GitDesktop/AAU-Notes/4-Semester/SPO%20-%20Languages%20and%20Compilers/img/26.jpg)
+![](./img/26.jpg)
 
 
 
@@ -91,11 +91,15 @@ a) og b)
 
 c) It was easiest to write with the rightmost derivation.  more??
 
-**9 TODO - First and Follow**
+![](.\img\28.png)
+
+A First($\alpha$) set, is a set of all terminal symbols that can begin a sentential form derivable from the string of grammar symbols in $\alpha$, formally: $Frist(\alpha)=\{ a \in \Sigma \; | \; \alpha \rightarrow * \; a \; \beta \}$
+
+First(C) -> d = {d} DONT DONTKNPW
 
 ## Lecture 6
 
-![](.\img\28.PNG)
+![](.\img\31.PNG)
 
 ID(main), LPAREN, RPAREN, LBRACE
 CONST, ID(float), ID(payment), ASSIGN, FLOATNUM(384.00), SEMICOLON
