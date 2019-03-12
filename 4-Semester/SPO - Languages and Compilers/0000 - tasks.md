@@ -93,3 +93,16 @@ c) It was easiest to write with the rightmost derivation.  more??
 
 **9 TODO - First and Follow**
 
+## Lecture 6
+
+![](.\img\28.PNG)
+
+ID(main), LPAREN, RPAREN, LBRACE
+CONST, ID(float), ID(payment), ASSIGN, FLOATNUM(384.00), SEMICOLON
+ID(float), ID(bal), SEMICOLON
+ID(int), ID(month) ASSIGN INTNUM(0) SEMICOLON
+
+All of the occurrences of ID require additional information, as do the numbers. The attached information is shown in parentheses in the lines above.
+
+
+
