@@ -96,3 +96,17 @@ c) It was easiest to write with the rightmost derivation.  more??
 A First($\alpha$) set, is a set of all terminal symbols that can begin a sentential form derivable from the string of grammar symbols in $\alpha$, formally: $Frist(\alpha)=\{ a \in \Sigma \; | \; \alpha \rightarrow * \; a \; \beta \}$
 
 First(C) -> d = {d} DONT DONTKNPW
+
+## Lecture 6
+
+![](.\img\31.PNG)
+
+ID(main), LPAREN, RPAREN, LBRACE
+CONST, ID(float), ID(payment), ASSIGN, FLOATNUM(384.00), SEMICOLON
+ID(float), ID(bal), SEMICOLON
+ID(int), ID(month) ASSIGN INTNUM(0) SEMICOLON
+
+All of the occurrences of ID require additional information, as do the numbers. The attached information is shown in parentheses in the lines above.
+
+
+
