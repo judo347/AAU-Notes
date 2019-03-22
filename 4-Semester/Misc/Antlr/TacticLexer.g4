@@ -13,10 +13,13 @@ INTEGER     :       'int';
 BOOL        :       'bool';
 SEPERATOR   :       ',';
 IF          :       'if';
+ELSEIF      :       'elseif';
 ELSE        :       'else';
 TRUE        :       'true';
 FLASE       :       'false';
 FOR         :       'for' ;
+WHILE       :       'while';
+DOT         :       '.';
 
 
 // Literals
@@ -41,6 +44,10 @@ BOOL_GREATER_OR_EQUAL   : '>=' ;
 INCREMENT               : '++' ;
 
 // Whitespace and comments
-WS          : [ \n\t]+      -> skip; // skip newlines and tabs
+WS          : [\n\t]+      -> skip; // skip newlines and tabs
 //LC          : '//' ~[\r\n]    -> channel(HIDDEN); //skip line comments
-LC          : '//' .*? '//'    -> channel(HIDDEN); //skip line comments
+//LC          : '//' .*? '//'    -> channel(HIDDEN); //skip line comments
+//LC          : '//' .*? '\n'    -> channel(HIDDEN); //skip line comments
+//LC          : '//' ~('\n'|'\r')*    -> channel(HIDDEN); //skip line comments
+//LC          : '//' ~('\n')    -> channel(HIDDEN); //skip line comments
+//LC            : '//' ~[\n] -> channel(HIDDEN);
