@@ -94,3 +94,16 @@ When specifying a parsing technique, we must state whether a leftmost or rightmo
 
 4 DONE
 
+## Chapter 7 - Syntax-Directed Translation
+
+The AST then serves as
+a mechanism for conveying information between compiler phases.
+
+In general, there can be no algorithm that determines whether the
+languages denoted by two context-free grammars are the same. This means
+that when a grammar is modified, it cannot in general be proved that the
+modification did not change the language in some unacceptable way.
+
+256: Designing the AST and parser that generates the wanted AST, CAN BE USED IN PROJECT!
+
+Chap 7 -> DONE
