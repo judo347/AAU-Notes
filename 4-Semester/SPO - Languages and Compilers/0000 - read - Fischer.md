@@ -107,3 +107,7 @@ modification did not change the language in some unacceptable way.
 256: Designing the AST and parser that generates the wanted AST, CAN BE USED IN PROJECT!
 
 Chap 7 -> DONE
+
+## Chapter 8 - Symbol Tables and Declaration Processing (Section 1-4)
+
+8 -> 8.3 DONE
