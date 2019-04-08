@@ -110,4 +110,10 @@ Chap 7 -> DONE
 
 ## Chapter 8 - Symbol Tables and Declaration Processing (Section 1-4)
 
-8 -> 8.3 DONE
+8 -> 8.4 DONE
+
+## Chapter 9 - Semantic Analysis
+
+DONE
+
+Nået til Lek14
