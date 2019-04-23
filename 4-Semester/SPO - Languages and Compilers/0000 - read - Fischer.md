@@ -117,3 +117,7 @@ Chap 7 -> DONE
 DONE
 
 Nået til Lek14
+
+
+
+Missing reads: Chap14, 
