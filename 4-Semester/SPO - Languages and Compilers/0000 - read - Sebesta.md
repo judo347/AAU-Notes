@@ -5,8 +5,3 @@ A third potential problem is **operator overloading**, in which a single operato
 1.1.3 Language evaluation Criteria!!!!
 
 
-
-
-
-## Sebesta Chap 2
-
