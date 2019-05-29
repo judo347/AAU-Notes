@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="antlr4" />
+        <module name="antlr4-maven-plugin" />
+        <module name="antlr4-runtime" />
+        <module name="antlr4-runtime-test-annotation-processors" />
+        <module name="antlr4-runtime-test-annotations" />
+        <module name="antlr4-runtime-testsuite" />
+        <module name="antlr4-tool-testsuite" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="antlr4" target="1.7" />
+      <module name="antlr4-master" target="1.7" />
+      <module name="antlr4-maven-plugin" target="1.7" />
+      <module name="antlr4-runtime" target="1.7" />
+      <module name="antlr4-runtime-test-annotation-processors" target="1.7" />
+      <module name="antlr4-runtime-test-annotations" target="1.7" />
+      <module name="antlr4-runtime-testsuite" target="1.7" />
+      <module name="antlr4-tool-testsuite" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
