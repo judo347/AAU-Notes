@@ -1,3 +1,11 @@
+**Re-exam**
+
+Make sure that there are a drawing for each topic and practice with that drawing as the centre of discussion!!!!!!!!!!!
+
+
+
+
+
 <https://www.youtube.com/watch?v=lIZN6UgoxOc&list=PLpYYmFbxbA1ofkOY3or5ysqBKYBdAuZ6S&index=2>
 
 Indian vids, nået til: 17
@@ -45,8 +53,6 @@ Each PCB has one or more linked TCB (threads).
 - New: being created, yet to run.
 - Dead: terminated.
 
-![](.\img\exam\1.png)
-
 ![](.\img\1.png)
 
 #### process creation
@@ -77,11 +83,29 @@ This is also done for threads, which is linked to a PCB. Each PCB has one or mul
 
 Multi-threading: Multiple lines of execution though your code. A thread is like another copy of a process that executes independently. They share the program code, address space and heap, but each has its own program counter and their own stack with a stack pointer. Results in a smaller memory footprint.
 
-Multi-threading is often used to maximize the unage of the CPU. So if one thread blocks the CPU, by duing I/O operations, another thread can use the CPU/core meanwhile.)
+Multi-threading is often used to maximize the usage of the CPU. So if one thread blocks the CPU, by doing I/O operations, another thread can use the CPU/core meanwhile.)
 
 Kernel threads: are threads that are scheduled independently by the kernel.
 
 #### implementation strategies for thread support
+
+Implementation in kernel-space (aka. obvious choice)
+
+- Modify/extend *kernel* to support threads
+- Pro's: better handling of blocked threads
+
+Implementation in user-space
+
+- *User-space library* for thread creation, switching, termination ...
+- Pro's: performance (kernel not involved), portable
+- Con's: blocked threads
+
+Hybrid: kernel-support for user-space threads (aka. complex choice)
+
+- Mainly in user-space
+- Mapping user-space threads to (fewer) kernel-space threads
+- Pro's: all of the above
+- Con's: complex implementation, complex management
 
 #### user-/kernel-mode
 
@@ -397,6 +421,8 @@ Devices expose an interface of memory registers
 - Command to execute
 - Data to transfer
 
+![](.\img\exam\8.PNG)
+
 #### Types of I/O (programmed, interrupt-driven, DMA)
 
 **Programmed**
@@ -429,11 +455,13 @@ See Types of I/O (programmed, interrupt-driven, DMA).
 
 #### device drivers
 
-Device drivers is part of OS code that talks to specific device, gives commands, handles interrupts etc. Each drivers knows its device, its regiters and such - how to interact.
+Device drivers is part of OS code that talks to specific device, gives commands, handles interrupts etc. Each drivers knows its device, its registers and such - how to interact.
 
 The OS knows how to read and write but the specifics for writing and reading for each device is handles by the drivers.
 
 ## Question 8: XV 6
 Keywords: Your choice!
+
+Idea: maybe take a few aspect that I know well and find out how these work in XV6!!
 
 <https://www.youtube.com/watch?v=YPIw67LuuY4&feature=youtu.be&fbclid=IwAR2hAwLBGtaAWZt2F_6m0HBgvHaq-dr4jPoVgcOl8ggAlKcj6esK3Cz-D9s>
