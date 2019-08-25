@@ -2,7 +2,7 @@
 
 Make sure that there are a drawing for each topic and practice with that drawing as the centre of discussion!!!!!!!!!!!
 
-
+Udskriv keywords!!
 
 
 
@@ -119,13 +119,15 @@ MANGLER 7:15-16:33 Lecture 4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ## Question 2: Scheduling
 
+**Notes/order**: <span style="color:pink">Two parts, metrics, simple process model, Scheduling policies.</span>
+
 Has two parts: Policy to pick which process to run and mechanism to switch to that process.
 
-Non-preemptive (non-cooperative) schedulers switch only when a process is blocked or terminated, and preemptive (non-cooperative) schedulers switch even when the process is ready to continue. CPU generates periodic timer interrupts and then the OS checks if the current process has run for too long.
+Non-preemptive schedulers switch only when a process is blocked or terminated, and preemptive schedulers switch even when the process is ready to continue. CPU generates periodic timer interrupts and then the OS checks if the current process has run for too long.
 
 #### Metrics for scheduling (turnaround time, response time)
 
-Tires to optimize:
+Tries to optimize:
 
 - Max: Utilization (Fraction of time CPU is used)
 - Min average: Turnaround time (Time from process arrival to completion)
@@ -146,7 +148,7 @@ Approaches:
 - FIFO: First in, first out / FCFS: Fist come, First Served.
   - Problems: turnaround times tend to be high: small processes can get stuck behind large ones.
 - SJF: Shortest Job Frist
-- - Problems: short jobs can still get stuck behind large ones by arriving after the large one starts to execute
+  - Problems: short jobs can still get stuck behind large ones by arriving after the large one starts to execute
 - STCF: Shortest Time-to-Completion First / PSJF: Preemptive Shortest Job First
   - Problem: 
 - Round Robin (Good for response time)
@@ -158,7 +160,7 @@ Approaches:
   - Within same priority, any algorithm like RR
   - Priority of process decays with its age
 - Lottery Scheduler
-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  - Each jobs gets a number of tickets and the scheduler then draws a random ticket at runs the matching job. Jobs can be granted a higher amount of tickets for a relative higher chance of selection.
 
 ## Question 3: Memory management
 
