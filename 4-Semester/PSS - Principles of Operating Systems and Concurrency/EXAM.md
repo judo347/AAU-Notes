@@ -207,11 +207,7 @@ Base is the physical address corresponding to the virtual address 0 and the boun
 
 #### static allocation (nonuniform)
 
-This is stored in the Program Code part of the process image. This is things like static/global variables.
-
 #### dynamic allocation
-
-Done on the heap and is used for dynamic data structures. Can be done by calling malloc.
 
 #### virtual memory
 
