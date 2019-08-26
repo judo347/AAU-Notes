@@ -389,18 +389,18 @@ Conditions for deadlock
 
 - Mutual exclusion: a thread claims exclusive control of a resource (e.g., lock)
 - Hold-and-wait: thread holds a resource and is waiting for another
-- No preemption: thread cannot be made to give up its resource (e.g., cannot take back a lock)
+- No pre-emption: thread cannot be made to give up its resource (e.g., cannot take back a lock)
 - Circular wait: there exists a cycle in the resource dependency graph
-- ALL four of the above contidions must hold for a deadlock to occour
+- ALL four of the above conditions must hold for a deadlock to occur
 
 #### solution strategies (prevention, avoidance, detection and recovery)
 
 - Prevention
   - Mutual exclusion: acquire locks in a certain fixed order, e.g., both threads acquire L1 before L2. Total ordering (or even a partial ordering on related locks) must be followed.
-  - Hold-and-wait: acquire all locks at once, say, by acquiring a master lock first. But this method may redure concurrent execution and performance gains.
+  - Hold-and-wait: acquire all locks at once, say, by acquiring a master lock first. But this method may reduce concurrent execution and performance gains.
 - Avoidance
   - If the OS knew which process needs which locks, it can schedule the processes in that deadlock will not occur
-    - Banker's algorithm, very popular but impractical in real life to assume this knowlegde.
+    - Banker's algorithm, very popular but impractical in real life to assume this knowledge.
 - Detection and recovery
   - At least, detect and recover: reboot system or kill deadlocked processes.
 
