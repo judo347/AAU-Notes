@@ -253,6 +253,16 @@ A virtual address is a physical one but has another address - is a part of a vir
 
 OS uses a part of the disk (swap space) to store pages that are not in active use. (Demand pages). If a page is trying to be accessed and is not in memory, the MMU will raise a trap to the OS - page fault. Then the OS moves the CPU to kernel mode. OS then fetches disk address of page and issues a read to disk. The read operation takes very long, so the current process is blocked and OS then makes a context switch to another process. When the disk read is completed, OS updates page table of process and marks it as ready. And the results the page fault and restarts the instruction that should now not raise a trap.
 
+- Swap space: part of disk used for non-active pages
+- If access is requested, MMU raises page fault trap
+  - OS then moves CPU to kernel mode
+  - OS fetches disk address of page -> issues a read to disk
+  - Disk read takes very long, so process is blocked -> context switch to another process
+  - When disk read is completed
+    - OS Updates page table, and marks process ready
+    - Results the page fault trap
+    - Restarts the instruction that caused the trap
+
 #### paging
 
 The entire address space of a process is split into fixed size chucks called pages. The physical memory is split into fixed size chucks called frames. Then when allocating space for a page it will be allocated to a set of frames.
