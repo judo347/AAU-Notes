@@ -313,7 +313,7 @@ LRU: Uses the accessed bit set by the MMU. OS Periodically looks at this bit to 
 
 Multi-threading: Multiple lines of execution though your code. A thread is like another copy of a process that executes independently. They share the program code, address space and heap, but each has its own program counter and their own stack with a stack pointer. Results in a smaller memory footprint.
 
-Multi-threading is often used to maximize the unage of the CPU. So if one thread blocks the CPU, by duing I/O operations, another thread can use the CPU/core meanwhile.)
+Multi-threading is often used to maximize the unagis of the CPU. So if one thread blocks the CPU, by doing I/O operations, another thread can use the CPU/core meanwhile.)
 
 Kernel threads: are threads that are scheduled independently by the kernel.
 
@@ -331,13 +331,13 @@ They do not share anything as default. Very complex. Methods: Segment of shared 
 
 #### race conditions
 
-Explanation: When concurrent execution can lead to different results. Like if two threads add one  to a number, one loads the number, adds one and gets interrupted before being able to save. Then the other thread does the same and then both treads saves. This results in only one increment, but if one threads gets to fisish before the next, then the result is two increments.
+Explanation: When concurrent execution can lead to different results. Like if two threads add one  to a number, one loads the number, adds one and gets interrupted before being able to save. Then the other thread does the same and then both treads saves. This results in only one increment, but if one threads gets to finish before the next, then the result is two increments.
 
 #### mutual exclusion
 
 This is the answer to race conditions. Used in a critical section of the code, so that only one thread can access the code at a time. So other threads will wait until the thread is done with that part of the come.
 
-This is also called atomicity. The critical section should execute like one uninterruptiable instruction. 
+This is also called atomicity. The critical section should execute like one uninterruptable instruction. 
 
 #### ensuring mutual exclusion (algorithms, hardware supported, mutexes, semaphores, monitors)
 
@@ -353,18 +353,18 @@ Methods of implementation:
 
 - (sleeping) mutex: C implements it as lock_t. When writing code, you can then lock this lock, write critical section and then unlock the lock. So if the lock is locked when another thread tries to lock the lock, it has to wait. A mutex lock gives up the CPU while waiting for a lock to unlock.
 - Hardware supported: a single hardware instruction. Since it is a single instruction it cannot be interrupted mid-way. 
-  - spinlocks: These locks has to have a while-loop spin continuesly to check if the lock has been unlocked, and thereby wasting CPU usage. Inside the OS spinlocks is always used, because there is no-one to give up the CPU for and the OS has to continue running. More on this in lec13 20:28.
+  - spinlocks: These locks has to have a while-loop spin continuously to check if the lock has been unlocked, and thereby wasting CPU usage. Inside the OS spinlocks is always used, because there is no-one to give up the CPU for and the OS has to continue running. More on this in lec13 20:28.
     - Simple lock using test-and-set: So a program will use this, and if the return is 1, then the lock has been set by someone else, and if the return is 0, then we know that we have locked the lock and we can continue.
     - Compare-and-swap: (int *ptr, int expected, int new) if the expected value matches the actual value, then set the value to the new. And then return the actual value.
 - Semaphores: Very simple mutexes (binary semaphore).
   - A semaphore is a variable with an underlying counter. Two functions: up/post increments the counter, down/wait decrements the counter and blocks the calling thread if the result value is negative.
   - A semaphore with init value 1 acts as a simple lock
 - monitors (CONDITION VARIABLES IN VIDEO)
-  - A condition variable is a queue for threads that are waiting on some condition. A signel when then be send to a thread when it may continue. They can happen based on FIFO, at random, etc..
+  - A condition variable is a queue for threads that are waiting on some condition. A signal will then be send to a thread when it may continue. They can happen based on FIFO, at random, etc..
 
 ## Question 6: Concurrency problems
 
-Writing multi-threaded programs is tricky and bugs are non-deterministic and occour based on execution order of threads - very hard to debug. The two types of bugs are roughly
+Writing multi-threaded programs is tricky and bugs are non-deterministic and occur based on execution order of threads - very hard to debug. The two types of bugs are roughly
 
 -  deadlocks: threads cannot execute any further and wait for each other. (The program comes to a stop, and freezes)
 - non-deadlocks: non deadlock but incorrect results when threads execute. (The program does not freeze, but they crash or the result is not what you expect) (like the one that would give different answers when incrementing with multiple treads)
