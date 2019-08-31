@@ -97,3 +97,6 @@ The Solaris MLFQ implementation — the Time-Sharing scheduling class, or TS —
 ### 9 Lottery Scheduling
 
 Has not read.
+
+### 13 Address Spaces
+
