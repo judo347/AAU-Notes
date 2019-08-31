@@ -1,4 +1,4 @@
-## DONE Question 1 - Language Design and Control Structures
+## Question 1 - Language Design and Control Structures
 
 ### Language Design Criteria - Slides: 3
 
@@ -43,7 +43,7 @@ Go though slides. Talk about project implementation.
 
 Go though slides.
 
-## DONE Question 2 - Structure of the compiler 3-19, 21-28 
+## Question 2 - Structure of the compiler 3-19, 21-28 
 
 ### Describe the phases of the compiler and give an overall description of what the purpose of each phase is and how the phases interface
 
@@ -61,7 +61,7 @@ Slides 24-27
 
 Slide 28
 
-## DONE Question 3 - Lexical analysis 3, 6-9, 10-17 (bonus: 18)
+## Question 3 - Lexical analysis 3, 6-9, 10-17 (bonus: 18)
 
 ### Describe the role of the lexical analysis phase
 
@@ -77,7 +77,7 @@ Slides: 6-9 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! BLIV
 
 Slides: 10-17 (bonus: 18) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! BLIV BEDRE TIL DISSE!
 
-## DONE Question 4 - Parsing 3, 4, 5, 6-7, 13-17
+## Question 4 - Parsing 3, 4, 5, 6-7, 13-17
 
 LL(1): *In LL1, first L stands for Left to Right and second L stands for Left-most Derivation. 1 stands for number of Look Aheads token used by parser while parsing a sentence.*
 
@@ -117,7 +117,7 @@ It is a top-down parser but requires the following:
 
 13-17 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! BLIV BEDRE TIL DISSE!
 
-## DONE Question 5 - Semantic Analysis 3, 4-17, 19 bonus 20
+## Question 5 - Semantic Analysis 3, 4-17, 19 bonus 20
 
 ### Describe the purpose of the Semantic analysis phase
 
@@ -133,7 +133,7 @@ Slide 4-17, 19 bonus 20 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! B
 
 ### Discuss Implementation of semantic analysis
 
-## DONE Question 6 - Run-time organization 3-5, 6-8, 
+## Question 6 - Run-time organization 3-5, 6-8, 
 
 ### Data representation (direct vs. indirect)
 
