@@ -24,5 +24,7 @@ Split the problem into slices and valid when each slide is done.
 
 ![](.\img\5.png)
 
+Copy past from stack overflow or buy software/code. Take others code and add a bit to save time.
+
 
 
