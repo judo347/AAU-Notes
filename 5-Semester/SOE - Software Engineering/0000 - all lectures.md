@@ -12,9 +12,31 @@ We solve tasks/make exercises by completing template.
 
 - Etik og moral
 
+#### Sommerville's Theory of Activites
+
+![](.\img\6.png)
+
+#### 1 - Specification
+
+![](.\img\7.png)
+
+#### 2 - Design and Implementation
+
+![](.\img\8.png)
+
+#### 3- validation & Varification
+
+![](.\img\9.png)
+
+#### 4 - Evolution
+
+![](.\img\10.png)
 
 
-### Process models
+
+### Software Process models
+
+![](.\img\11.png)
 
 ![](.\img\3.PNG)
 
@@ -24,7 +46,11 @@ Split the problem into slices and valid when each slide is done.
 
 ![](.\img\5.png)
 
-Copy past from stack overflow or buy software/code. Take others code and add a bit to save time.
+Copy paste from stack overflow or buy software/code. Take others code and add a bit to save time.
+
+#### Which model in which situation?
+
+![](.\img\12.png)
 
 
 
