@@ -51,10 +51,81 @@ Reference models:
 - Wireless
 - RFID
 
+### Distributed systems
+
+- Cloud computing
+- Distributed computing (PC Cluster, Super computing)
+- Games running through clients only (peer-to-peer)
+- Automotive control 
+- Sensor-networks
+- Mission-critical applications (Where multiple devices work together)
+  - Example: rail control systems, military command, power plants... etc.
+
 #### Definition
 
-Distributed system: when they do not operate under the same clock (So a multicore pc is not a distributed system.)
+Distributed system: when they do not operate under the **same clock** (So a multicore pc is not a distributed system.)
+
+A **distributed system** is the one in which hardware and software components at **networked computers** communicate and coordinate their activity only by **passing messages**.
+
+#### Consequences
+
+![](.\img\2.png)
+
+#### Why a Distributed System?
+
+![](.\img\3.png)
+
+Better performance
+
+- Increased processing pwoer
+- Load balancing
+
+Increased Reliability
+
+- Exploit independent failures property
+- Redundancy
+
+## Models
+
+#### Service layers
+
+![](.\img\4.png)
+
+#### Middleware
+
+![](.\img\5.png)
+
+#### Client / Server model
+
+![](.\img\6.png)
+
+#### A distributed application based on peer processes
+
+![](.\img\7.png)
+
+#### Client Server vs Peer based
+
+Client-Server: Most widely used model. Functional specialization. Asymmetrical. Tends to be Centralized. Tends to scale poorly
+
+Peer: Symmetrical, computers runs same algorithms / same responsibilities.
+
+Truly Distributed: Share / exploit resources at a large number of participants.
+
+#### Interaction model
+
+![](.\img\8.png)
+
+#### Failure Models
+
+![](.\img\9.png)
+
+#### Timing failures
+
+![](.\img\10.png)
+
+#### Security model
+
+![](.\img\11.png)
 
 
 
-MANGE FLERE SLIDES!!
