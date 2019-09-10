@@ -4,9 +4,9 @@ Termer: genkendelighed og afgørbarhed.
 
 ![](.\img\1.png)
 
-Genkendelighed = skal acceptere en string, og må ellers gerne gå i uendelig løkke.
+Genkendelighed/Recognizability = skal acceptere en string, og må ellers gerne gå i uendelig løkke.
 
-Afgørbarhed = skal standse i en accept-tilstand ved alle input strenge i sproget.
+Afgørbarhed/Decidability = skal standse i en accept-tilstand ved alle input strenge i sproget.
 
 #### Afsnit 1
 
