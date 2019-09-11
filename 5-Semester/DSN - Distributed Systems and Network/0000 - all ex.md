@@ -72,3 +72,28 @@ At low load, they perform equally good. The pure one will sometimes make collisi
 
 **[CN] 4.15 (4.15) A 1-km-long, 10-Mbps CSMA/CD LAN (not 802.3) has a propagation speed of 200 m/μsec. Repeaters are not allowed in this system. Data frames are 256 bits long, including 32 bits of header, checksum, and other overhead. The first bit slot after a successful transmission is reserved for the receiver to capture the channel in order to send a 32-bit acknowledgement frame. What is the effective data rate, excluding overhead, assuming that there are no collisions?**
 
+<https://www.wikihow.com/Calculate-Data-Transfer-Rate>
+"Data transfer rate is the rate that a certain amount of data is transferred over a given period in time."
+
+?!?!?!?!?!?
+
+#### Ex 3
+
+**[CN] 4.22 (4.22) In Fig. 4-27, four stations, A, B, C, and D, are shown. Which of the last two stations do you think is closest to A and why?**
+
+C is closer to A then D. This is the case because D does not receive the RTS from A.
+
+#### Ex 4
+
+**[CN] 4.25 (4.25) Suppose that an 11-Mbps 802.11b LAN is transmitting 64-byte frames back-to-back over a radio channel with a bit error rate of $10^{−7}$. How many frames per second will be damaged on average?**
+
+$10^{-7}=0.0000001$ so after 10000000 bits, one bit will be wrong on average.
+
+64-byte = 512 bits.
+
+$10000000 / 512 = 19531.25$ So we can send 19531 packets and the next has a wrong bit.
+
+10000000 bits = 80 Mb, so one bit in 80 Mb will go wrong.
+
+We send 11 Mb per second, so $11 / 80 = 0.1375$ frame per second will be damaged? NOT SURE!
+
