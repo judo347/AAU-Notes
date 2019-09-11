@@ -131,49 +131,159 @@ Truly Distributed: Share / exploit resources at a large number of participants.
 
 # 02 - The medium access control layer and the network layer
 
-Slides: 2+3
+#### Medium Access Control Sublayer
 
-3: dette lag fungerer godt når kun få sender og modtagerne holder mund. Hvis nogen hører nogen sige noget holder man mund.
+- Channel Allocation Problem
+- Multiple Acccess Protocols
+- Ethernet
+- Wireless LAN's
 
-Slide 4: Channel Allocation Problem (I)
+#### The MAC Sublayer
 
-Slide 5, 6 (multiple access protocol), 7- 9(CSMA(I)), 10: CSMA, er den protocol der ligger til grunds for stort set alt netværks kommunikation. 0.5-persistent betyder at når vi kan sende, er der 50% chance for at vi gør det.
+![](.\img\12.png)
 
-Slide 11: CSMA (3) -Collision Detection: Bruges stort set over alt med variation. Fungerer rigtig fint, så længe vi er på et kabel. Pakke størrelse kommer an på kabel længde - lysets hastighed.
+Dette lag fungerer godt når kun få sender og modtagerne holder mund. Hvis nogen hører nogen sige noget holder man mund.
 
-SLide 12: signaler taber effekt over afstande. 
+![](.\img\13.png)
 
-Slide 13 (Wireless LAns (2)): "when sending to " **B**
+![](.\img\14.png)
 
-Slide 14, 15: kollitioner er dyrer i trådløse netværk. RTS = request to send, CTS = clear to send. Denne bliver brugt til mobil netværk og wifi, dog med moditikationer. Bluetooth er dog mere indviklet, men er baseret på noget lignende. Kollitioner er grimme. Kabler er meget nemmere da vi ved hvor mange der er på nettet i modsætning til wifi (altså hvor mange der sender og modtager).
+#### Multiple Access Protocols
 
-Slide 16, 17: har også opgaven at vedligeholde topologisk information.
+![](.\img\15.png)
 
-(exam pensum) Slide 18,  19, 20: fejl i tabel, router kan kun sende videre til dem den er forbundet til. Slide 21: routeren vælger hvor den skal sende pakken hen baseret på deres tag og ikke dens destination. Dette er ligesom det gamle telefon netværk. I sær tilfælde kan man lave dette på tværs af ISP'er, men dette er ikke normalt, og man gør det kun med folk man kender. (benyttes i CERN).
+![](.\img\16.png)
 
-(exam)Slide 22. 
+![](.\img\17.png)
 
-Slide 23: når routeren kun kan se sine naboer er det svært at træffe beslutninger om hvor den skal sende pakker hen. Hvordan går routeren topologisk forståelse.
+![](.\img\18.png)
 
-Slide 24, 25, 26, 27: den var backup algorithme på de første netværk.
+CSMA, er den protocol der ligger til grunds for stort set alt netværks kommunikation. 0.5-persistent betyder at når vi kan sende, er der 50% chance for at vi gør det.
 
-Slide 28-30: denne algorithme bruges selvfølgelig ikke. Kan dog godt fikses, men den algorithme har Cisco taget patent på.
+![](.\img\19.png)
 
-Slide 31: Dette er den algorithme man bruger på internettet. Sending alt vi ved om vores topologi i en link-state-packet.
+Bruges stort set over alt med variation. Fungerer rigtig fint, så længe vi er på et kabel. Pakke størrelse kommer an på kabel længde - lysets hastighed.
 
-Slide 32: Disse pakker bliver videresendt rundt i nettet, så det ikke kun er naboerne der går dem, men alle, aka flooding. Men det er derfor vi har *seq* nummer der er løbenummer, og *age* der gør at pakken ikke bliver sendt videre efter et stykke tid. (dør) 
+![](.\img\20.png)
+
+Signaler taber effekt over afstande. 
+
+![](.\img\21.png)
+
+
+
+Missing a b: ".. when sending to " **B**
+
+![](.\img\22.png)
+
+Kollitioner er dyrer i trådløse netværk. RTS = request to send, CTS = clear to send. Denne bliver brugt til mobil netværk og wifi, dog med moditikationer. Bluetooth er dog mere indviklet, men er baseret på noget lignende. Kollitioner er grimme. Kabler er meget nemmere da vi ved hvor mange der er på nettet i modsætning til wifi (altså hvor mange der sender og modtager).
+
+![](.\img\23.png)
+
+![](.\img\24.png)
+
+Har også opgaven at vedligeholde topologisk information.
+
+![](.\img\25.png)
+
+![](.\img\26.png)
+
+![](.\img\27.png)
+
+(**exam pensum**) Fejl i tabel, router kan kun sende videre til dem den er forbundet til. 
+
+![](.\img\28.png)
+
+Routeren vælger hvor den skal sende pakken hen baseret på deres tag og ikke dens destination. Dette er ligesom det gamle telefon netværk. I sær tilfælde kan man lave dette på tværs af ISP'er, men dette er ikke normalt, og man gør det kun med folk man kender. (benyttes i CERN).
+
+![](.\img\29.png)
+
+(**exam pensum**)
+
+![](.\img\30.png)
+
+Når routeren kun kan se sine naboer er det svært at træffe beslutninger om hvor den skal sende pakker hen. Hvordan går routeren topologisk forståelse.
+
+![](.\img\31.png)
+
+![](.\img\32.png)
+
+![](.\img\33.png)
+
+![](.\img\34.png)
+
+Flooding var backup algorithme på de første netværk.
+
+![](.\img\35.png)
+
+![](.\img\36.png)
+
+![](.\img\37.png)
+
+Denne algorithme bruges selvfølgelig ikke. Kan dog godt fikses, men den algorithme har Cisco taget patent på.
+
+![](.\img\38.png)
+
+Dette er den algorithme man bruger på internettet. Sending alt vi ved om vores topologi i en link-state-packet.
+
+![](.\img\39.png)
+
+Disse pakker bliver videresendt rundt i nettet, så det ikke kun er naboerne der går dem, men alle, aka flooding. Men det er derfor vi har *seq* nummer der er løbenummer, og *age* der gør at pakken ikke bliver sendt videre efter et stykke tid. (dør) 
 
 Internettet er bygget op som et træ/hiraki struktur så hele nettet ikke bliver flooded af LSP. Ligesom når man kører, kører man på motervejen selvom der måske er en kortere vej. Dette ses på næste slide.
 
-Slide 33: beskrevet ovenstående. Denne routing kører en anden protocol (BGP), men den skal vi ikke vide noget om. Pga. penge.
+![](.\img\40.png)
 
-Slide 34 - 37, 39-41: faktisk en ok måde at gøre det på hvad angår bandwith, da vi anyways skal kommunikere og så mange pakker er det heller ikke vi sender. Det der er skidt er hvis stien ændre sig.
 
-Slide 42-47: subnetting is done to avoid checking all bits (and other reasons).
 
-Slide 48.
-(exam) Slide 49.
+Beskrevet ovenstående. Denne routing kører en anden protocol (BGP), men den skal vi ikke vide noget om. Pga. penge.
 
-Slide 51: ports are used to save IP-addresses.
+![](.\img\41.png)
 
-Slide 52-55
+![](.\img\42.png)
+
+![](.\img\43.png)
+
+![](.\img\44.png)
+
+![](.\img\45.png)
+
+![](.\img\46.png)
+
+![](.\img\47.png)
+
+
+
+Faktisk en ok måde at gøre det på hvad angår bandwith, da vi anyways skal kommunikere og så mange pakker er det heller ikke vi sender. Det der er skidt er hvis stien ændre sig.
+
+![](.\img\48.png)
+
+![](.\img\49.png)
+
+![](.\img\50.png)
+
+![](.\img\51.png)
+
+![](.\img\52.png)
+
+![](.\img\53.png)
+
+Subnetting is done to avoid checking all bits (and other reasons).
+
+![](.\img\54.png)
+
+![](.\img\55.png)(exam penum) 
+
+![](.\img\56.png)
+
+![](.\img\57.png)
+
+Ports are used to save IP-addresses.
+
+![](.\img\58.png)
+
+![](.\img\59.png)
+
+![](.\img\60.png)
+
+![](.\img\61.png)
