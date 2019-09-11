@@ -56,3 +56,19 @@ Fraction of bandwith filled with headers = **((n * h) / M + n * h) * 100**
 
 Example: n = 5 = number of layer protocols, M = 10 = bytes of msg, h = 1 = byte of each header. Fraction of bandwith filled with headers = **((n * h) / M + n * h) * 100 = ((5 * 1) / 10 + 5 * 1) * 100 = 33.33..**
 
+
+
+# 2 - Media Access Control and Internetworking
+
+#### Ex 1
+
+**[CN] 4.3 (4.3) Consider the delay of pure ALHOA vs slotted ALOHA at low load. Which one is less? Explain your answer**
+
+The graph on the slides says that slotted ALOHA is always better at handling loads then pure ALOHA - at low load, they are the same. 
+
+At low load, they perform equally good. The pure one will sometimes make collisions, but this should rarely happens since the load is low. The slotted one will also sometimes make collisions, but this is detected earlier then the pure one.
+
+#### Ex 2
+
+**[CN] 4.15 (4.15) A 1-km-long, 10-Mbps CSMA/CD LAN (not 802.3) has a propagation speed of 200 m/μsec. Repeaters are not allowed in this system. Data frames are 256 bits long, including 32 bits of header, checksum, and other overhead. The first bit slot after a successful transmission is reserved for the receiver to capture the channel in order to send a 32-bit acknowledgement frame. What is the effective data rate, excluding overhead, assuming that there are no collisions?**
+
