@@ -4,6 +4,8 @@ Exam is oral. Opgaveregnings hjælp fås ved at sende sms til 31621403.
 
 Læsning til forelæsning sker efter, så læs kun det nædvendige.
 
+Til eksamen bliver der langt slides op man kan kalde på. Slidesne vil indeholde illustrationer man kan forklare ud fra. Meget ligesom SPO.
+
 # 01 - Introduction
 
 #### Computer networks
@@ -287,3 +289,95 @@ Ports are used to save IP-addresses.
 ![](.\img\60.png)
 
 ![](.\img\61.png)
+
+# 3 - Transport Layer
+
+![](.\img\62.png)
+
+![](.\img\63.png)
+
+![](.\img\64.png)
+
+"vi kan stoppe noget ned i nettet og får det ud i den anden ende." Transport lageret er det første lag der bekymre sig om tabt data. UDP er forbindelses løs, og TCP skaber en forbindelse imellem to processer er service.
+
+![](.\img\65.png)
+
+I de lavere lag bliver "segment payload" pakket ind og modtagerens transport lag pakker den ud igen.
+
+![](.\img\66.png)
+
+
+
+Client er den der ringer op, og server er den der svarer. En server der lytter venter på at nogle ringer. Klient skal opgive hvem den vil sende til og forbindelsen kan først laves hvis serveren lytter. Dette er forklaret på nedenstående slide.
+
+![](.\img\67.png)
+
+Dette er teorien, men kommunikationen er baseret på pakker, og dette lag er det første der bekymre sig om pakketab, så der skal gøres noget ekstra for at sikre at det fungerer.
+
+![](.\img\68.png)
+
+![](.\img\69.png)
+
+TSAP gør at vi kan køre flere processer/applikationer på samme computer der kun har en IP.
+
+![](.\img\70.png)
+
+![](.\img\71.png)
+
+![](.\img\72.png)
+
+a) gammel eller ugyldi CR pakke: host godkender ikke ACK, da den ved at "seq" ikke passer. b)  både gammel og ugyldig CR og DATA: her passer både "seq" og ACK ikke.
+
+Nogle gange er der processer der ikke gør dette ordenligt og så er der implementeret timeouts der håndterer dette.
+
+![](.\img\73.png)
+
+Her tror Host 1 at den har sendt og at modtageren Host 2 har modtaget pakken, men den har allerede lukket forbindelsen og modtager ikke længere.
+
+![](.\img\74.png)
+
+Her sender klient en DR og når den modtager DR fra Host 2, ved den at vi er færdig da Host 1, der er klient, var den der startede samtalen/forbindelse, og så sender Host 1 en ACK for at bekræfte at forbindelsen er lukket. Dette fungerer godt så længe der ikke er pakke tab. Set på næste slide.
+
+Slide 15-16: Sliding window er data der er sendt men ikke nået frem. Det flytter sig hele tiden da data kommer frem og nyt data bliver sendt.
+
+Slide 17: Goodput er der hvor vi gerne vil hen, throughput er det der sker.
+
+Slide 18: Forbindelsen imellem R1 og R2 bliver nød til at begrænse dens bandwidth, da forbindelse i mellem R2 og R3 er  delt med andet data. Denne styring skal være dynamisk og kunne ændres hvis nu en router ikke sender, så skal de andre have lov at sende mere. Vist på næste slide.
+
+Slide 19: Det ovenstående skal sender selv finde ud af uden den ved hvem der ellers sender.
+
+Slide 20-21: Dette skal fixes fra senderens side uden at den ved noget. Dette kan kun gøre ved at man prøver sig frem. Næste slide.
+
+Slide 22: Dette skaber occilering, da de vil stå og ping ponge frem og tilbage ved at skrue op og ned.
+
+Slide 23: Den mængde data den skruger op og ned for varierer for at ramme den optimale punkt, og for at undgå occilering.
+
+Slide 24-25: Afsender port er en port der gør at computeren ved hvilket program der skal modtage hvilke pakker. 
+
+Slide 26-30: TCP bruges i begge retninger, så man behøver ikke at sende noget Data med.
+
+Slide 31-34: Modtager fortæller hele tiden for hvor data den har modtaget og hvor meget den stadig har plads til, og så sender afstender det modtager har plads til.
+
+Slide 35: Hvis vinduerne er for små, bruger vi for meget data til at synkronisere, og hvis de er for store, *sender man for meget data* - ikke sikker på det sidste.
+
+Slide 36: Eksempel: forventet ventetid på bybus vs. rutebus.
+
+Slide 37: CWND: fortæller hvor mange pakker der må være ude i netværket. Pakker forsvinder ikke i kablerne, men i devices hvis buffers er fyldte. Hvis vi taber pakker så har vi congestion.
+
+Slide 38-40: vi doblet hele tiden antal af pakker vi prøver at sende, og på et tidspunkt skifte vi til at øge vinduet med en.
+
+Slide 41: Hvis vi taber en pakke, så starter vi forfra, men med flyttet threshold.
+
+**Sliding window vs Congestion window**
+
+- SW: tester hvor mange pakker modtageren kan modtage.
+- CW: tester hvor mange pakker der kan være ude i netværket.
+
+Slide 42-43
+
+
+
+**NAT**:
+
+![](.\img\75.png)
+
