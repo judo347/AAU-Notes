@@ -54,3 +54,7 @@ Copy paste from stack overflow or buy software/code. Take others code and add a 
 
 
 
+# 2 - Scrum, Agile, Daily, XP
+
+
+
