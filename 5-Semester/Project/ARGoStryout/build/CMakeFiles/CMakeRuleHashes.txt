@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+cf74a7877cd33105f68be71f724be619 controllers/kbot/CMakeFiles/kbot_autogen
