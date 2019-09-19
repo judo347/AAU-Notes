@@ -17,7 +17,7 @@
 		</actuators>
 		<sensors>
 			<footbot_proximity implementation="default" show_rays="true" />
-		</sensors
+		</sensors>
 		<params alpha="7.5" delta="0.1" velocity="5" />
 	</controllers>
 	<arena size="2, 2, 1" center="0,0,0.5" positional_grid_size="5, 5, 1">
