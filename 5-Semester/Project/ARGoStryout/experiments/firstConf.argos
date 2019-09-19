@@ -11,7 +11,7 @@
 	</framework>
 	<controllers>
 		<KBot_controller 	id="kbc"
-							library="build/controllers/kbot">
+							library="build/controllers/kbot/libkbot">
 		<actuators>
 			<differential_steering implementation="default" />
 		</actuators>
@@ -36,10 +36,10 @@
 	  </box>
 	  
 	  <!-- Place the bot and bind it to the controller -->
-	  <kuntz-bot id="kb_0">
+	  <foot-bot id="fb_0">
 		<body position="0,0,0" orientation="0,0,0" />
 		<controller config="kbc" />
-	  </kuntz-bot>
+	  </foot-bot>
 	</arena>
 	<physics_engines>
 		<!-- Use a 2D dynamics engine. -->
