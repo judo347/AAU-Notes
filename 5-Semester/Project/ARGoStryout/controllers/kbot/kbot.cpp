@@ -36,6 +36,7 @@ void KBot::Init(TConfigurationNode& t_node){
 void KBot::ControlStep(){
     //TODO Movement
     m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
+    LOG << "TICK";
 }
 
 REGISTER_CONTROLLER(KBot, "KBot_controller")
