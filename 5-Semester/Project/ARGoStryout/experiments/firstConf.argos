@@ -10,7 +10,15 @@
 				truncate_file="true" />
 	</framework>
 	<controllers>
-	...
+		<KBot_controller 	id="kbc"
+							library="build/controllers/kbot">
+		<actuators>
+			<differential_steering implementation="default" />
+		</actuators>
+		<sensors>
+			<footbot_proximity implementation="default" show_rays="true" />
+		</sensors
+		<params alpha="7.5" delta="0.1" velocity="5" />
 	</controllers>
 	<arena size="2, 2, 1" center="0,0,0.5" positional_grid_size="5, 5, 1">
 	  <box id="wall_north" size="2,0.1,0.5" movable="false">
@@ -25,19 +33,22 @@
 	  <box id="wall_west" size="0.1,2,0.5" movable="false">
 		<body position="-1,0,0" orientation="0,0,0" />
 	  </box>
-	  <kuntz-bot id="fb_0">
+	  
+	  <!-- Place the bot and bind it to the controller -->
+	  <kuntz-bot id="kb_0">
 		<body position="0,0,0" orientation="0,0,0" />
-		<controller config="fdc" />
+		<controller config="kbc" />
 	  </kuntz-bot>
 	</arena>
 	<physics_engines>
-	...
+		<!-- Use a 2D dynamics engine. -->
+		<dynamics2d id="dyn2d" />
 	</physics_engines>
 	<media>
-	...
+		<!-- Media is used for robot communication. -->
 	</media>
 	<visualization>
-	...
+		<qt-opengl />
 	</visualization>
-	<loop_functions library="/path/to/libmy_loop_functions.so" label="my_loop_functions" />
+	<!-- <loop_functions library="/path/to/libmy_loop_functions.so" label="my_loop_functions" /> -->
 </argos-configuration>
