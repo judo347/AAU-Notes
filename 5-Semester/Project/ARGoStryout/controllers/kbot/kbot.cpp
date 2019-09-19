@@ -4,6 +4,8 @@
 #include <argos3/core/utility/configuration/argos_configuration.h>
 /* 2D vector definition. */
 #include <argos3/core/utility/math/vector2.h>
+/* Function definitions for logging */
+#include <argos3/core/utility/logging/argos_log.h>
 
 /******************************/
 
