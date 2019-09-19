@@ -64,4 +64,6 @@ private:
    /* Angle tolerance range to go straight.
     * It is set to [-alpha,alpha]. */
    CRange<CRadians> m_cGoStraightAngleRange;
-}
+};
+
+#endif
