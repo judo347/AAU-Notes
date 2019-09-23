@@ -34,18 +34,61 @@ void KBot::Init(TConfigurationNode& t_node){
     GetNodeAttributeOrDefault(t_node, "delta", m_fDelta, m_fDelta);
     GetNodeAttributeOrDefault(t_node, "velocity", m_fWheelVelocity, m_fWheelVelocity);
 
-    
+    isAdjustingDirection = false;
+
     /* SetDirection(new CVector3(1,1,0)); */
 }
 
 void KBot::ControlStep(){
+
+    /* Get readings from proximity sesor */
+   const CCI_FootBotProximitySensor::TReadings& tProxReads = m_pcProximity->GetReadings();
+
+   /* Sum readings together */
+   CVector2 cAccumulator;
+   for(int i = 0; i < tProxReads.size(); i++){
+        cAccumulator += CVector2(tProxReads[i].Value, tProxReads[i].Angle);
+    }
+    cAccumulator /= tProxReads.size();
+
+    /* If the angle of the vector is small enough and the closest obstacle
+     * is far enough, continue going straight, else pick a random direction */
+    CRadians cAngle = cAccumulator.Angle();
+    if(m_cGoStraightAngleRange.WithinMinBoundIncludedMaxBoundIncluded(cAngle) &&
+        cAccumulator.Length() < m_fDelta ) {
+        /* Go straight */
+        m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
+        isAdjustingDirection = false;
+    }
+    else {
+
+	/* Are we currently adjusting the direction or do we need to find a new direction? */
+        if(isAdjustingDirection){
+	    m_pcWheels->SetLinearVelocity(m_fWheelVelocity, 0.0f);
+        } else {
+	    targetDirection = GetRandomDirection();
+	    isAdjustingDirection = true;
+	}
+    }
+
     //TODO Movement
-    m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
+    // m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
     LOG << "TICK";
 }
 
 CVector2 KBot::GetRandomDirection(){
-	CVector2 randomDirection = new CVector2(2 ,3);
+
+	int randNum1;
+	int randNum2;
+
+	srand((unsigned)time(0));
+
+	randNum1 = (rand()%3)-1;
+	randNum2 = (rand()%3)-1;
+
+	CVector2 randomDirection;
+
+	randomDirection = CVector2(randNum1, randNum2);
 
 	return randomDirection;
 }

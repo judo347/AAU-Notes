@@ -1,33 +1,33 @@
 [profiled portion overall]
 
-Wall clock time: 2048.94
-CPU usage: 7.85342%
-User time: 143.602
-System time: 17.3096
-Maximum resident set size: 41608
+Wall clock time: 114.264
+CPU usage: 7.34538%
+User time: 6.96567
+System time: 1.42745
+Maximum resident set size: 40352
 Integral shared memory size: 0
 Integral unshared data size: 0
 Integral unshared stack size: 0
-Page reclaims: 9805
-Page faults: 1
+Page reclaims: 8632
+Page faults: 2
 Swaps: 0
-Block input operations: 0
+Block input operations: 136
 Block output operations: 24
 Messages sent: 0
 Messages received: 0
 Signals received: 0
-Voluntary context switches: 286427
-Involuntary context switches: 1437
+Voluntary context switches: 20718
+Involuntary context switches: 145
 
 [profiled portion start]
 
-User time: 0.042207
-System time: 0.008441
-Maximum resident set size: 36792
+User time: 0.046949
+System time: 0.004268
+Maximum resident set size: 36056
 Integral shared memory size: 0
 Integral unshared data size: 0
 Integral unshared stack size: 0
-Page reclaims: 2358
+Page reclaims: 2304
 Page faults: 0
 Swaps: 0
 Block input operations: 0
@@ -35,57 +35,57 @@ Block output operations: 0
 Messages sent: 0
 Messages received: 0
 Signals received: 0
-Voluntary context switches: 380
-Involuntary context switches: 3
+Voluntary context switches: 420
+Involuntary context switches: 1
 
 [profiled portion end]
 
-User time: 143.645
-System time: 17.318
-Maximum resident set size: 78400
+User time: 7.01262
+System time: 1.43172
+Maximum resident set size: 76408
 Integral shared memory size: 0
 Integral unshared data size: 0
 Integral unshared stack size: 0
-Page reclaims: 12163
-Page faults: 1
+Page reclaims: 10936
+Page faults: 2
 Swaps: 0
-Block input operations: 0
+Block input operations: 136
 Block output operations: 24
 Messages sent: 0
 Messages received: 0
 Signals received: 0
-Voluntary context switches: 286807
-Involuntary context switches: 1440
+Voluntary context switches: 21138
+Involuntary context switches: 146
 
 [process overall]
 
-User time: 143.645
-System time: 17.318
-Maximum resident set size: 78400
+User time: 7.01279
+System time: 1.43176
+Maximum resident set size: 76408
 Integral shared memory size: 0
 Integral unshared data size: 0
 Integral unshared stack size: 0
-Page reclaims: 12163
-Page faults: 1
+Page reclaims: 10936
+Page faults: 2
 Swaps: 0
-Block input operations: 0
+Block input operations: 136
 Block output operations: 32
 Messages sent: 0
 Messages received: 0
 Signals received: 0
-Voluntary context switches: 286807
-Involuntary context switches: 1440
+Voluntary context switches: 21138
+Involuntary context switches: 146
 
 [thread #0 overall]
 
-CPU usage: 0.69258%
-User time: 13.2602
-System time: 0.930311
-Maximum resident set size: 78400
+CPU usage: 0.341304%
+User time: 0.22285
+System time: 0.167137
+Maximum resident set size: 76408
 Integral shared memory size: 0
 Integral unshared data size: 0
 Integral unshared stack size: 0
-Page reclaims: 76
+Page reclaims: 57
 Page faults: 0
 Swaps: 0
 Block input operations: 0
@@ -93,19 +93,19 @@ Block output operations: 0
 Messages sent: 0
 Messages received: 0
 Signals received: 0
-Voluntary context switches: 79112
-Involuntary context switches: 220
+Voluntary context switches: 5416
+Involuntary context switches: 8
 
 [thread #1 overall]
 
-CPU usage: 0.264685%
-User time: 2.22274
-System time: 3.20051
-Maximum resident set size: 78400
+CPU usage: 0.243343%
+User time: 0.109235
+System time: 0.168818
+Maximum resident set size: 76408
 Integral shared memory size: 0
 Integral unshared data size: 0
 Integral unshared stack size: 0
-Page reclaims: 19
+Page reclaims: 9
 Page faults: 0
 Swaps: 0
 Block input operations: 0
@@ -113,5 +113,5 @@ Block output operations: 0
 Messages sent: 0
 Messages received: 0
 Signals received: 0
-Voluntary context switches: 92433
-Involuntary context switches: 24
+Voluntary context switches: 5216
+Involuntary context switches: 7

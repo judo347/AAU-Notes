@@ -8,6 +8,8 @@
 #include <argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h>
 /* Definition of the foot-bot proximity sensor */
 #include <argos3/plugins/robots/foot-bot/control_interface/ci_footbot_proximity_sensor.h>
+/* 2D vector def */
+#include <argos3/core/utility/math/vector2.h>
 
 /* You save typing argos:: ever time. */
 using namespace argos;
@@ -33,8 +35,6 @@ public:
 
     /* Cleanup method */
     virtual void Destroy(){}
-
-    CVector2 GetRandomDirection();
 
 private:
 
@@ -66,6 +66,11 @@ private:
    /* Angle tolerance range to go straight.
     * It is set to [-alpha,alpha]. */
    CRange<CRadians> m_cGoStraightAngleRange;
+
+   bool isAdjustingDirection;
+   CVector2 targetDirection;
+
+   CVector2 GetRandomDirection();
 };
 
 #endif

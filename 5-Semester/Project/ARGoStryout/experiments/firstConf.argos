@@ -37,43 +37,11 @@
 	  
 	  <!-- Place the bot and bind it to the controller -->
 	  <foot-bot id="fb_0">
-		<body position="0.1,0,0" orientation="1,0,0" />
+		<body position="0.5,0,0" orientation="1,0,0" />
 		<controller config="kbc" />
 	  </foot-bot>
 	  <foot-bot id="fb_1">
-		<body position="-0.1,0,0" orientation="-1,0,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	  <foot-bot id="fb_2">
-		<body position="0,0.1,0" orientation="0,1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	  <foot-bot id="fb_3">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	<foot-bot id="fb_4">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	<foot-bot id="fb_5">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	<foot-bot id="fb_6">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	<foot-bot id="fb_7">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	<foot-bot id="fb_8">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
-		<controller config="kbc" />
-	  </foot-bot>
-	<foot-bot id="fb_9">
-		<body position="0,-0.1,0" orientation="0,-1,0" />
+		<body position="-0.5,0,0" orientation="-1,0,0" />
 		<controller config="kbc" />
 	  </foot-bot>
 	</arena>
