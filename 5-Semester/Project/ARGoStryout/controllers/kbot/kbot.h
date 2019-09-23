@@ -34,6 +34,8 @@ public:
     /* Cleanup method */
     virtual void Destroy(){}
 
+    CVector2 GetRandomDirection();
+
 private:
 
     /* Pointer to the differential steering actuator */

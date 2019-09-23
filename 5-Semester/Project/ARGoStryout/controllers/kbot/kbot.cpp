@@ -33,12 +33,21 @@ void KBot::Init(TConfigurationNode& t_node){
     m_cGoStraightAngleRange.Set(-ToRadians(m_cAlpha), ToRadians(m_cAlpha));
     GetNodeAttributeOrDefault(t_node, "delta", m_fDelta, m_fDelta);
     GetNodeAttributeOrDefault(t_node, "velocity", m_fWheelVelocity, m_fWheelVelocity);
+
+    
+    /* SetDirection(new CVector3(1,1,0)); */
 }
 
 void KBot::ControlStep(){
     //TODO Movement
     m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
     LOG << "TICK";
+}
+
+CVector2 KBot::GetRandomDirection(){
+	CVector2 randomDirection = new CVector2(2 ,3);
+
+	return randomDirection;
 }
 
 REGISTER_CONTROLLER(KBot, "KBot_controller")
