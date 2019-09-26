@@ -15,18 +15,6 @@ argos3/plugins/robots/foot-bot/control_interface/ci_footbot_proximity_sensor.h
 -
 argos3/plugins/robots/generic/control_interface/ci_positioning_sensor.h
 -
-loop_functions/communicator_loop_functions/communicator_loop_functions.h
--
-
-..//loop_functions/communicator_loop_functions/communicator_loop_functions.h
-argos3/core/simulator/loop_functions.h
--
-argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
--
-controllers/alibot/alibot.h
--
-argos3/core/control_interface/ci_controller.h
--
 
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/communicator_loop_functions/communicator_loop_functions_autogen/mocs_compilation.cpp
 

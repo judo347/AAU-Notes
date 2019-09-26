@@ -40,12 +40,12 @@ void CommunicatorLoopFunctions::SetBotController(){
    /* Get the first foot-bot and its controller */
    CSpace::TMapPerType::iterator it = botMap.begin();
    CFootBotEntity& cFootbot = *any_cast<CFootBotEntity*>(it->second);
-   //Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController());
-   CCI_Controller& controller = dynamic_cast<CCI_Controller&>(cFootbot.GetControllableEntity().GetController());
+   Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController());
+   //CCI_Controller& controller = dynamic_cast<CCI_Controller&>(cFootbot.GetControllableEntity().GetController());
 
    /* Set field and add THIS to bot controller */   
    //controller.AddCommunicator(*this);
-   botController = &controller;
+   botController = controller;
 }
 /****************************************/
 /****************************************/

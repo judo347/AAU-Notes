@@ -13,7 +13,7 @@
 /* Definition of the positioning sensor */
 #include <argos3/plugins/robots/generic/control_interface/ci_positioning_sensor.h>
 /**/
-#include <loop_functions/communicator_loop_functions/communicator_loop_functions.h>
+//#include <loop_functions/communicator_loop_functions/communicator_loop_functions.h>
 
 /*
  * All the ARGoS stuff in the 'argos' namespace.

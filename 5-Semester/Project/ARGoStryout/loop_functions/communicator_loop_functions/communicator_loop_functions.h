@@ -23,7 +23,7 @@ public:
 
 private:
 
-   CCI_Controller* botController;
+   Alibot botController;
    void SetBotController();
 };
 
