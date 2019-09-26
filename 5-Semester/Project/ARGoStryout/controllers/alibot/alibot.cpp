@@ -122,4 +122,4 @@ void Alibot::ControlStep()
  * controller class to instantiate.
  * See also the configuration files for an example of how this is used.
  */
-REGISTER_CONTROLLER(CFootBotDiffusion, "footbot_diffusion_controller")
+REGISTER_CONTROLLER(Alibot, "Alibot_controller")

@@ -136,6 +136,32 @@ kbot_autogen/fast:
 	$(MAKE) -f controllers/kbot/CMakeFiles/kbot_autogen.dir/build.make controllers/kbot/CMakeFiles/kbot_autogen.dir/build
 .PHONY : kbot_autogen/fast
 
+#=============================================================================
+# Target rules for targets named alibot
+
+# Build rule for target.
+alibot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 alibot
+.PHONY : alibot
+
+# fast build rule for target.
+alibot/fast:
+	$(MAKE) -f controllers/alibot/CMakeFiles/alibot.dir/build.make controllers/alibot/CMakeFiles/alibot.dir/build
+.PHONY : alibot/fast
+
+#=============================================================================
+# Target rules for targets named alibot_autogen
+
+# Build rule for target.
+alibot_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 alibot_autogen
+.PHONY : alibot_autogen
+
+# fast build rule for target.
+alibot_autogen/fast:
+	$(MAKE) -f controllers/alibot/CMakeFiles/alibot_autogen.dir/build.make controllers/alibot/CMakeFiles/alibot_autogen.dir/build
+.PHONY : alibot_autogen/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -146,6 +172,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... kbot"
 	@echo "... kbot_autogen"
+	@echo "... alibot"
+	@echo "... alibot_autogen"
 .PHONY : help
 
 

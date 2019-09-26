@@ -6,3 +6,7 @@
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/kbot/CMakeFiles/kbot.dir
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/kbot/CMakeFiles/edit_cache.dir
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/kbot/CMakeFiles/kbot_autogen.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/rebuild_cache.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/alibot.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/edit_cache.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/alibot_autogen.dir

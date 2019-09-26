@@ -9,8 +9,6 @@
 
 /******************************/
 
-
-//TODO
 KBot::KBot() :
     m_pcWheels(NULL),
     m_pcProximity(NULL),

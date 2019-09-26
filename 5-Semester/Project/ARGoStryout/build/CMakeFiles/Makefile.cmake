@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "../cmake/FindGALIB.cmake"
   "../controllers/CMakeLists.txt"
+  "../controllers/alibot/CMakeLists.txt"
   "../controllers/kbot/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake"
@@ -67,10 +68,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "controllers/CMakeFiles/CMakeDirectoryInformation.cmake"
   "controllers/kbot/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "controllers/alibot/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "controllers/kbot/CMakeFiles/kbot.dir/DependInfo.cmake"
   "controllers/kbot/CMakeFiles/kbot_autogen.dir/DependInfo.cmake"
+  "controllers/alibot/CMakeFiles/alibot.dir/DependInfo.cmake"
+  "controllers/alibot/CMakeFiles/alibot_autogen.dir/DependInfo.cmake"
   )

@@ -35,11 +35,15 @@
 		<body position="-1,0,0" orientation="0,0,0" />
 	  </box>
 	  
-	  <!-- Place the bot and bind it to the controller
-	  <kbot id="kb_0">
-		<body position="0,0,0" orientation="0,0,0" />
+	  <!-- Place the bot and bind it to the controller -->
+	  <foot-bot id="fb_0">
+		<body position="0.5,0,0" orientation="1,0,0" />
 		<controller config="kbc" />
-	  </kbot> -->
+	  </foot-bot>
+	  <foot-bot id="fb_1">
+		<body position="-0.5,0,0" orientation="-1,0,0" />
+		<controller config="kbc" />
+	  </foot-bot>
 	</arena>
 	<physics_engines>
 		<!-- Use a 2D dynamics engine. -->

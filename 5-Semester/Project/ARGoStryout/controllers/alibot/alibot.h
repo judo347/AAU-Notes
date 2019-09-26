@@ -27,10 +27,10 @@ class Alibot : public CCI_Controller {
 public:
 
    /* Class constructor. */
-   CFootBotDiffusion();
+   Alibot();
 
    /* Class destructor. */
-   virtual ~CFootBotDiffusion() {}
+   virtual ~Alibot() {}
 
    /*
     * This function initializes the controller.
@@ -98,8 +98,6 @@ private:
 
    bool isAdjustingDirection;
    CVector2 targetDirection;
-
-
 };
 
 #endif
