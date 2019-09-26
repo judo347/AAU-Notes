@@ -1,21 +1,19 @@
 #ifndef COMMUNICATOR_LOOP_FUNCTIONS_H
 #define COMMUNICATOR_LOOP_FUNCTIONS_H
 
-#include <argos3/plugins/simulator/visualizations/qt-opengl/qtopengl_user_functions.h>
-#include <argos3/plugins/robots/foot-bot/simulator/footbot_entity.h>
+#include <argos3/core/simulator/loop_functions.h>
 
 using namespace argos;
 
-class CommunicatorLoopFunctions : public CQTOpenGLUserFunctions {
+class CommunicatorLoopFunctions : public CLoopFunctions {
 
 public:
 
    CommunicatorLoopFunctions();
+   virtual ~CommunicatorLoopFunctions();
 
-   virtual ~CommunicatorLoopFunctions() {}
+   virtual void Init(TConfigurationNode& t_tree);
 
-   void Draw(CFootBotEntity& c_entity);
-   
 };
 
 #endif

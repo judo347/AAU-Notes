@@ -162,6 +162,32 @@ alibot_autogen/fast:
 	$(MAKE) -f controllers/alibot/CMakeFiles/alibot_autogen.dir/build.make controllers/alibot/CMakeFiles/alibot_autogen.dir/build
 .PHONY : alibot_autogen/fast
 
+#=============================================================================
+# Target rules for targets named communicator_loop_functions
+
+# Build rule for target.
+communicator_loop_functions: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 communicator_loop_functions
+.PHONY : communicator_loop_functions
+
+# fast build rule for target.
+communicator_loop_functions/fast:
+	$(MAKE) -f loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions.dir/build.make loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions.dir/build
+.PHONY : communicator_loop_functions/fast
+
+#=============================================================================
+# Target rules for targets named communicator_loop_functions_autogen
+
+# Build rule for target.
+communicator_loop_functions_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 communicator_loop_functions_autogen
+.PHONY : communicator_loop_functions_autogen
+
+# fast build rule for target.
+communicator_loop_functions_autogen/fast:
+	$(MAKE) -f loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions_autogen.dir/build.make loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions_autogen.dir/build
+.PHONY : communicator_loop_functions_autogen/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +200,8 @@ help:
 	@echo "... kbot_autogen"
 	@echo "... alibot"
 	@echo "... alibot_autogen"
+	@echo "... communicator_loop_functions"
+	@echo "... communicator_loop_functions_autogen"
 .PHONY : help
 
 

@@ -15,6 +15,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../controllers/CMakeLists.txt"
   "../controllers/alibot/CMakeLists.txt"
   "../controllers/kbot/CMakeLists.txt"
+  "../loop_functions/CMakeLists.txt"
+  "../loop_functions/communicator_loop_functions/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake"
@@ -69,6 +71,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "controllers/CMakeFiles/CMakeDirectoryInformation.cmake"
   "controllers/kbot/CMakeFiles/CMakeDirectoryInformation.cmake"
   "controllers/alibot/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "loop_functions/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "loop_functions/communicator_loop_functions/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -77,4 +81,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "controllers/kbot/CMakeFiles/kbot_autogen.dir/DependInfo.cmake"
   "controllers/alibot/CMakeFiles/alibot.dir/DependInfo.cmake"
   "controllers/alibot/CMakeFiles/alibot_autogen.dir/DependInfo.cmake"
+  "loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions.dir/DependInfo.cmake"
+  "loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions_autogen.dir/DependInfo.cmake"
   )

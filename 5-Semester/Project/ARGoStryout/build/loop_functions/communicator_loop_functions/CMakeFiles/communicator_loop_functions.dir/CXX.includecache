@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/communicator_loop_functions/communicator_loop_functions_autogen/mocs_compilation.cpp
+
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/loop_functions/communicator_loop_functions/communicator_loop_functions.cpp
+communicator_loop_functions.h
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/loop_functions/communicator_loop_functions/communicator_loop_functions.h
+argos3/plugins/robots/foot-bot/simulator/footbot_entity.h
+-
+
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/loop_functions/communicator_loop_functions/communicator_loop_functions.h
+argos3/core/simulator/loop_functions.h
+-
+

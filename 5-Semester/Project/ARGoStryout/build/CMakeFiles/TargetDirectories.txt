@@ -10,3 +10,9 @@
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/alibot.dir
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/edit_cache.dir
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/CMakeFiles/alibot_autogen.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/CMakeFiles/rebuild_cache.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/CMakeFiles/edit_cache.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/communicator_loop_functions/CMakeFiles/rebuild_cache.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/communicator_loop_functions/CMakeFiles/edit_cache.dir
+/home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/loop_functions/communicator_loop_functions/CMakeFiles/communicator_loop_functions_autogen.dir
