@@ -5,6 +5,8 @@
 #include <argos3/plugins/robots/foot-bot/simulator/footbot_entity.h>
 #include <controllers/alibot/alibot.h>
 
+#include <list>
+
 /****************************************/
 
 CommunicatorLoopFunctions::CommunicatorLoopFunctions() {
@@ -37,15 +39,18 @@ void CommunicatorLoopFunctions::SetBotController(){
    CSpace::TMapPerType& botMap = GetSpace().GetEntitiesByType("foot-bot");
    argos::LOG << "Number of foot-bots: " << botMap.size() << std::endl;
 
-   /* Get the first foot-bot and its controller */
-   CSpace::TMapPerType::iterator it = botMap.begin();
-   CFootBotEntity& cFootbot = *any_cast<CFootBotEntity*>(it->second);
-   Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController());
-   //CCI_Controller& controller = dynamic_cast<CCI_Controller&>(cFootbot.GetControllableEntity().GetController());
+   /* Initialize array size to match the number of bots */
+   //Alibot array[botMap.size()];
+   //botController = array;
 
-   /* Set field and add THIS to bot controller */   
-   //controller.AddCommunicator(*this);
-   botController = controller;
+   /* Iterate through all bots and collect their controller */
+   for(CSpace::TMapPerType::iterator it = botMap.begin(); it != botMap.end(); it++){
+      CFootBotEntity& cFootbot = *any_cast<CFootBotEntity*>(it->second);
+      Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController());
+      botControllers.push_back(controller); //Put it a the end of the list
+   }
+
+   argos::LOG << "Number of controllers: " << botControllers.size() << std::endl;
 }
 /****************************************/
 /****************************************/

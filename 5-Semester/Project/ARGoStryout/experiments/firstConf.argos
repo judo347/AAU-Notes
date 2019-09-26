@@ -54,6 +54,14 @@
 		<body position="0,0,0" orientation="1,0,0" />
 		<controller config="abc" />
 	  </foot-bot>
+	  <foot-bot id="fb_1">
+		<body position="0,0,0" orientation="1,0,0" />
+		<controller config="abc" />
+	  </foot-bot>
+	  <foot-bot id="fb_2">
+		<body position="0,0,0" orientation="1,0,0" />
+		<controller config="abc" />
+	  </foot-bot>
 	</arena>
 	<physics_engines>
 		<!-- Use a 2D dynamics engine. -->

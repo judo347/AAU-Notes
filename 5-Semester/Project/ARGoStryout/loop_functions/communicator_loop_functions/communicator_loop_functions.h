@@ -6,6 +6,8 @@
 #include <controllers/alibot/alibot.h>
 #include <argos3/core/control_interface/ci_controller.h>
 
+#include <list>
+
 using namespace argos;
 
 class CommunicatorLoopFunctions : public CLoopFunctions {
@@ -23,7 +25,7 @@ public:
 
 private:
 
-   Alibot botController;
+   std::list<Alibot> botControllers;
    void SetBotController();
 };
 

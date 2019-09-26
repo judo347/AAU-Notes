@@ -25,6 +25,8 @@ controllers/alibot/alibot.h
 -
 argos3/core/control_interface/ci_controller.h
 -
+list
+-
 
 /home/lekkkim/Desktop/repos/AAU-Notes/5-Semester/Project/ARGoStryout/build/controllers/alibot/alibot_autogen/mocs_compilation.cpp
 
