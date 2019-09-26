@@ -12,6 +12,8 @@
 #include <argos3/plugins/robots/foot-bot/control_interface/ci_footbot_proximity_sensor.h>
 /* Definition of the positioning sensor */
 #include <argos3/plugins/robots/generic/control_interface/ci_positioning_sensor.h>
+/**/
+#include <loop_functions/communicator_loop_functions/communicator_loop_functions.h>
 
 /*
  * All the ARGoS stuff in the 'argos' namespace.
@@ -63,6 +65,8 @@ public:
     */
    virtual void Destroy() {}
 
+   //void AddCommunicator(CommunicatorLoopFunctions& clf);
+
 private:
 
    /* Pointer to the differential steering actuator */
@@ -98,6 +102,7 @@ private:
 
    bool isAdjustingDirection;
    CVector2 targetDirection;
+   // CommunicatorLoopFunctions* clf;
 };
 
 #endif

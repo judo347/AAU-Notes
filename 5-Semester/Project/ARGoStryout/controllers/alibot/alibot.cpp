@@ -11,6 +11,8 @@
 /* Enable logging */
 #include <argos3/core/utility/logging/argos_log.h>
 
+#include <loop_functions/communicator_loop_functions/communicator_loop_functions.h>
+
 /****************************************/
 /****************************************/
 
@@ -70,10 +72,11 @@ void Alibot::Init(TConfigurationNode &t_node)
 
 void Alibot::ControlStep()
 {
+
+
    /* Get readings from proximity sensor */
    const CCI_FootBotProximitySensor::TReadings &tProxReads = m_pcProximity->GetReadings();
 
-   // argos::LOG << "[x = " << (int)m_pcPosSens->GetReading().Position.GetX() << "] [y = " << (int)m_pcPosSens->GetReading().Position.GetY() << "]" << std::endl;
    argos::LOG << m_pcPosSens->GetReading().Position << std::endl;
 
    /* If the angle of the vector is small enough and the closest obstacle
@@ -108,6 +111,12 @@ void Alibot::ControlStep()
       m_pcWheels->SetLinearVelocity(m_fWheelVelocity, -m_fWheelVelocity);
    }
 }
+
+/*
+void Alibot::AddCommunicator(CommunicatorLoopFunctions& clf_incoming){
+   argos::LOG << "Alibot: A communicator has been added!" << std::endl;
+   clf = &clf_incoming;
+}*/
 
 /****************************************/
 /****************************************/
