@@ -24,15 +24,20 @@ public:
 
    virtual void PostStep();
 
-   //void RobotCheckIn(CFootBotEntity& bot);
-
 private:
 
+   /* A list for all controllers */
+   std::list<Alibot*> botControllers;
+
+   /* All destinations not handed out to controllers */
+   std::list<CVector2> destinations;
+
+   /* Delegates destinations to controllers that is available. */
    void DelegateDestinations();
 
-   std::list<Alibot*> botControllers;
-   void SetBotController();
-   std::list<CVector2> destinations;
+   /* Find and collects all foot-bot controllers.
+    * (Only works with alibots) */
+   void CollectBotControllers();
 };
 
 #endif
