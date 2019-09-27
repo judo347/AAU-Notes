@@ -65,6 +65,8 @@ void Alibot::Init(TConfigurationNode &t_node)
    m_cGoStraightAngleRange.Set(-ToRadians(m_cAlpha), ToRadians(m_cAlpha));
    GetNodeAttributeOrDefault(t_node, "delta", m_fDelta, m_fDelta);
    GetNodeAttributeOrDefault(t_node, "velocity", m_fWheelVelocity, m_fWheelVelocity);
+
+   //isReadyForDestinationReady = true;
 }
 
 /****************************************/
@@ -72,7 +74,13 @@ void Alibot::Init(TConfigurationNode &t_node)
 
 void Alibot::ControlStep()
 {
+   argos::LOG << std::endl << "Alibot control: before if. Is ready: " << isReadyForDestinationReady << "target direction: " << targetDirection << std::endl;
 
+   if(isReadyForDestinationReady){
+      return;
+   }
+
+   argos::LOG << "Alibot control: after if" << std::endl;
 
    /* Get readings from proximity sensor */
    const CCI_FootBotProximitySensor::TReadings &tProxReads = m_pcProximity->GetReadings();
@@ -85,8 +93,6 @@ void Alibot::ControlStep()
 
    m_pcWheels->SetLinearVelocity(m_fWheelVelocity, -m_fWheelVelocity);
    m_pcPosSens->GetReading().Orientation.ToEulerAngles(cZAngle, cYAngle, cXAngle);
-
-   targetDirection = CVector2(-2, -2);
 
    int frontAngle = ToDegrees(cZAngle).GetValue();
    int targetAngle = targetDirection.Angle().GetValue() * 57.2958;
@@ -110,6 +116,12 @@ void Alibot::ControlStep()
    {
       m_pcWheels->SetLinearVelocity(m_fWheelVelocity, -m_fWheelVelocity);
    }
+}
+
+void Alibot::SetDestination(CVector2 destVec){
+   targetDirection = CVector2(destVec.GetX(), destVec.GetY());
+   argos::LOG << "Alibot: got destination: " << destVec << " target : " << targetDirection << std::endl;
+   isReadyForDestinationReady = false;
 }
 
 /*

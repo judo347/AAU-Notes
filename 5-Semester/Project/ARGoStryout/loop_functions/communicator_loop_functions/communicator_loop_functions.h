@@ -5,6 +5,7 @@
 #include <argos3/plugins/robots/foot-bot/simulator/footbot_entity.h>
 #include <controllers/alibot/alibot.h>
 #include <argos3/core/control_interface/ci_controller.h>
+#include <argos3/core/utility/math/vector2.h>
 
 #include <list>
 
@@ -21,12 +22,17 @@ public:
 
    virtual void PreStep();
 
+   virtual void PostStep();
+
    //void RobotCheckIn(CFootBotEntity& bot);
 
 private:
 
+   void DelegateDestinations();
+
    std::list<Alibot> botControllers;
    void SetBotController();
+   std::list<CVector2> destinations;
 };
 
 #endif
