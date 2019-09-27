@@ -30,7 +30,7 @@ private:
 
    void DelegateDestinations();
 
-   std::list<Alibot> botControllers;
+   std::list<Alibot*> botControllers;
    void SetBotController();
    std::list<CVector2> destinations;
 };

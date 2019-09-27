@@ -45,10 +45,12 @@ void CommunicatorLoopFunctions::PostStep(){
 
 }
 
+
 void CommunicatorLoopFunctions::DelegateDestinations(){
    //argos::LOG << "1" << std::endl;
    /* Iterate through all controls and check if bot is ready for a destination */
-   std::list<Alibot>::iterator it; // = botControllers.begin();
+   std::list<Alibot*>::iterator it = this->botControllers.begin(); // = botControllers.begin();
+   std::list<Alibot*>::iterator end = this->botControllers.end();
    //argos::LOG << "2" << std::endl;
 
    //argos::LOG << "Number of conrolasdla: " << botControllers.size();
@@ -56,12 +58,12 @@ void CommunicatorLoopFunctions::DelegateDestinations(){
    //return;
 
    //while(it != botControllers.end()){
-   for(it = botControllers.begin(); it != botControllers.end(); it++){
+   for(it; it != end; it++){
       //argos::LOG << "for tick" << std::endl;
 
-      argos::LOG << "Coms: for: is ready: " << it->IsReadyForDestination() << std::endl;
+      argos::LOG << "Coms: for: is ready: " << (*it)->IsReadyForDestination() << std::endl;
 
-      if(it->IsReadyForDestination()){
+      if((*it)->IsReadyForDestination()){
 
          argos::LOG << "Coms: bot is ready!" << std::endl;
 
@@ -70,7 +72,7 @@ void CommunicatorLoopFunctions::DelegateDestinations(){
 
             CVector2 dest = *itDest;
             destinations.pop_front();
-            it->SetDestination(dest);
+            (*it)->SetDestination(dest);
             argos::LOG << "Coms: gave dest!" << std::endl;
          }
       }
@@ -98,7 +100,8 @@ void CommunicatorLoopFunctions::SetBotController(){
       CFootBotEntity& cFootbot = *any_cast<CFootBotEntity*>(it->second);
       Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController());
       //controller.SetDestination(CVector2(5,5));
-      botControllers.push_back(controller); //Put it a the end of the list
+      Alibot *pr = &controller;
+      botControllers.push_back(pr); //Put it a the end of the list
    }
 
    argos::LOG << "Number of controllers: " << botControllers.size() << std::endl;
