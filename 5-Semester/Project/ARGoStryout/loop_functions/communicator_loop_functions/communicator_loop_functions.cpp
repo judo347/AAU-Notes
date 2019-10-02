@@ -22,7 +22,7 @@ CommunicatorLoopFunctions::~CommunicatorLoopFunctions(){
 /****************************************/
 
 void CommunicatorLoopFunctions::Init(TConfigurationNode& t_tree){
-
+   //TODO
    SetBotController();
 
    /* Add destinations to destination list */
@@ -33,50 +33,79 @@ void CommunicatorLoopFunctions::Init(TConfigurationNode& t_tree){
 
 void CommunicatorLoopFunctions::PreStep(){
 
-   /* Delegate destinations to controllers available. */
+   //argos::LOG << "pre-step tick" << std::endl;
    DelegateDestinations();
+
 }
 
-/* Delegates destinations to controllers that is available. */
+void CommunicatorLoopFunctions::PostStep(){
+
+   //argos::LOG << "post-step tick" << std::endl;
+   //DelegateDestinations();
+
+}
+
+
 void CommunicatorLoopFunctions::DelegateDestinations(){
-
-   /* Iterate through all controllers and check if bot is ready for directions */
-   std::list<Alibot*>::iterator it = this->botControllers.begin(); 
+   //argos::LOG << "1" << std::endl;
+   /* Iterate through all controls and check if bot is ready for a destination */
+   std::list<Alibot*>::iterator it = this->botControllers.begin(); // = botControllers.begin();
    std::list<Alibot*>::iterator end = this->botControllers.end();
+   //argos::LOG << "2" << std::endl;
 
+   //argos::LOG << "Number of conrolasdla: " << botControllers.size();
+
+   //return;
+
+   //while(it != botControllers.end()){
    for(it; it != end; it++){
+      //argos::LOG << "for tick" << std::endl;
 
-      /* Is this bot ready for directions? */
+      argos::LOG << "Coms: for: is ready: " << (*it)->IsReadyForDestination() << std::endl;
+
       if((*it)->IsReadyForDestination()){
 
-         /* Is there any directions left to give? */
+         argos::LOG << "Coms: bot is ready!" << std::endl;
+
          if(destinations.size() != 0){
             std::list<CVector2>::iterator itDest = destinations.begin();
 
             CVector2 dest = *itDest;
             destinations.pop_front();
             (*it)->SetDestination(dest);
+            argos::LOG << "Coms: gave dest!" << std::endl;
          }
       }
    }
 }
 
-/* Find and collects all foot-bot controllers.
- * (Only works with alibots) */
-void CommunicatorLoopFunctions::CollectBotControllers(){
+/*
+void CommunicatorLoopFunctions::RobotCheckIn(CFootBotEntity& bot){
+   argos::LOG << "Communicator: A robot has checked-in!" << std::endl;
+   botController = bot;
+}*/
+
+void CommunicatorLoopFunctions::SetBotController(){
    
    /* Get a map containing all active foot-bots */
    CSpace::TMapPerType& botMap = GetSpace().GetEntitiesByType("foot-bot");
+   argos::LOG << "Number of foot-bots: " << botMap.size() << std::endl;
+
+   /* Initialize array size to match the number of bots */
+   //Alibot array[botMap.size()];
+   //botController = array;
 
    /* Iterate through all bots and collect their controller */
    for(CSpace::TMapPerType::iterator it = botMap.begin(); it != botMap.end(); it++){
-      CFootBotEntity& cFootbot = *any_cast<CFootBotEntity*>(it->second); //Get the footbot
-      Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController()); //Get the controller of the footbot
+      CFootBotEntity& cFootbot = *any_cast<CFootBotEntity*>(it->second);
+      Alibot& controller = dynamic_cast<Alibot&>(cFootbot.GetControllableEntity().GetController());
+      //controller.SetDestination(CVector2(5,5));
       Alibot *pr = &controller;
       botControllers.push_back(pr); //Put it a the end of the list
    }
-}
 
+   argos::LOG << "Number of controllers: " << botControllers.size() << std::endl;
+}
 /****************************************/
 /****************************************/
 
