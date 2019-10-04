@@ -383,3 +383,11 @@ Slide 42-43
 
 # 4 - How it actually works
 
+# 7 - Programming models 2 - indirect communication
+
+Slide 3: Time upcoupled + Space coulbed: sms, if the receiver is in flight mode, the sms will be held in the sms-system and devivered when the receiver comes online again.
+
+Slide 13: du kan sende msg ind, men så får du den ikke slev. Du kan sende beskeden inde i gruppen, så får du den også selv. 
+
+Slide 13: When working with group you have to consider what happens when one joins a group: does it get all msg's currently flowing around in the system, or can you only garuantee that it reveices some of the msgs?
+
