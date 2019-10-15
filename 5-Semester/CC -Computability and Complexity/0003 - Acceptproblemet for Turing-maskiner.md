@@ -34,5 +34,15 @@
 
 #### Afsnit 4
 
-NÅET TIL!!
+![](.\img\134.png)
+
+![](.\img\135.png)
+
+![](.\img\136.png)
+
+![](.\img\137.png)
+
+![](.\img\138.png)
+
+![](.\img\139.png)
 
