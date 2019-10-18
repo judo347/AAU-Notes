@@ -93,6 +93,8 @@ void Alibot::ControlStep()
 
    m_pcWheels->SetLinearVelocity(m_fWheelVelocity, -m_fWheelVelocity);
    m_pcPosSens->GetReading().Orientation.ToEulerAngles(cZAngle, cYAngle, cXAngle);
+ 
+   argos::LOG << "z angle: " << cZAngle << std::endl;
 
    int frontAngle = ToDegrees(cZAngle).GetValue();
    int targetAngle = targetDirection.Angle().GetValue() * 57.2958;
