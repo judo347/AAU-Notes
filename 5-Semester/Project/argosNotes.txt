@@ -1,0 +1,41 @@
+TODOS:
+ - optimize checkAndTurn: turn slower the close to the desired angle you are.
+ - checkAndTurn: 180 is not possible to hit
+
+/* TEMP EXAMPLE OF HOW TO USE COMPASS DIRECTIONS */
+   //Alibot::CompassDirection nextDirection = Alibot::CompassDirection::north;
+   //argos::LOG << Alibot::direction_vectors[nextDirection] << std::endl;
+
+//TODO TMEP
+   //pointTowards(Alibot::CompassDirection::south);
+   //moveOneCellForward();
+
+
+
+
+argos::LOG << "Front = " << frontAngle << std::endl;
+   argos::LOG << "Target = " << targetAngle << std::endl;
+   argos::LOG << "Abs value = " << abs(targetAngle - frontAngle) << std::endl;
+
+   if(abs(targetAngle - frontAngle) < 0.05){
+      isBusy = false;
+      isTurning = false;
+      m_pcWheels->SetLinearVelocity(0, 0); //Stop the wheels from turning
+   }else{
+
+      int turnDistanceToTargetLEFT;
+      int turnDistanceToTargetRIGHT;
+
+      
+
+      m_pcWheels->SetLinearVelocity(m_fWheelVelocity /4, -m_fWheelVelocity /4);
+   }
+
+case 0:  firstControllerPtr->pointTowards(Alibot::CompassDirection::east); break;
+         case 1:  firstControllerPtr->pointTowards(Alibot::CompassDirection::north); break;
+         case 2:  firstControllerPtr->pointTowards(Alibot::CompassDirection::west); break;
+         //case 1:  firstControllerPtr->moveOneCellForward(); break;
+         //case 2:  firstControllerPtr->moveOneCellForward(); break;
+         case 3:  firstControllerPtr->pointTowards(Alibot::CompassDirection::south); break;
+         case 4:  firstControllerPtr->moveOneCellForward(); break;
+         case 5:  firstControllerPtr->moveOneCellForward(); break;
