@@ -4,6 +4,19 @@
 
 Løb over alle spørgsmål "hurtigt" og hvis der er tid til sidst, så gå i dybten med dem!
 
+**Status**:
+
+- 1: Stort set done.
+- 2: Stort set done.
+- 3:
+- 4:
+- 5:
+- 6:
+- 7:
+- 8:
+- 9:
+- 10:
+
 # Question 1: Networking and Internetworking
 Question: **Explain what a network is and how we can connect different networks together to form an internetwork [CN1].**
 **Explain what a network is, the idea of protocol hierarchies and the benefits. What are the OSI and IP models and what responsibility resides at each layer? What is the difference between a connection oriented and a connectionless network? Give examples of different kinds of networks in use.**
@@ -63,6 +76,40 @@ Service provided by a layer is devided into two categories:
 
 Question: **Explain how packages are routed in an internetwork [CN5].**
 **What is the purpose of routing packages. How does a routing table look for a connectionless network? For a connection oriented network? How do we construct and maintain a routing table in a connectionless network - explain either distance vector or link state routing. How do we represent routing tables, consider especially how to represent them in a compact form.**
+
+<span style="color:red">Give short introduction to what a network is it focus on the router part of it. Use slide 8 </span>
+![](.\img\exam\slides\8.PNG)
+
+### Purpose of routing packages in an internetwork
+To send information between devices on different networks, involving a number of routers. 
+
+### Routing table look for connectionless network?
+Slide 13
+![](.\img\exam\slides\13.PNG)
+Slide 13: Hver router har deres tabel, første kollonne lonne er hvad slut destinationen for pakken er, og anden kollonne er hvor den skal sendes videre til for at komme imod destinationen. <span style="color:blue">Det er vel ip-addresser i virkerlighenden. </span>
+Fejl i A's tabel (later): den kan du sende til dem den er fundet til. 
+
+### Routing table look for connection oriented network?
+Slide 14
+![](.\img\exam\slides\14.PNG)
+Pakker får et tag, og alle router tabeller er så sat op så de ved hvilke tag skal sendes hvor hen. Dvs. at når alt er sat op, bliver pakker med samme tag altid sendt samme sted hen.
+<span style="color:blue">Hvad betyder tabellerne? </span>
+
+### How to contruct and maintain routing tables in connectionless network?
+Slide 15
+![](.\img\exam\slides\15.PNG)
+Finding the optimal route matters. But might change over time because of failture or hardware getting turned off.
+
+Slide 18
+![](.\img\exam\slides\18.PNG)
+Explain link state routing.
+![](.\img\38.png)
+Disse pakker bliver videresendt rundt i nettet, så det ikke kun er naboerne der går dem, men alle, aka flooding. Men det er derfor vi har *seq* nummer der er løbenummer, og *age* der gør at pakken ikke bliver sendt videre efter et stykke tid. (dør) 
+
+Internettet er bygget op som et træ/hiraki struktur så hele nettet ikke bliver flooded af LSP. Ligesom når man kører, kører man på motervejen selvom der måske er en kortere vej.
+
+### Representation of routing tables - compact form
+<span style="color:red">??? </span>
 
 # Question 3: Transport Layer
 Question: **Explain how we can build a reliable ordered connection using an unreliable connectionless network [CN6]**
