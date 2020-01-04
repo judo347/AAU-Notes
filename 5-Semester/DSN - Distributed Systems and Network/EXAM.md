@@ -1,15 +1,66 @@
 # Random notes
 
+<span style="color:red">Husk det tager tid at printe og øve!!!!!!!</span>
 
-
-
+Løb over alle spørgsmål "hurtigt" og hvis der er tid til sidst, så gå i dybten med dem!
 
 # Question 1: Networking and Internetworking
 Question: **Explain what a network is and how we can connect different networks together to form an internetwork [CN1].**
 **Explain what a network is, the idea of protocol hierarchies and the benefits. What are the OSI and IP models and what responsibility resides at each layer? What is the difference between a connection oriented and a connectionless network? Give examples of different kinds of networks in use.**
 
+### What is a network and examples of different types of networks
+
+Slide 7-8
+
+A network may contain devises like computers, printers, routers, switches and other devices connected to the network. These devices form different connections like, client-server, peer-to-peer (talks without server) and mobile users like wifi, 3G, etc..
+
+Types:
+
+- PAN: bluetooth, etc..
+- LAN: may also include wifi, and can be called WLAN.
+- MAN: Metropolitican Area Network, a city or if a datacenter has replicateded structure it would be called two MAN. 
+- WAN: Connect devices over a country, ISP network, VPN
+- Internet: interplanetary
+
+Internet = inter-network: ~58.000 different networks on the internet.
+
+![](.\img\exam\slides\7.PNG)
+
+![](.\img\exam\slides\8.PNG)
+
+### Idea: protocol hierarchies and the benefits
+
+Slide 4. <span style="color:blue">Other information for also 3? Not really?</span>
+
+![](.\img\exam\slides\4.PNG)
+
+The above slide shows that at each layers, additional information is added to the packet. 
+
+![](.\img\exam\1.PNG)
+
+### OSI and IP model - responsibility resides at each layer?
+
+Slide 5-6
+
+<span style="color:red">Text to explain models</span>
+
+![](.\img\exam\slides\5.PNG)
+
+![](.\img\exam\slides\6.PNG)
+
+### Connection oriented vs connectionless network
+
+Service provided by a layer is devided into two categories:
+
+- Connection-oriented: setup and torn down: e.g. phone call.
+- Connectionless: messages are handled separately, e.g., postal delivery.
+
+![](.\img\01.PNG)
+
+<span style="color:red">UDP and TCP?</span>
 
 # Question 2: Routing
+
 Question: **Explain how packages are routed in an internetwork [CN5].**
 **What is the purpose of routing packages. How does a routing table look for a connectionless network? For a connection oriented network? How do we construct and maintain a routing table in a connectionless network - explain either distance vector or link state routing. How do we represent routing tables, consider especially how to represent them in a compact form.**
 
