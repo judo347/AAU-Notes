@@ -6,7 +6,7 @@ Løb over alle spørgsmål "hurtigt" og hvis der er tid til sidst, så gå i dyb
 
 Workload:
 - 5/1: 8 / 3dage = 2.667 questions per day
-- 6/1 (udregnet 5/1 hvor 1 blev laver): 7/2 = 3.5
+- 6/1 (udregnet 5/1 hvor 2 blev lavet): 6/2 = 3
 
 **Status**:
 
@@ -16,10 +16,12 @@ Workload:
 - 4:
 - 5:
 - 6:
-- 7:
+- 7: Done
 - 8:
 - 9:
 - 10:
+
+(Alle mangler at blive lavet til noter!)
 
 # Question 1: Networking and Internetworking
 Question: **Explain what a network is and how we can connect different networks together to form an internetwork [CN1].**
@@ -186,9 +188,78 @@ Question: **Discuss the goal of Peer-to-Peer systems, and describe how searches 
 Question: **Discuss algorithms to achieve clock synchronization in distributed system [DS14.1-14.3]**
 **How are clocks implemented in computers? How is time represented ? what are the sources of inaccurate clocks? Why can't computer clocks not be 100% accurately synchronized? What is internal/external synchronization? How does Christians method and the Berkeley Algorithm synchronize clocks? What is the network time protocol? **
 
+### How are clocks implemented in computers
+Man kan købe modtagere, der kan modtage radio bølger fra satallitter, som kan forbindes til computere. Men det normale er at der i en computer sidder noget HW der tæller occileringer af en quartz krystal. Efter et bestemt antal af svingninger ligger uret én til et register.
+Resolution are perioden imellem klokke opdateringer. 
+OS vedligeholder en software klokke der er baseret på registret. 
+
+### How is time represented
+<span style="color:blue">Er besvaret i ovenstående under spørgsmål? </span>
+
+### What are the sources of inaccurate clocks
+
+- Resolution: Hvis to events sker med kortere tids interval end Resolution, kan disse ikke adskilles i tid.
+- Alle quartz uret "skew"s over tid.
+  - Kommer an på temperatur.
+
+### Why can't computer clocks not be 100% accurately synchronized
+Fordi urer "skew" forskellige og vil derfor over tid ikke være ens, og når urer synkroniseres, skal der kommunikeres og det kan ikke gøres "instant".
+
+### What is internal/external synchronization
+External: urerne bliver sat efter en ekstern "authorative" source.
+Internal: urerne er synkroniseret relativt til hinanden.
+
+### How does Christians method and the Berkeley Algorithm synchronize clocks
+Disse to algorithmer bliver brugt i asynkrone systemer.
+#### Christians Algorithm
+Client - server synkronisering. 
+- Klienten sender en tidsreserverings forspørgsel til serveren. 
+- Serveren returnere så dens tid. 
+- Klienten måler hvor lang tid det tog. Fra SEND til SVAR MODTAGET.
+- Klienten sætter så sit ur til: serverens tid + (Fra SEND til SVAR MODTAGET) /2 
+
+Præcisheden er Fra SEND til SVAR MODTAGET /2 - minimal message delay.
+
+- Det er ikke tilladt at justere uret tilbage i tiden.
+- Og at springe frem kan også skabe problemer
+- Så uret justeres langsomt over tid.
+
+#### Berkeley Algorithm
+Designed for intern synkronisering.
+- Vælg en maskine om er mester (M)
+- M forespørger all andre maskiner deres lokale tid.
+- M udregner en gennemsnit klokkeslet baseret på de modtagne tider.
+- M siger så til alle hvad de skal justerer deres ur med for at være det samme som gennemsnittet (+/-)
+
+
+### What is the network time protocol
+Skal vide hvad det er - behøver ikke at gå i dybten.
+
+Synkronisering af klienter relativt til UTC, Universal Time Coordinated, på et intetnet-wide scale.
+Pålideligt selv hvis store dele mister forbindelsen.
+Tillader ofte synkronisering.
+
+
 # Question 8: Logical Time
 Question: **Discuss methods to order events in a distributed system [DS14.1-14.2,14.4]**
 **What is logical time time as opposed to physical time time? What is causal ordering and the happens-before relation? What is Lamportclocks? How are events time stamped? What is vector clocks? What can be done with vector clocks that cannot be achieved with Lamportclocks? What can logical time be used for? What system model is assumed for the different algorithms?**
+
+### What is logical time time as opposed to physical time time
+
+### What is causal ordering and the happens-before relation
+
+### What is Lamportclocks
+
+### How are events time stamped
+
+### What is vector clocks
+
+### What can be done with vector clocks that cannot be achieved with Lamportclocks
+
+### What can logical time be used for
+
+### What system model is assumed for the different algorithms
+
 
 # Question 9: Security
 Question: **Discuss how cryptography can be to ensure integrity and confidentiality in a distributed system [DS11 except 11.3.1-11.3.3, 11.6.4, and 11.5].**
