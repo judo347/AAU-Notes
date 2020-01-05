@@ -4,11 +4,15 @@
 
 Løb over alle spørgsmål "hurtigt" og hvis der er tid til sidst, så gå i dybten med dem!
 
+Workload:
+- 5/1: 8 / 3dage = 2.667 questions per day
+- 6/1 (udregnet 5/1 hvor 1 blev laver): 7/2 = 3.5
+
 **Status**:
 
 - 1: Stort set done.
 - 2: Stort set done.
-- 3:
+- 3: Stort set done.
 - 4:
 - 5:
 - 6:
@@ -70,7 +74,7 @@ Service provided by a layer is devided into two categories:
 
 ![](.\img\01.PNG)
 
-<span style="color:red">UDP and TCP?</span>
+TCP is Connection-oriented and UDP is connnectionless.
 
 # Question 2: Routing
 
@@ -114,6 +118,57 @@ Internettet er bygget op som et træ/hiraki struktur så hele nettet ikke bliver
 # Question 3: Transport Layer
 Question: **Explain how we can build a reliable ordered connection using an unreliable connectionless network [CN6]**
 **In the presence of possibility of package loss, duplication and reordering, how do we handle connection establishment, connection termination, ensure ordering and reliability? What is the purpose of the sliding window protocol and what affects the window size? What is the purpose of "slow start" in TCP?**
+
+Transport layer is lvl 4 OSI: TCP and UDP. The transport layer is the first layer that handles data loss.
+
+Maybe slide 25 as intro?
+
+TPDU (Transport Protocol Data Unit) is a message encapsulation format where there are several bytes of routing header added to the front of the payload message. The processing overhead of the TPDU has two components: the overhead TPDU and the overhead per byte
+
+### In the presence of possibility of package loss, duplication and reordering, how do we handle connection establishment, connection termination, ensure ordering and reliability?
+
+![](.\img\exam\slides\26.PNG)
+Teorien bag, men kommunikationen er baseret på pakker.
+
+<span style="color:red">Noget om at pakker bliver numereret? </span>
+
+Slide 27-31
+
+![](.\img\exam\slides\27.PNG)
+Forklar three-way handshake
+
+![](.\img\exam\slides\28.PNG)
+a) gammel eller ugyldig CR pakke: host godkender ikke ACK, da den ved at "seq" ikke passer. b)  både gammel og ugyldig CR og DATA: her passer både "seq" og ACK ikke.
+
+Nogle gange er der processer der ikke gør dette ordenligt og så er der implementeret timeouts der håndterer dette.
+
+![](.\img\exam\slides\29.PNG)
+Her tror Host 1 at den har sendt og at modtageren Host 2 har modtaget pakken, men den har allerede lukket forbindelsen og modtager ikke længere.
+
+![](.\img\exam\slides\30.PNG)
+Her sender klient en DR og når den modtager DR fra Host 2, ved den at vi er færdig da Host 1, der er klient, var den der startede samtalen/forbindelse, og så sender Host 1 en ACK for at bekræfte at forbindelsen er lukket. Dette fungerer godt så længe der ikke er pakke tab. Set på næste slide.
+
+![](.\img\exam\slides\31.PNG)
+Gennemgå dem. Måske skip slide?
+
+### What is sliding window protocol? What affects window size?
+Ideen bag sliding window er at den tester hvor mange pakker modtageren kan modtage, og justerer ud fra det.
+
+Slide 39
+![](.\img\exam\slides\39.PNG)
+Modtager fortæller hele tiden for hvor data den har modtaget og hvor meget den stadig har plads til, og så sender afstender det modtager har plads til.
+
+### Purpose of "slow start" in TCP?
+
+Slide 41-42
+![](.\img\exam\slides\41.PNG)
+![](.\img\exam\slides\42.PNG)
+CWND: fortæller hvor mange pakker der må være ude i netværket. Pakker forsvinder ikke i kablerne, men i devices hvis buffers er fyldte. Hvis vi taber pakker så har vi congestion.
+vi doblet hele tiden antal af pakker vi prøver at sende, og på et tidspunkt skifte vi til at øge vinduet med en.
+Hvis vi taber en pakke, så starter vi forfra, men med flyttet threshold.
+
+SW: tester hvor mange pakker modtageren kan modtage.
+CW: tester hvor mange pakker der kan være ude i netværket.
 
 # Question 4: RMI
 Question: **Give an introduction to the idea of RMI, and discuss the implementation principles [DS5.1-5.5].**
