@@ -6,20 +6,21 @@ Løb over alle spørgsmål "hurtigt" og hvis der er tid til sidst, så gå i dyb
 
 Workload:
 - 5/1: 8 / 3dage = 2.667 questions per day
-- 6/1 (udregnet 5/1 hvor 2 blev lavet): 6/2 = 3
+- 6/1 : 6/2 = 3
+- 7/1: (udreget 6/1, 1 done): 5
 
 **Status**:
 
 - 1: Stort set done.
 - 2: Stort set done.
 - 3: Stort set done.
-- 4:
-- 5:
-- 6:
+- 4: Stort set done.
+- 5 DFS: 70% done
+- 6: Done
 - 7: Done
-- 8:
-- 9:
-- 10:
+- 8 Logical Time:
+- 9: Done
+- 10 Study ex:
 
 (Alle mangler at blive lavet til noter!)
 
@@ -176,13 +177,241 @@ CW: tester hvor mange pakker der kan være ude i netværket.
 Question: **Give an introduction to the idea of RMI, and discuss the implementation principles [DS5.1-5.5].**
 **What is Remote Method Invocation? Why is RMI suitable for distributed systems? What is the goal of RMI? What is a remote interface? How can it be specified? How are remote invocations different from local invocations? What is an idempotent operation? What options exists for call semantics? What is maybe invocation semantics? What is at least once semantics? What is at most once semantics? How can they be implemented? What problems arise in case of failures and concurrency? How can a distributed object system be implemented? What are the involved components? What happens step by step during a remote method invocation? What is static and dynamic invocation? What are server threads? What is java RMI (or .netRemoting) ? How are remote interfaces specified in Java RMI (or .netRemoting)? How are parameters transferred? What is the call semantics? How is the code for parameter objects transferred? What is the purpose of the registry?**
 
+### Intro
+**What is Remote Method Invocation?**
+Remote method invocation tillader at kalde metoder på objekter på tværs af et netværk, semantisk ækvivalent som at det var samme maskine. 
+**What is the goal of RMI?** IKKE HELT SIKKER PÅ DISSE
+- At benytte existerende netværks protokoller.
+- Generalisering af existerende primative typer i programmerings sprog for at understøtte udvikling af distribuerede systemer.
+- Distribueret "garbage collection"
+- At minimerer forskellen imellem at arbejde med lokale og "remote" objects.
+
+**Why is RMI suitable for distributed systems?**
+RMI er brugbar for distribuerede systemer fordi det gør implementering nemmere ved at abstrahere netværks delen og tillade implementering næsten som om det ikke var på tværs af netværk. 
+**How are remote invocations different from local invocations?**
+For klienten er der ikke forskel på "remote" og lokale "invocations", men nogle ekstra elementer er nødvendige for at både klient og server kan se hvad den anden tilbyder.
+
+### Implementing RMI
+
+Slide 46
+![](.\img\exam\slides\46.PNG)
+Gennemgå slide: Model for RMI og deres kommunikation. 
+- Proxy objekter: Klasser der udgiver sig for at være lokale, men så invoker remote klasser når de bliver brugt. (Ideen fra RMI, gør remote lokalt)
+- Remote reference module: ansvarlig for at oversætte til og fra lokale og "remote" objekt referencer, og for at lave referencer til "remote" objekter.
+- Communication module:
+- Skeleton & dispatcher: (Server side) hver process har én dispatcher, og en skeleton for hver lokal klasse.
+  - Dispatcher: modtager all "request msgs" fra commiunication module, og videregiver den til det skeleton der matcher method id.
+  - Skeleton: Un-marshals request og får argumenterne, invoker den tilsvarende metode, og marshals svaret og returnerer det til communication module.
+
+Marshals: At lave en samling af "data items" (platform dependent) til en extern data representation (platform independent).
+
+Un-marshals: Det modsatte.
+
+### Invocation semantics
+
+![](.\img\exam\4.PNG)
+
+**What is maybe invocation semantics? **
+**What is at least once semantics? **
+**What is at most once semantics? **
+**What is an idempotent operation? **
+Samme resultat hvis "applied" repeatedly, w/o side effects.
+
+### What happens step by step during a remote method invocation? 
+Slide 44
+![](.\img\exam\slides\44.PNG)
+
+### Java RMI
+- Define the remote interface: A remote interface provides the description of all the methods of a particular remote object. The client communicates with this remote interface.
+- Develop the implementation class (remote object): We need to implement the remote interface created in the earlier step. 
+- Develop the server program: An RMI server program should implement the remote interface or extend the implementation class. Here, we should create a remote object and bind it to the **RMIregistry**.
+- Develop the client program: Write a client program in it, fetch the remote object and invoke the required method using this object.
+- Compile the application
+- Execute the application
+- What is java RMI (or .netRemoting)?
+
+How are remote interfaces specified in Java RMI (or .netRemoting)? 
+How are parameters transferred? 
+
+### Registry
+**What is the purpose of the registry?**
+Serverne benytter dette registry til at angive deres tilgængelighed, og klienten benytter dette registry til at finde referencer til det "remote object" de vil invoke.
+
+### What is static and dynamic invocation
+Static: pre-compiled skeleton and stubs. You already know where and what you're calling.
+Dynamic: makes calls to the registry to discover what services are available and how to call them. *In theory, this means that you don't need to know anything about the API.  In practice...I don't think I've ever seen anybody do this in any realistic way.*
+
 # Question 5: Distributed File System (DFS)
 Question: **Discuss what is the goal of distributed files systems, and describe SUN NFS [DS12.1-12.3].**
 **What is the purpose of a basic distributed file system (DFSA) ? What are the required features and areas of responsibility? What are the expected benefits? What is a file? What is a directory? What typical operations must the DFS support? What is the architecture of a typical DFS? What is a flat file service? What is a directory service? How are the typical distributed flat file service operations different from their centralized counterparts+ What is an idempotent operation? what is a stateless server? How is a file identified? What is NFS ? What typical operations are offered by the NFS protocol? What is the architecture of a NFS system? What is a file handle? How is a path name translated? What is the purpose of caching? What is server caching? What is read-ahead? What is write through? What happens in case of failure? What is client caching? What is cache consistency? How does NFS check for validity of a client cache entry? What performance bottlenecks exists in NFS?**
 
+### Introduction
+DFS et system hvor lagring og tilgang af filer er baseret på en klinet/server arkitektur. En eller flere servere lagre filer der kan blive tilgået, med de rigtige rettigheder, af klienter i netværket.
+Kravene af: high transparency og performance. Transparency så dem der tilgår filerne kan gøre med dem som om de var lokalt på computeren, og performance da .......
+
+Storage systems and their properties: DFS: Sharing, Persistence, Distributed cache/replicas, consistency maintenance.
+
+Requirements to distributed filesystems:
+- Transparency: Access, location, mobility, performance, scaling.
+- Concurrent file acecess
+- Replication
+- Heterogeneity of OS and hardware (understøttelse)
+- Fault tolerance
+- Maintaining consistency of data
+- Security
+- Efficienty
+
+### File Service architecture
+Slide 47
+![](.\img\exam\slides\47.PNG)
+
+Giver adgang til filer ved at strukturere file service som 3 komponenter: (Ansvar)
+- Flat file service:
+  -  Implementation af operationer på indhold af filer. (+ og - af: read, create, GetAttr)
+  - Unique File Identifiers (UFIDs) er brugt til at refererer filer i alle "requests" for flat file service operations.
+- Directory service:
+  - Mapping imellem text file navne og deres UFIDs.
+  - Supports tilføjelse af nye filer til mapper.
+  - Operations: Lookup, AddName, UnName, GetNames.
+- Client module:
+  - Tilbyder integreret service til klienten. Som i at på UNIX emulerer den alle unix file operations.
+  - Har også netværks lokation på serveren, og directory server processes.
+
+
+
+Operations:
+
+- Flat file service
+  - Read(FileId, i, n): reads a sequence of up to n items from file starting at item i.
+  - Write(FileId, i, Data): Write a sequence of Data to a file, starting at item i.
+  - Create(): Laver en ny file med længden 0, og giver UFID for den.
+  - Delete(FileId): Sletter filen fra storage.
+  - GetAttributes(FileId): returnerer filens attributes.
+  - SetAttributes(FileId, Attr): Setter attr af fil.
+- Directory service:
+  - Lookup(Dir, Name): returnerer UFID på givent navn, eller kaster exception. 
+  - AddName(Dir, Name, File): Tilføjer file eller kaster exception hvis findes allerede. 
+  - UnName(Dir, Name): Hvis fundet, selt, ellers kast exception. 
+  - GetNames(Dir, Pattern): Retunerer alle text names i Dir der matcher REGEX pattern. 
+
+### NFS architecture
+Slide 48
+![](.\img\exam\slides\48.PNG)
+
+Network file system tillader at man mounter remote file systemer systems (or a part of it). Rettigheder kan styre tilladelser: read-only, read-write. NFS bruger Remote Procedure Calls (RPCs) til at sende requests imellem klient og server. NFS version 2 og 3, tillader UDP over IP netværk og derved skaber "stateless" netværk forbindelser imellem klienter og server. 
+
+Stateful: Maintains a state of all open files.
+
+Write through: klient svarer tilbage med det samme.
+
+Idempotent operation: Samme resultat hvis "applied" repeatedly, w/o side effects.
+
+stateless server: don't "store" data. Database og sådan ligger et andet sted.
+
+**Operations**
+
+![](.\img\exam\6.PNG)![](.\img\exam\7.PNG)
+
+
+
+
+
+Slide 49
+![](.\img\exam\slides\49.PNG)
+
+
+What typical operations must the DFS support? 
+What is the architecture of a typical DFS? 
+How are the typical distributed flat file service operations different from their centralized counterparts? 
+What typical operations are offered by the NFS protocol? 
+What is a file handle? 
+How is a path name translated? 
+What is the purpose of caching? 
+What is server caching? 
+What is read-ahead? 
+What happens in case of failure? 
+What is client caching? 
+What is cache consistency? 
+How does NFS check for validity of a client cache entry? 
+What performance bottlenecks exists in NFS?
+
+
+
 # Question 6: P2P
 Question: **Discuss the goal of Peer-to-Peer systems, and describe how searches in a Pastry net is performed [DS10.1-10.5].**
 **What is a p2p system? What are their goals? How are they different from centralized or client/server systems? What are the advantages and disadvantages of p2p systems? How are resources identified? How are nodes identified? What is overlay routing networks? What is a distributed hash table? What is the API for a DHT? How is a DHT realized in Pastry? How is routing performed? What information is contained by the routing table? What is the longest common prefix? What is a leaf set? What purpose does it serve? What is the performance of the Pastry System? How does Pastry function when nodes fail or appear/disappear dynamically? What disadvantages do you see of the pastry approach?**
+
+### Introduction
+**What is a p2p system**
+Et netværk hvor alle computere er "lige/peers", og lokaliseret i udkanten af netværket. Et logisk "overlay network", der ligger ovenpå et IP netværk. 
+
+**What are their goals**
+- Deling af data og resourcer på meget stor skala
+  - Ingen central og separat servere -> self organised
+  - Deler belastningen ved at bruge resourcer (mem. and CPU) fra "End-hosts" lokaliseret i kanten af netværket.
+  - Dynamisk set af "peers"
+- Privacy
+- Anonymity
+
+**P2P Types**
+- Unstructured: Links in overlay created arbitrarily
+- Semi-structured: p2p systemes with super-peers
+- Structured: logical topology on node and data ID's (most DHT's)
+
+### How are they different from centralized or client/server systems
+- Alle "nodes" i netværket er lige og har samme ansvar. Ingen central server eller lignende
+- Anonymitet og privacy
+
+### Common issues
+- Organize, maintain overlay network
+  - Routing
+  - Node arrivals
+  - Node failures
+- Resource allocation/load balancing
+- Efficient placement & localization
+- Locality (network proximity)
+
+Idea: generic P2P middleware (aka "substrate"). Dette bliver håndteret af distributed hash table (DHT).
+
+**How are resources identified**  TODOOOOOOOO
+**How are nodes identified** TODOOOOOOOO
+
+### What is a distributed hash table (DHT) IMPORTANT
+
+DHT er det der gør at P2P netværk ikke skal bruge en server ved at uddele data over et antal nodes. DHT er et hash table der mapper en key til en value og er distribueret over et antal nodes i netværket. Hver node har en GUID (Gobally unique ID)
+**Ny "content (filer, etc..)" ankommer**: Når noget nyt er tilføjet til netværket, bliver der genereret en hash key og en besked bliver sent til alle nodes der deltager i DHT. Når beskeden så når noden ansvarlig for denne key, bliver den gemt i denne node, sammen med dens value. En bruger kan så queryring hvilken som helst DHT node med en hash key genereret baseret på hvad de ønsker, og får dataen på samme måde ved at forspørgslen går fra node til node.
+
+Pastry er en implementering af dette.
+
+Hashing gør det hele tamperproof da man ikke kan ændre i en fil og stadig have samme hash.
+
+
+
+### Pastry (DHT implementation)
+
+Slide 50-52
+
+![](.\img\exam\5.PNG)
+
+Giver ids til nodes og bruger en virtual ring.
+Leaf set: hver node kender dem/den der kommer før og efter.
+Routing er baseret på "prefix matching" og er derfor log(N).
+Pastry forsøger også at tage højde for den underliggende netværks topology, ved at gøre distancen imellem dem så små som muligt.
+Nabo peers er lagret på følgende måde: hvis jeg har id 011101, og min nabo har 011000, så vil jeg lagre det som 011*. Som i at de første 3 bits er det samme, og resten er beskrevet med *, da fjedre bit er forskellig. Når noden skal route til en peer, finder den den nabo med den "largest matching prefix". Som i at den ser hvor mange bits, fra venstre, den kan få til at matche med en nabo. Den var flest bits fra venstre matcher, router den videre til. Hvis noden har flere naboer med samme længde matching prefix, vælger den den med "shortest round-trip-time" - denne værdi kommer fra den underliggende netværks topology (noget lignende kortest ping time).
+Jo kortere matching prefix, jo større chance er der for at de er "tættere" på dig. Så første hops er korte og de senere er længere.
+Hvis alle nodes kende alle nodes i netværket ville der altid kun være et hop -> slide 50. Men dette gør at alle nodes skal indeholde rigtig meget data = umuligt hvis rigtig stort. Derfor indeholder alle nodes bare et givent antal naboer, og hopsne vil derfor være -> slide 51. Forklar routing ud fra de to slides.
+
+**What is the API for a DHT**
+
+### What information is contained by the routing table
+Slide 52
+GUID mapped til IP, på andre nodes end den selv. GRÅ = dens egen GUID. Så den behøver ikke at have alle fyldt ud, den vælger bare den med longest matching prefix.
+
+### What is the performance of the Pastry System
+### How does Pastry function when nodes fail or appear/disappear dynamically
+Forspørgsler er bundet på hashing og ud fra værdien vælges den node der "numerical" er tættest på værdien. Så hvis en node forsvinder eller ankommer, vil systemer automatisk sende forspørgsler til den på det tidspunkt mest "relevante".
+### What disadvantages do you see of the pastry approach
+I can be very slow? = a lot of hops
 
 # Question 7: Physical Time
 Question: **Discuss algorithms to achieve clock synchronization in distributed system [DS14.1-14.3]**
@@ -264,6 +493,95 @@ Question: **Discuss methods to order events in a distributed system [DS14.1-14.2
 # Question 9: Security
 Question: **Discuss how cryptography can be to ensure integrity and confidentiality in a distributed system [DS11 except 11.3.1-11.3.3, 11.6.4, and 11.5].**
 **What are the main security goals? What kinds of threats are a distributed system subject to? Describe the difference between shared secret and public-private key cryptography. How can public-private key cryptography be used to ensure the integrity and authenticity of a message? What is a HMAC? Explain the Needham Schroeder protocol or Kerberos.**
+
+### What are the main security goals
+Er disse de rigtige?:
+- Confidentiality: sikkere sig at den rette modtager, og kun denne, modtager beskeden/data'en. Aka, hvis en ikke godkendt person får fat i dataen kan han ikke bruge den til noget.
+- Integrity: at sørge for at data'en der krypteres, sendes og modtages, er komplet. Eks. en person modtager data, og data'en kun kan dekrypteres hvis den er komplet.
+- Availability: sørger for at data'en er tilgængelig til de autoriserede parter.
+
+### What kinds of threats are a distributed system subject to
+Threats:
+- Eavesdropping
+  - "Lytte" til data for at finde f.eks. en nøgle.
+- Masquerading
+  - At udgive sig for at være en anden for at få adgang.
+- Message tampering
+  - Ændre i beskeder.
+- Replaying
+  - WiFi hack, optag authentication, og gensend.
+- Denial of service
+  - Dette angreb kan bliver brugt til at lægge dele af et system ned.
+
+### Describe the difference between shared secret and public-private key cryptography
+#### Shared-secret-key crypto:
+(Symmetric cryptography)
+Shared secret, er et stykke data, der kun er kendt af de involverede parter. Det kan være et kodeord, et tal eller noget lignende. Det er brugt i kommunikation og enten aftalt på forhånd eller ved starten af en komminikation.
+
+#### Public-private-key crypto:
+(asymmetric cryptography)
+Public keys:
+- only be used to encrypt msgs
+
+Private keys:
+- used to decrypt msgs with a matching public key
+- is kept secret
+
+Public key kan blive delt ud til alle, og private key bliver hold hemmelig. Brugere kan så enkryptere data med public key og verificere digitale signaturer. Digitale signaturer kan blive lavet med private key.
+
+**Digital signatures** - content is digitally signed with an individual’s private key and is verified by the individual’s public key
+
+**Encryption** - content is encrypted using an individual’s public key and can only be decrypted with the individual’s private key
+
+#### Foreskelle
+Shared-secret bruger en nøgle til at enkryptere og dekryptere. Public-private-key benytter en til hver.
+
+
+### How can public-private key cryptography be used to ensure the integrity and authenticity of a message
+![](.\img\exam\2nope.PNG)
+
+at sørge for at data'en der krypteres, sendes og modtages, er komplet. Eks. en person modtager data, og data'en kun kan dekrypteres hvis den er komplet.
+
+Digitale signaturer.
+
+
+
+
+### What is a HMAC
+Hash-based message authentication code.
+Hvor der bruges en hash function og en hemmelig nøgle til at verificere både data integrity og beskedens autentitet.
+HMAC uses two passes of hash computation. The secret key is first used to derive two keys – inner and outer. The first pass of the algorithm produces an internal hash derived from the message and the inner key. The second pass produces the final HMAC code derived from the inner hash result and the outer key.
+
+
+### Explain the Needham Schroeder protocol or Kerberos
+
+Chosen: Kerberos
+
+![](.\img\exam\Slides\58.PNG)
+
+![](.\img\exam\3.PNG)
+
+Authentication protocol for client/server applications. Purpose: security and authentication.
+
+Formål: undgå at kodeord bliver aflyret (eavesdropping), og samtidig give authentication til brugere.
+
+1: 
+
+- Request er enkrypteret med brugers shared-secret-key. 
+- KDC, har også denne key, og verificere brugeren.
+
+2: svaret brugeren får tilbage er krypteret med en anden key, som kun KDC kender.
+
+3: Dekrypterer så beskeden med KDC key.
+
+4: Server ticket er enkrypteret med en 3. key, som kun KDC og Server S, kender.
+
+5: Server S, verificerer så brugerens token med den key der er kendt af S og KDC.
+
+6: Hvis godkendt, får brugeren en session key, der giver brugeren adgang i et stykke tid.
+
+
+
 
 # Question 10: Study Exercise
 Question: **Choose one of the two problems below:**

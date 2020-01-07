@@ -19,7 +19,7 @@ General pointers:
 
 Question pointers:
 
-- P2P: distributed has table.
+- P2P: distributed hash table.
 
 - Physical Time: NTP, has to know but no need to explain.
 - Logical Time: lamport time.
