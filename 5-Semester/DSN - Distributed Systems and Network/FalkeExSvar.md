@@ -13,3 +13,10 @@ while True:
 # + alt det andet perifære
 ```
 
+
+
+
+
+DSN OPG:
+
+**Implement a simple client-server communication protocol using UDP. The protocol should be a RRA (request reply ack) protocol and be capable of handling dropped packages, duplicate messages etc. Illustrate it with a simple bank-account application providing 3 operations: deposit, withdraw and balance.**

@@ -38,7 +38,7 @@ Types:
 
 - PAN: bluetooth, etc..
 - LAN: may also include wifi, and can be called WLAN.
-- MAN: Metropolitican Area Network, a city or if a datacenter has replicateded structure it would be called two MAN. 
+- MAN: Metropolitan Area Network, a city or if a datacenter has replicateded structure it would be called two MAN. 
 - WAN: Connect devices over a country, ISP network, VPN
 - Internet: interplanetary
 
@@ -93,8 +93,8 @@ To send information between devices on different networks, involving a number of
 ### Routing table look for connectionless network?
 Slide 13
 ![](.\img\exam\slides\13.PNG)
-Slide 13: Hver router har deres tabel, første kollonne lonne er hvad slut destinationen for pakken er, og anden kollonne er hvor den skal sendes videre til for at komme imod destinationen. <span style="color:blue">Det er vel ip-addresser i virkerlighenden. </span>
-Fejl i A's tabel (later): den kan du sende til dem den er fundet til. 
+Slide 13: Hver router har deres tabel, første kollonne er hvad slut destinationen for pakken er, og anden kollonne er hvor den skal sendes videre til for at komme imod destinationen. <span style="color:blue">Det er vel ip-addresser i virkerlighenden. </span>
+Fejl i A's tabel (later): den kan kun sende til dem den er forbundet til. 
 
 ### Routing table look for connection oriented network?
 Slide 14
@@ -181,6 +181,7 @@ Question: **Give an introduction to the idea of RMI, and discuss the implementat
 **What is Remote Method Invocation?**
 Remote method invocation tillader at kalde metoder på objekter på tværs af et netværk, semantisk ækvivalent som at det var samme maskine. 
 **What is the goal of RMI?** IKKE HELT SIKKER PÅ DISSE
+
 - At benytte existerende netværks protokoller.
 - Generalisering af existerende primative typer i programmerings sprog for at understøtte udvikling af distribuerede systemer.
 - Distribueret "garbage collection"
@@ -196,9 +197,10 @@ For klienten er der ikke forskel på "remote" og lokale "invocations", men nogle
 Slide 46
 ![](.\img\exam\slides\46.PNG)
 Gennemgå slide: Model for RMI og deres kommunikation. 
+
 - Proxy objekter: Klasser der udgiver sig for at være lokale, men så invoker remote klasser når de bliver brugt. (Ideen fra RMI, gør remote lokalt)
 - Remote reference module: ansvarlig for at oversætte til og fra lokale og "remote" objekt referencer, og for at lave referencer til "remote" objekter.
-- Communication module:
+- Communication module: står for kommunikationen imellem klient og server.
 - Skeleton & dispatcher: (Server side) hver process har én dispatcher, og en skeleton for hver lokal klasse.
   - Dispatcher: modtager all "request msgs" fra commiunication module, og videregiver den til det skeleton der matcher method id.
   - Skeleton: Un-marshals request og får argumenterne, invoker den tilsvarende metode, og marshals svaret og returnerer det til communication module.
@@ -223,13 +225,18 @@ Slide 44
 
 ### Java RMI
 - Define the remote interface: A remote interface provides the description of all the methods of a particular remote object. The client communicates with this remote interface.
-- Develop the implementation class (remote object): We need to implement the remote interface created in the earlier step. 
-- Develop the server program: An RMI server program should implement the remote interface or extend the implementation class. Here, we should create a remote object and bind it to the **RMIregistry**.
-- Develop the client program: Write a client program in it, fetch the remote object and invoke the required method using this object.
-- Compile the application
-- Execute the application
-- What is java RMI (or .netRemoting)?
 
+- Develop the implementation class (remote object): We need to implement the remote interface created in the earlier step. 
+
+- Develop the server program: An RMI server program should implement the remote interface or extend the implementation class. Here, we should create a remote object and bind it to the **RMIregistry**.
+
+- Develop the client program: Write a client program in it, fetch the remote object and invoke the required method using this object.
+
+- Compile the application
+
+- Execute the application
+
+What is java RMI (or .netRemoting)?
 How are remote interfaces specified in Java RMI (or .netRemoting)? 
 How are parameters transferred? 
 
@@ -246,20 +253,20 @@ Question: **Discuss what is the goal of distributed files systems, and describe 
 **What is the purpose of a basic distributed file system (DFSA) ? What are the required features and areas of responsibility? What are the expected benefits? What is a file? What is a directory? What typical operations must the DFS support? What is the architecture of a typical DFS? What is a flat file service? What is a directory service? How are the typical distributed flat file service operations different from their centralized counterparts+ What is an idempotent operation? what is a stateless server? How is a file identified? What is NFS ? What typical operations are offered by the NFS protocol? What is the architecture of a NFS system? What is a file handle? How is a path name translated? What is the purpose of caching? What is server caching? What is read-ahead? What is write through? What happens in case of failure? What is client caching? What is cache consistency? How does NFS check for validity of a client cache entry? What performance bottlenecks exists in NFS?**
 
 ### Introduction
-DFS et system hvor lagring og tilgang af filer er baseret på en klinet/server arkitektur. En eller flere servere lagre filer der kan blive tilgået, med de rigtige rettigheder, af klienter i netværket.
+DFS et system hvor lagring og tilgang af filer er baseret på en klient/server arkitektur. En eller flere servere lagre filer der kan blive tilgået, med de rigtige rettigheder, af klienter i netværket.
 Kravene af: high transparency og performance. Transparency så dem der tilgår filerne kan gøre med dem som om de var lokalt på computeren, og performance da .......
 
 Storage systems and their properties: DFS: Sharing, Persistence, Distributed cache/replicas, consistency maintenance.
 
-Requirements to distributed filesystems:
+Requirements to distributed file systems:
 - Transparency: Access, location, mobility, performance, scaling.
-- Concurrent file acecess
+- Concurrent file access
 - Replication
 - Heterogeneity of OS and hardware (understøttelse)
 - Fault tolerance
 - Maintaining consistency of data
 - Security
-- Efficienty
+- Efficiency
 
 ### File Service architecture
 Slide 47
@@ -346,6 +353,7 @@ Question: **Discuss the goal of Peer-to-Peer systems, and describe how searches 
 Et netværk hvor alle computere er "lige/peers", og lokaliseret i udkanten af netværket. Et logisk "overlay network", der ligger ovenpå et IP netværk. 
 
 **What are their goals**
+
 - Deling af data og resourcer på meget stor skala
   - Ingen central og separat servere -> self organised
   - Deler belastningen ved at bruge resourcer (mem. and CPU) fra "End-hosts" lokaliseret i kanten af netværket.
@@ -398,7 +406,6 @@ Leaf set: hver node kender dem/den der kommer før og efter.
 Routing er baseret på "prefix matching" og er derfor log(N).
 Pastry forsøger også at tage højde for den underliggende netværks topology, ved at gøre distancen imellem dem så små som muligt.
 Nabo peers er lagret på følgende måde: hvis jeg har id 011101, og min nabo har 011000, så vil jeg lagre det som 011*. Som i at de første 3 bits er det samme, og resten er beskrevet med *, da fjedre bit er forskellig. Når noden skal route til en peer, finder den den nabo med den "largest matching prefix". Som i at den ser hvor mange bits, fra venstre, den kan få til at matche med en nabo. Den var flest bits fra venstre matcher, router den videre til. Hvis noden har flere naboer med samme længde matching prefix, vælger den den med "shortest round-trip-time" - denne værdi kommer fra den underliggende netværks topology (noget lignende kortest ping time).
-Jo kortere matching prefix, jo større chance er der for at de er "tættere" på dig. Så første hops er korte og de senere er længere.
 Hvis alle nodes kende alle nodes i netværket ville der altid kun være et hop -> slide 50. Men dette gør at alle nodes skal indeholde rigtig meget data = umuligt hvis rigtig stort. Derfor indeholder alle nodes bare et givent antal naboer, og hopsne vil derfor være -> slide 51. Forklar routing ud fra de to slides.
 
 **What is the API for a DHT**
@@ -418,7 +425,7 @@ Question: **Discuss algorithms to achieve clock synchronization in distributed s
 **How are clocks implemented in computers? How is time represented ? what are the sources of inaccurate clocks? Why can't computer clocks not be 100% accurately synchronized? What is internal/external synchronization? How does Christians method and the Berkeley Algorithm synchronize clocks? What is the network time protocol? **
 
 ### How are clocks implemented in computers
-Man kan købe modtagere, der kan modtage radio bølger fra satallitter, som kan forbindes til computere. Men det normale er at der i en computer sidder noget HW der tæller occileringer af en quartz krystal. Efter et bestemt antal af svingninger ligger uret én til et register.
+Man kan købe modtagere, der kan modtage radio bølger fra satallitter, som kan forbindes til computere. Men det normale er at der i en computer sidder noget HW der tæller oscilleringer af en quartz krystal. Efter et bestemt antal af svingninger ligger uret én til et register.
 Resolution are perioden imellem klokke opdateringer. 
 OS vedligeholder en software klokke der er baseret på registret. 
 
@@ -427,7 +434,7 @@ OS vedligeholder en software klokke der er baseret på registret.
 
 ### What are the sources of inaccurate clocks
 
-- Resolution: Hvis to events sker med kortere tids interval end Resolution, kan disse ikke adskilles i tid.
+- Resolution: Hvis to events sker med kortere tidsinterval end Resolution, kan disse ikke adskilles i tid.
 - Alle quartz uret "skew"s over tid.
   - Kommer an på temperatur.
 
@@ -435,14 +442,14 @@ OS vedligeholder en software klokke der er baseret på registret.
 Fordi urer "skew" forskellige og vil derfor over tid ikke være ens, og når urer synkroniseres, skal der kommunikeres og det kan ikke gøres "instant".
 
 ### What is internal/external synchronization
-External: urerne bliver sat efter en ekstern "authorative" source.
+External: urerne bliver sat efter en ekstern "authoritative" source.
 Internal: urerne er synkroniseret relativt til hinanden.
 
 ### How does Christians method and the Berkeley Algorithm synchronize clocks
-Disse to algorithmer bliver brugt i asynkrone systemer.
+Disse to algoritmer bliver brugt i asynkrone systemer.
 #### Christians Algorithm
 Client - server synkronisering. 
-- Klienten sender en tidsreserverings forspørgsel til serveren. 
+- Klienten sender en tidsreserverings forespørgsel til serveren. 
 - Serveren returnere så dens tid. 
 - Klienten måler hvor lang tid det tog. Fra SEND til SVAR MODTAGET.
 - Klienten sætter så sit ur til: serverens tid + (Fra SEND til SVAR MODTAGET) /2 
@@ -464,7 +471,7 @@ Designed for intern synkronisering.
 ### What is the network time protocol
 Skal vide hvad det er - behøver ikke at gå i dybten.
 
-Synkronisering af klienter relativt til UTC, Universal Time Coordinated, på et intetnet-wide scale.
+Synkronisering af klienter relativt til UTC, Universal Time Coordinated, på et internet-wide scale.
 Pålideligt selv hvis store dele mister forbindelsen.
 Tillader ofte synkronisering.
 
@@ -492,7 +499,7 @@ For eksempel at sende og modtage en besked. Så ved vi at beskeden skal sendes f
 
 a->b->c->d->f, men vi ved ikke om e kommer før eller efter b!
 
-### Lamportclocks
+### Lamport clocks
 
 Lamportclocks er en måde at holdestyr på hvad der er vist på det ovenstående slide aka causal ordering. 
 
@@ -545,16 +552,11 @@ Er disse de rigtige?:
 
 ### What kinds of threats are a distributed system subject to
 Threats:
-- Eavesdropping
-  - "Lytte" til data for at finde f.eks. en nøgle.
-- Masquerading
-  - At udgive sig for at være en anden for at få adgang.
-- Message tampering
-  - Ændre i beskeder.
-- Replaying
-  - WiFi hack, optag authentication, og gensend.
-- Denial of service
-  - Dette angreb kan bliver brugt til at lægge dele af et system ned.
+- Eavesdropping: "Lytte" til data for at finde f.eks. en nøgle.
+- Masquerading: At udgive sig for at være en anden for at få adgang.
+- Message tampering: Ændre i beskeder.
+- Replaying: WiFi hack, optag authentication, og gensend.
+- Denial of service: Dette angreb kan bliver brugt til at lægge dele af et system ned.
 
 ### Describe the difference between shared secret and public-private key cryptography
 #### Shared-secret-key crypto:
@@ -570,20 +572,20 @@ Private keys:
 - used to decrypt msgs with a matching public key
 - is kept secret
 
-Public key kan blive delt ud til alle, og private key bliver hold hemmelig. Brugere kan så enkryptere data med public key og verificere digitale signaturer. Digitale signaturer kan blive lavet med private key.
+Public key kan blive delt ud til alle, og private key bliver holdt hemmelig. Brugere kan så kryptere data med public key og verificere digitale signaturer. Digitale signaturer kan blive lavet med private key.
 
 **Digital signatures** - content is digitally signed with an individual’s private key and is verified by the individual’s public key
 
 **Encryption** - content is encrypted using an individual’s public key and can only be decrypted with the individual’s private key
 
 #### Foreskelle
-Shared-secret bruger en nøgle til at enkryptere og dekryptere. Public-private-key benytter en til hver.
+Shared-secret bruger en nøgle til at kryptere og dekryptere. Public-private-key benytter en til hver.
 
 
 ### How can public-private key cryptography be used to ensure the integrity and authenticity of a message
 ![](.\img\exam\2nope.PNG)
 
-at sørge for at data'en der krypteres, sendes og modtages, er komplet. Eks. en person modtager data, og data'en kun kan dekrypteres hvis den er komplet.
+Ved at sørge for at data'en der krypteres, sendes og modtages, er komplet. Eks. en person modtager data, og data'en kun kan dekrypteres hvis den er komplet.
 
 Digitale signaturer.
 
