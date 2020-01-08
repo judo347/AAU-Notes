@@ -18,7 +18,7 @@ Workload:
 - 5 DFS: 70% done
 - 6: Done
 - 7: Done
-- 8 Logical Time:
+- 8 Logical Time: Done
 - 9: Done
 - 10 Study ex:
 
@@ -473,21 +473,64 @@ Tillader ofte synkronisering.
 Question: **Discuss methods to order events in a distributed system [DS14.1-14.2,14.4]**
 **What is logical time time as opposed to physical time time? What is causal ordering and the happens-before relation? What is Lamportclocks? How are events time stamped? What is vector clocks? What can be done with vector clocks that cannot be achieved with Lamportclocks? What can logical time be used for? What system model is assumed for the different algorithms?**
 
-### What is logical time time as opposed to physical time time
+#### Introduction
 
-### What is causal ordering and the happens-before relation
+**Logical time vs physical time**
 
-### What is Lamportclocks
+Physical time har man et ur, ofte med en quartz krystal. Hvis man så har flere computere kande synkroniserer deres ure indbyrdes eller stille dem efter en ekstern kilde. Det skaber en del problemer: skew, delay on synkronising.
+Logical time er baseret på viden om at nogle events sker før andre, og på den måde kan man opstille dem i rækkefølge baseret på tid. Som i at vi ikke ved hvornår dette event præcist skete, men vi ved at den kom efter denne og før denne. Dette kaldes **Causal ordering**.
 
-### How are events time stamped
+**Happens-before relation**
+
+For eksempel at sende og modtage en besked. Så ved vi at beskeden skal sendes før den kan modtages. Så derfor er forholdet i tid altid at sende kommer før modtage.
+
+
+
+**Forklar slide 53**
+
+![](.\img\exam\slides\53.PNG)
+
+a->b->c->d->f, men vi ved ikke om e kommer før eller efter b!
+
+### Lamportclocks
+
+Lamportclocks er en måde at holdestyr på hvad der er vist på det ovenstående slide aka causal ordering. 
+
+Fremgangsmåde:
+
+1. En proces ligger 1 til dens counter før hvert event.
+2. Når en proces sender en besked, inkluderer den dens counter værdi.
+3. Når en besked modtages, sammenlignes den modfølgende counter med processens egen counter. Og processens counter updateres baseret på hvilken værdi er højst. Så ligges der en til og dette er timestamp for received msg.
+
+Forklar fremgangsmåden ud fra exam slide med disse værdier:
+
+![](.\img\exam\8.PNG)
 
 ### What is vector clocks
 
+Ligesom med Lamportclocks bliver urerne sendt med beskeden imellem processerne. Alle processors ure er lagret i en vektor med størrelse lig med antal af processer. 5 processor = 5 tupel vektor.
+
+- Alle ure starter på 0
+- Ved internt event, "increments" den proces' ur i vektoren.
+- Besked sendes: opdateres dens ur, altså kun en gang, og så sendes der en kopi af vektoren med beskeden.
+- Besked modtages: increment own clock value, og opdater alle værdier i egen vektor med den højeste værdi fra enten den modtagne vektor eller egen.
+
+Forklar fremgangsmåden ud fra exam slide med disse værdier:
+
+![](.\img\exam\9.PNG)
+
 ### What can be done with vector clocks that cannot be achieved with Lamportclocks
 
-### What can logical time be used for
+Vector clocks kan se forskel på om to operationer er concurrent eller causally dependent. Holder mere information. 
 
-### What system model is assumed for the different algorithms
+LamportClocks kan ikke konkludere at der er "causal happend-before relation". e(1) og c(3), 1 er mindre end 3, men det betyder ikke at "e" kom før "c".
+
+Vector clocks kan: To determine if two events are concurrent, do an element-by-element comparison of the corresponding timestamps:
+
+- Hvis alle sæt af værdier i en vektor er størrer end værdierne i den anden, så kommer den med højeste værdier efter den med mindste værdier.
+- Hvis nogle værdier er større og andre er mindre, så er de "concurrent".
+
+e og c er "concurrent".
 
 
 # Question 9: Security
