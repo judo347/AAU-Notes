@@ -6,6 +6,8 @@ The current project is based on making a robot that plays football in the roboti
 
 ### Find two suitable workshops and two suitable conferences where your current project work could be possibly published. The submission deadline for the conferences/workshops should be in this or next year. For each workshop/conference provide its full name, acronym, an URL to the home-page of the event and the submission deadline.
 
+The workshops and conferences has deadline early 2020, and the groups work is not done before later this year. I expect the below mentioned will be held again next year, so if I want to participate, it will be 2021, and the same events.
+
 **Workshops:**
 
 - The ECAI 2020 Workshop on Robustness of AI Systems Against Adversarial Attacks
