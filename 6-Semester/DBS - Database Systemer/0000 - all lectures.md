@@ -49,3 +49,54 @@ Slide 62
 Slide 64-65
 
 Slide 67-70
+
+# 02 - Relational model and relational algebra
+
+![](.\img\3.png)
+
+![](.\img\4.png)
+
+instance is a snapshot of the relation, containing values for a specific point in time.
+
+Slide 5-10
+
+Dublicates with null values or okay. As example: "Sue, null" and "Sue, null" is okay, they are not dublicates. Null values cant be compared.
+
+Slide 11
+
+Slide 12: Unary has one input, binary has two
+
+Slide 13-18
+
+Slide 19: Work from the inside and out. We rename both to differ them and then take the Cartesian product. Then we select ???
+
+Slide 20-22
+
+Slide 23: Arity means number of attributes.
+
+Slide 24
+
+Slide 26
+
+Slide 27: Join also removed dublicates.
+
+Slide 28-29
+
+Slide 30: false! They keep the first instance of dublicates, jo they are not communitive/the same. (Only in the context of relational algebra)
+
+Slide 32--37
+
+Slide 39
+
+SLide 40: count(*) = count star = count number of tubles in each group
+
+Slide 41
+
+Slide 43-50
+
+
+
+
+
+
+
