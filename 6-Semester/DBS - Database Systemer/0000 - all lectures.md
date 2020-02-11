@@ -72,45 +72,136 @@ Database software:
 
 instance is a snapshot of the relation, containing values for a specific point in time.
 
-Slide 5-10
+![](.\img\18.png)
+
+![](.\img\19.png)
+
+![](.\img\20.png)
+
+![](.\img\21.png)
+
+![](.\img\22.png)
+
+![](.\img\23.png)
+
+![](.\img\24.png)
 
 Dublicates with null values or okay. As example: "Sue, null" and "Sue, null" is okay, they are not dublicates. Null values cant be compared.
 
-Slide 11
+![](.\img\25.png)
 
-Slide 12: Unary has one input, binary has two
+![](.\img\26.png)
 
-Slide 13-18
+Unary has one input, binary has two
 
-Slide 19: Work from the inside and out. We rename both to differ them and then take the Cartesian product. Then we select ???
+![](.\img\27.png)
 
-Slide 20-22
+![](.\img\28.png)
 
-Slide 23: Arity means number of attributes.
+![](.\img\29.png)
 
-Slide 24
+![](.\img\30.png)
 
-Slide 26
+![](.\img\31.png)
 
-Slide 27: Join also removed dublicates.
+![](.\img\32.png)
 
-Slide 28-29
+![](.\img\33.png)
 
-Slide 30: false! They keep the first instance of dublicates, jo they are not communitive/the same. (Only in the context of relational algebra)
+![](.\img\34.png)
 
-Slide 32--37
+![](.\img\35.png)
 
-Slide 39
+![](.\img\36.png)
 
-SLide 40: count(*) = count star = count number of tubles in each group
+![](.\img\37.png)
 
-Slide 41
-
-Slide 43-50
+![](.\img\39.png)
 
 
 
+Work from the inside and out. We rename both to differ them and then take the Cartesian product. Then we select ???
+
+![](.\img\40.png)
+
+![](.\img\41.png)
+
+![](.\img\42.png)
+
+![](.\img\43.png)
+
+![](.\img\44.png)
+
+Arity means number of attributes.
+
+![](.\img\45.png)
+
+![](.\img\46.png)
+
+![](.\img\47.png)
+
+![](.\img\48.png)
+
+Join also removes dublicates.
+
+![](.\img\49.png)
+
+![](.\img\50.png)
+
+![](.\img\51.png)
+
+![](.\img\52.png)
+
+![](.\img\53.png)
 
 
+
+![](.\img\54.png)
+
+![](.\img\55.png)
+
+![](.\img\56.png)
+
+false! They keep the first instance of dublicates, jo they are not communitive/the same. (Only in the context of relational algebra)
+
+![](.\img\57.png)
+
+![](.\img\58.png)
+
+![](.\img\59.png)
+
+![](.\img\60.png)
+
+![](.\img\61.png)
+
+![](.\img\62.png)
+
+
+
+![](.\img\63.png)
+
+![](.\img\64.png)
+
+![](.\img\65.png)
+
+count(*) = count star = count number of tubles in each group
+
+![](.\img\66.png)
+
+![](.\img\67.png)
+
+![](.\img\68.png)
+
+![](.\img\69.png)
+
+![](.\img\70.png)
+
+![](.\img\71.png)
+
+![](.\img\72.png)
+
+![](.\img\73.png)
+
+![](.\img\74.png)
 
 
