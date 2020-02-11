@@ -99,5 +99,28 @@ Slide 31-40
 
 Slide 42-44
 
+# 03 - Flow Networks and Maximum Flow
 
+Slide 4-7
 
+Slide 8: Antiparallel: two edges between the same two nodes, but they go opposite ways.
+
+Slide 9
+
+Slide 11-13
+
+Slide 14: Simple path: no loops allowed. Maybe also no one node two times in the same path?
+
+Slide 15
+
+Slide 16: and edge with only one number, is the capacity -> flow/capacity || capacity.
+
+Slide 18-27
+
+Slide 28-31 ??? LOOK THROUGH
+
+Slide 32-34, 36-42, 44-45
+
+Slide 47: University example: couble be L: course, R = Undervisere, Hver underviser kan undervise i flere fag, men kun én ad gangen. 
+
+Slide 48 -> slides? consider
