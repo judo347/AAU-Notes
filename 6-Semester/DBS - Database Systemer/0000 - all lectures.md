@@ -23,32 +23,46 @@ Problems with data:
   - Failed disk
   - Which version is correct?
 
-Slide 32
+![](.\img\5.png)
 
-Slide 35
+![](.\img\6.png)
 
-Slide 36-37: Line under al_ID, means it is unique and can be used to identify a row. ar_ID -> artists, mens that data is this coloum is an ID for another table.
 
-Slide 38-39: Never make nested relations in exam or hand-in. This is shown in the album coloumn.
 
-Slide 39: How the data is actualy stored. This should be completed hidden from the aplication.
+![](.\img\7.png)
 
-Slide 41: In external schemas we can define if an app. only gets access to a specific set of data.
+Line under al_ID, means it is unique and can be used to identify a row. ar_ID -> artists, mens that data is this coloum is an ID for another table.
 
-Slide 42-44
+![](.\img\8.png)
+
+Never make nested relations in exam or hand-in. This is shown in the album coloumn.
+
+![](.\img\9.png)
+
+How the data is actualy stored. This should be completed hidden from the aplication.
+
+![](.\img\10.png)
+
+![](.\img\11.png)
+
+![](.\img\12.png)
+
+In external schemas we can define if an app. only gets access to a specific set of data.
+
+![](.\img\13.png)
 
 Database software:
 
 - Big players: Oracle, Microsoft SQL Server, IMB DB2
 - Small players: **PostgreSQL**, MySQL
 
-Slide 59-61
+![](.\img\14.png)
 
-Slide 62
+![](.\img\15.png)
 
-Slide 64-65
+![](.\img\16.png)
 
-Slide 67-70
+![](.\img\17.png)
 
 # 02 - Relational model and relational algebra
 
