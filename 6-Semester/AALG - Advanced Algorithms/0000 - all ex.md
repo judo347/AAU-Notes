@@ -9,3 +9,7 @@ Show the matrix $D^{(k)}$ that results for each iteration of the outer loop.**
 
 **Show not only the matrix $D^{(k)}$, but also the matrix $P^{(k)}$ ($π^{(k)}$ in the book) after each iteration of the outer loop. You can stop after three iterations of the outer loop :)**
 
+![](.\img\3.jpg)
+
+![](.\img\4.jpg)
+
