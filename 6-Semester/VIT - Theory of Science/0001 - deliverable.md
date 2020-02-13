@@ -30,6 +30,29 @@ The workshops and conferences has deadline early 2020, and the groups work is no
   - https://waset.org/computer-science-machine-learning-and-analytics-conference-in-june-2020-in-venice
   - Deadline: 13/2-2020
 
+# Deliverable 2
+
+Names of all students participating in the preparation: Alihan Øztürk, Jon T. Nilsson, Christopher P. Krejler, and Mathias Hindsgaul.
+
+Feedback received in lecture:
+
+- Title: good
+- Abstract
+  - First sentence great
+  - Too much introduction
+  - Only 1-2 lines introduction
+  - Use we after first paragraph
+  - Second paragraph: what we made
+  - Last sentence should start: "We constructed"
+
+Title: **Simulation Framework for Automated Storage- and Retrieval Systems**
+
+Abstract:
+
+*The logistic demands of automated warehouses increase, as online shopping is expected to increase in the coming years. We constructed a framework which supports the implementation and testing of Multi Agent Path-Finding algorithms, using centralized communication, which aids in improving automated storage and retrieval systems (ASRS). The framework, with minor tweaks allows for comparison between centralized and de-centralized ASRS including simulation and evaluation of Path-Finding algorithms in both system architectures.*
+
+
+
 # Deliverable 6
 
 Moodle, lec 1, says literature as this deliverable?!
