@@ -124,3 +124,23 @@ Slide 32-34, 36-42, 44-45
 Slide 47: University example: couble be L: course, R = Undervisere, Hver underviser kan undervise i flere fag, men kun én ad gangen. 
 
 Slide 48 -> slides? consider
+
+# 04 - Greedy Algorithms
+
+Slide 4: [1,3) is that the activity starts at 1 and ends before 3.
+
+Slide 5-6
+
+Slide 7: The spots which are X or 0, is always this.
+
+Slide 8-18
+
+Slide 20-26
+
+SLides ???
+
+Slide 29: Not recursive, use RAM model
+
+Slide 30-32
+
+Slides ???
