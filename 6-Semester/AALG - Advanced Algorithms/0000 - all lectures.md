@@ -144,3 +144,27 @@ Slide 29: Not recursive, use RAM model
 Slide 30-32
 
 Slides ???
+
+# 08 - Computational Geometry Algorithms: Range Searching
+
+Slide 4-5
+
+|      |           | Runtime (Build) | Runtime (Query)  | SPACE       |
+| ---- | --------- | --------------- | ---------------- | ----------- |
+| 1D   | BST       | $O(n*lg*n)$     | $\Theta(lg*n+k)$ | $\Theta(n)$ |
+| 2D   | KDTree    |                 |                  |             |
+| KD   | RangeTree |                 |                  |             |
+
+Slide 7-16
+
+Slide 18-19
+
+Slide 20: k = output
+
+Slide 22-30
+
+Slide 32-34
+
+Slide 36-
+
+todooo
