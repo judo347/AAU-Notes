@@ -53,7 +53,21 @@ Abstract:
 
 # Deliverable 3
 
-TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+#### 1. Read the paper
+
+#### 2. Write a summary of the content of the paper (one paragraph)
+
+The paper is primarily for students in Theoretical Computer Science on the topic of giving a talk with slides. This may be a job interview, conference, at the exam or other occasions. The paper talks about the structure of your talk, how to act and talk, and a lot of guidelines for all aspects of public speaking.
+
+#### 3. List five points mentioned in the paper where you think are your major weaknesses when giving a (slide) presentation and where you would like to improve in the future.
+
+1. Emphasise the introduction more
+2. Road-map should point out specifics and not be too general
+3. Use repetition of important points
+4. The overall structure of the presentation
+5. Think more about the use of colours
+
+
 
 # Deliverable 4
 
@@ -69,7 +83,9 @@ Ben should have informed Alyssa about the policy beforehand. Also, if Ben wanted
 **Is it reasonable to have expected Alyssa to have behaved any differently**
 No. The fault lies with Ben here.
 
-**Case B(Authorship Practices)**
+
+
+**Case B (Authorship Practices)**
 **Do you see any cases of irresponsible conduct?**
 If both of them have agreed to submit the paper as joint authors, then that is fine. It might be a problem that Anna has gotten her results from another University, however, since it was only written down as a draft, it should not be an issue. The main issue is probably related to the fact that Bob might have not contributed sufficiently, in order to be deserving of his PhD.
 
@@ -77,7 +93,9 @@ If both of them have agreed to submit the paper as joint authors, then that is f
 From the text, it seems that Bob might have not contributed “enough” to be considered co-author. If this is the case, Bob should have refused to have his name on the paper as a co-author. Furthermore, since the results that Anna provided had nothing to do with Bob at all, he should not be co-author. Anna might have also acted irresponsible, since she willingly let Bob co-author, even when he might have not contributed.
 
 **What actions should be taken in the present situation, if any?**
-Nothing can be done. Anna willingly let Bob join
+Nothing can be done. Anna willingly let Bob join.
+
+
 
 **Case C Publication Practices:**
 **If the experiments are part of a series, are Paula and her students justified in not publishing them together?**
@@ -89,6 +107,8 @@ Its hard to say. They should all be listed as co-authors; “Paula, Stud1 & Stud
 **If a single paper is published, how can they emphasize to the review committees and funding agencies their various roles and the importance of the paper?**
 Listing everyone as co-authors means that everyone has contributed to everything. Emphasizing their roles makes no sense, since they have decided to publish the paper as one group. Trying to do so, would surely end badly.
 
+
+
 **Case D : Selection of Data**
 **How should the data from the two suspected runs be handled?**
 They can’t remove points, since that would be unethical. They should keep the data points, but should then argue why the points might be wrong. If possible, they should redo the experiment.
@@ -99,15 +119,13 @@ If they have included the data points in their results and have argued that they
 **What other sources of information, in addition to their faculty adviser, can Deborah and Kathleen use to help decide?**
 They could contact their publisher (ACM for instance) and ask for advice.
 
-TODOOOOOOOOOOOOOOOO Look though the above answer.
-
 ### 2. Did your opinion on some of the ethical issues changed after you discussed the cases in the groups/classroom? Comment briefly on how if your answer to this question was positive.
 
-TODOOOOOOOOOOOOOOOOOOO
+I did not know that you would/could add a person to your paper only with the purpose of that person presentation the paper at a conference.
 
 ### 3. In the report write the names of all students participating at the group discussion.
 
-TODOOOOOOOOOOO
+Mads Kristian Bau-Madsen, Mads Faber, Mikkel Kuntz, Niels Kristian Lyshoj Jensen, Jan Taasti Jensen and Rasmus Buchholdt.
 
 # Deliverable 6
 
