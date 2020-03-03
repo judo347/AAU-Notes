@@ -168,3 +168,57 @@ Slide 32-34
 Slide 36-
 
 todooo
+
+# 09 - External-memory algorithms and data structures
+
+## External memory
+
+Hard disks (magnetic)
+
+![](.\img\100.png)
+
+![](.\img\101.png)
+
+![](.\img\102.png)
+
+![](.\img\103.png)
+
+## B-trees, $B^+$-trees, and R-trees
+
+We want a wide and short tree and NOT a tall slim tree.
+
+![](.\img\104.png)
+
+![](.\img\105.png)
+
+![](.\img\106.png)
+
+![](.\img\107.png)
+
+![](.\img\108.png)
+
+![](.\img\109.png)
+
+![](.\img\110.png)
+
+![](.\img\111.png)
+
+![](.\img\112.png)
+
+![](.\img\113.png)
+
+![](.\img\114.png)
+
+![](.\img\115.png)
+
+![](.\img\116.png)
+
+![](.\img\117.png)
+
+![](.\img\118.png)
+
+![](.\img\119.png)
+
+![](.\img\120.png)
+
+TODO SLIDES
