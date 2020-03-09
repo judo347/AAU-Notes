@@ -127,7 +127,54 @@ I did not know that you would/could add a person to your paper only with the pur
 
 Mads Kristian Bau-Madsen, Mads Faber, Mikkel Kuntz, Niels Kristian Lyshoj Jensen, Jan Taasti Jensen and Rasmus Buchholdt.
 
+# Deliverable 5
+
+### 1. Write your answers on the questions in cases A, B and C  covered during the lecture (see the lecture slides).
+
+**Case A**
+**Do you see any cases of irresponsible conduct?**
+Never copy word-for-word unless you cite the source. He also list a manuscript that as "submitted for publication", even though at the time of submission of the thesis, the paper was not quite finished. It sounds like Mark didn't take the PhD too serious?
+
+**If so, what would have been the appropriate responsible conduct?**
+He should either have cited the sources or written it himself using his own words. He should also not have listed the manuscript if it was not a valid source at the time of publication.
+
+**What actions should be taken in present situation, if any?**
+He should not get his PhD since the 20-30 included plagiarism, which is unfortunate, since he will possibly lose his post-doc position.
+
+
+
+**Case B**
+**Do you see any cases of irresponsible conduct?**
+Classic miscommunication. John has started selling the language to ComCom without informing the others, though he later informs Jim.
+
+**If so, what would have been the appropriate responsible conduct?**
+John should have informed the others about how he had talked to ComCom about the language, and that ComCom is interested in commercializing the language and giving John a contract. The case does not mention any NDA so he should have been able to do this.
+
+**What actions should be taken in the present situation, if any?**
+John should tell about ComCom. Two companies have offered a contracts for the language, so no contract has been signed yet. That means, they technically still can choose which of the two companies they want to work with. As far as we understand, the university just wants *some* contract with the industry, so which one should not matter. ComCom has however only promised a contract with John, so he should have a good talk with his colleagues.
+
+
+
+**Case C:**
+**Does Ben have any way of receiving credit for his work?**
+He could try and contact Dr. Freeman and ask him to add Ben to the citations. Both the project and the article just involves the technique, which means Ben might be creditted as the inventor. He maybe able to get credit for the technique if he released a paper specifically about the technique.
+
+**Should he contract Dr. Freeman in an effort to have his work recognized?**
+Yes, definitely.
+
+**Is Ben's advisor mistaken in encouraging his students to be so open about their work?**
+No. It is good to be open, since it benefits the field of since. However, it assumes that everyone has high moral and wont steal or miscredit. But maybe Ben should not have fully explained the technique to Dr. Freeman, and just said "wait for the paper".
+
+### 3. In the report write the names of all students participating at the group discussion.
+
+Nicolaj Østerby, Mikkel Kuntz, Simon Mathiasen and Roufan Wu.
+
 # Deliverable 6
 
-Moodle, lec 1, says literature as this deliverable?!
+### 1. Select and read one paper of your interest from the recommended reading of blocks 1 to 5. (The paper by Ian Parberry from block 3 cannot be selected.)
+
+### 2. Write a one paragraph summary of the content of the paper.
+
+### 3. Why did you choose this paper and what was the most important thing that you can perhaps use in your future professional career?
+### 4. What topic(s) covered during the first part of the course did you find most interesting?
 
