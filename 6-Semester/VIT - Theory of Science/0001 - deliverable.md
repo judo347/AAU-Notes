@@ -1,3 +1,5 @@
+Author: Mikkel Kuntz
+
 # Deliverable 1
 
 ### Write one paragraph summary of the area where you do your current project.
@@ -173,8 +175,19 @@ Nicolaj Østerby, Mikkel Kuntz, Simon Mathiasen and Roufan Wu.
 
 ### 1. Select and read one paper of your interest from the recommended reading of blocks 1 to 5. (The paper by Ian Parberry from block 3 cannot be selected.)
 
+I chose the *How to Have Your Abstract Rejected* from block 3. I hope this counts as a paper.
+
 ### 2. Write a one paragraph summary of the content of the paper.
 
+The paper is written as pure sarcasm to emphasise exactly what not to do when writing an abstract. 
+
 ### 3. Why did you choose this paper and what was the most important thing that you can perhaps use in your future professional career?
+
+I chose it mostly because of the title. If the authors has chosen a title like that, it must be a good read. 
+
+What I found most useful is what I think they call: Run Spot Run. This is where your abstract contains text but is way too shallow and not in detail at all. A few lines of this way of writing can easily slip into your abstract - at least in the first draft and is for sure something too look out for.
+
 ### 4. What topic(s) covered during the first part of the course did you find most interesting?
+
+Block 3: Presenting a Scientific Work, was the one I found most interesting. Throughout the lecture a lot of good and very useful points were made, that can be used in everyday life. How you present a topic is something I think that always can be improved, and the guest talk was a fun and educational!
 
