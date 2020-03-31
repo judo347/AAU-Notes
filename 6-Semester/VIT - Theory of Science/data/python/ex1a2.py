@@ -232,6 +232,178 @@ def ex1a2h4():
 	plt.show()
 
 
+def ex2ch4():
+	data_array = parseFile()
+
+	q5_lower_than_q8_counter = 0
+
+	index = 0
+	for data_obj in data_array:
+		if int(data_array[index].q5) < int(data_array[index].q8):
+			q5_lower_than_q8_counter += 1
+
+		index += 1
+
+	print("ex2h4: The times the score of q5 were lower than q8 happend: " + str(q5_lower_than_q8_counter))
+
+def ex2ch3():
+	data_array = parseFile()
+
+	BLA_scored_higher_than_CRU_average = 0
+
+	index = 0
+	for data_obj in data_array:
+		if str(data_array[index].program) == "BLA":
+			if int(data_array[index].total) > 55:
+				BLA_scored_higher_than_CRU_average += 1
+
+		index += 1
+
+	print("ex2h4: The number of times a BLA scored higher than the CRU average of total score (55): " + str(BLA_scored_higher_than_CRU_average))
+
+def ex2ch3v2():
+	data_array = parseFile()
+
+	bla_scores = ""
+	cru_scores = ""
+
+	index = 0
+	for data_obj in data_array:
+		if str(data_array[index].program) == "BLA":
+			bla_scores = bla_scores + data_array[index].total + ","
+		elif str(data_array[index].program) == "CRU":
+			cru_scores = cru_scores + data_array[index].total + ","
+
+		index += 1
+
+	print("CRU: " + cru_scores)
+	print("BLA: " + bla_scores)
+
+
+# M1 The probability that a student gets question 1-4 right is 50%
+def ex2dm1():
+	data_array = parseFile()
+
+	all_four_right_counter = 0
+	other_counter = 0
+
+	index = 0
+	for data_obj in data_array:
+		if int(data_array[index].q1) == 1 and int(data_array[index].q2) == 1 and int(data_array[index].q3) == 1 and int(data_array[index].q4) == 1:
+			all_four_right_counter += 1
+		else:
+			other_counter += 1
+
+		index += 1
+
+	print("all four correct: " + str(all_four_right_counter))
+	print("others: " + str(other_counter))
+
+	# Plotting
+	objects = ("All four correct", "One or more wrong")
+	y_pos = np.arange(len(objects))
+	performance = [all_four_right_counter, other_counter]
+
+	plt.bar(y_pos, performance)
+	plt.xticks(y_pos, objects)
+	plt.ylabel("Number of students")
+	plt.title("Results of question 1-4 combined")
+
+	plt.show()
+
+
+# M2 The average score of question 5-8 is more than 15 points
+def ex2dm2():
+	data_array = parseFile()
+
+	combined_average = 0
+	average_scores_string = ""
+
+	index = 0
+	for data_obj in data_array:
+
+		question_average = (int(data_array[index].q5) + int(data_array[index].q6) + int(data_array[index].q7) + int(data_array[index].q8)) / 4
+		average_scores_string += str(question_average) + ","
+		combined_average += question_average
+		index += 1
+
+	result = combined_average / index
+
+	print("Average: " + str(result))
+	print("STring: " + average_scores_string)
+
+
+# M3 The average score of question 5 and 6 is higher than the average score of question 7 and 8
+def ex2dm3():
+	data_array = parseFile()
+
+	combined_average_five_and_six = 0
+	combined_average_seven_and_eight = 0
+	average_scores_string_five_and_six = ""
+	average_scores_string_seven_and_eight = ""
+
+	index = 0
+	for data_obj in data_array:
+		question_average_first = (int(data_array[index].q5) + int(data_array[index].q6)) / 2
+		question_average_second = (int(data_array[index].q7) + int(data_array[index].q8)) / 2
+		average_scores_string_five_and_six += str(question_average_first) + ","
+		average_scores_string_seven_and_eight += str(question_average_second) + ","
+		combined_average_five_and_six += question_average_first
+		combined_average_seven_and_eight += question_average_second
+		index += 1
+
+	result_first = combined_average_five_and_six / index
+	result_second = combined_average_seven_and_eight / index
+
+	print("Average first: " + str(result_first))
+	print("Average second: " + str(result_second))
+	print("String first:: " + average_scores_string_five_and_six)
+	print("String second:: " + average_scores_string_seven_and_eight)
+
+
+# M4 Given 100 students from each program which has the highest total score, CRU will have the highest average score.
+def ex3dm4():
+	data_array = parseFile()
+
+	all_cru_totals = []
+	all_bla_totals = []
+
+	index = 0
+	for data_obj in data_array:
+		if str(data_array[index].program) == "BLA":
+			all_bla_totals.append(data_array[index].total)
+		elif str(data_array[index].program) == "CRU":
+			all_cru_totals.append(data_array[index].total)
+
+		index += 1
+
+	all_cru_totals.sort()
+	all_bla_totals.sort()
+
+	top_100_cru_totals = all_cru_totals[:100]
+	top_100_bla_totals = all_bla_totals[:100]
+
+	print("CRU: " + str(top_100_cru_totals))
+	print("BLA: " + str(top_100_bla_totals))
+
+	top_100_cru_average = 0
+	top_100_bla_average = 0
+
+	for elem in top_100_cru_totals:
+		top_100_cru_average += int(elem)
+
+	top_100_cru_average = top_100_cru_average / 100
+
+	for elem in top_100_bla_totals:
+		top_100_bla_average += int(elem)
+
+	top_100_bla_average = top_100_bla_average / 100
+
+
+	print("CRU top 100 avg: " + str(top_100_cru_average))
+	print("BLA top 100 avg: " + str(top_100_bla_average))
+
+
 def parseFile():
 	file = open("vitdata.txt", "r")
 	lines = file.readlines()
@@ -271,4 +443,4 @@ def parse_line(line):
 
 
 # MAIN SECTION
-ex1a2h1()
+ex3dm4()
