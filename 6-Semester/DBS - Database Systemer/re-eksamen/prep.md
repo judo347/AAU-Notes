@@ -10,20 +10,26 @@
 
 
 
+Torsdags todos:
+
+- Specific slides to show over MSTeams?
 
 
-## The relational model and relational algebra
+
+
+
+## 1. The relational model and relational algebra
 
 Slides: DBS-2
 
-## ER modelling
+## 2. ER modelling
 
 Slides: DBS-3
 
-## Mapping of ER diagrams to relations
+## 3. Mapping of ER diagrams to relations
 
-## Functional dependencies and normal forms
-## SQL
+## 4. Functional dependencies and normal forms
+## 5. SQL
 
 Slides: DBS-5, own notes
 
@@ -78,12 +84,69 @@ WHERE empid IN (SELECT taughtby FROM course);
 
 ![](.\img\0.png)
 
-## Concurrency control
-## Recovery
-## Query optimization
+## 6. Concurrency control
+## 7. Recovery
+## 8. Query optimization
 
 Slides: DBS-8
 
-## Physical design, including indexes
+## 9. Physical design, including indexes
 
 Slides: DBS-7
+
+### File Organization (Physical design)
+
+![](.\img\3.png)
+
+![](.\img\4.png)
+
+![](.\img\5.png)
+
+![](.\img\6.png)
+
+![](.\img\7.png)
+
+TODO Emphasize above term! Learn them!
+
+![](.\img\8.png)
+
+#### Fixed vs Variable size records
+
+![](.\img\13.png)
+
+![](.\img\14.png)
+
+#### Organizing records in a file
+
+**Determine the order of records within a file**
+
+- Heap file organization: A record can be placed **anywhere** in the file
+- Sequential file organization: Records stored in **sequential order** **by the value of the search key**
+- Hash file organization: Hash the record to a **block based** on a **hash function** and a hash key
+
+
+
+
+
+Slide 12-15, hvor meget er nødvendigt? TODO??!?!??!?!?!
+
+
+
+### Indexes
+
+TODO
+
+### Physical Design Tuning
+
+![](.\img\9.png)
+
+![](.\img\10.png)
+
+TODO??!? Explain above slide?!
+
+![](.\img\11.png)
+
+![](.\img\12.png)
+
+
+
